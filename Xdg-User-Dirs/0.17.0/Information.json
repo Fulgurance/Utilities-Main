@@ -1,0 +1,14 @@
+{
+  "port": "Utilities-Main",
+  "name": "Xdg-User-Dirs",
+  "version": "0.17.0",
+  "architectures": ["x86_64"],
+  "description": "Tool to help manage user directories like the desktop folder and the music folder",
+  "website": "https://www.freedesktop.org/wiki/Software/xdg-user-dirs",
+  "downloadLinks": ["https://user-dirs.freedesktop.org/releases/xdg-user-dirs-0.17.tar.gz"],
+  "md5sums": ["e0564ec6d838e6e41864d872a29b3575"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [],
+  "options": []
+}
