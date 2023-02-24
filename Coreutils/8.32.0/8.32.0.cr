@@ -4,7 +4,7 @@ class Target < ISM::Software
         super
 
         if option("Pass1")
-            configureSource([   "--prefix=#{Ism.settings.rootPath}usr",
+            configureSource([   "--prefix=/usr",
                                 "--host=#{Ism.settings.target}",
                                 "--build=$(build-aux/config.guess)",
                                 "--enable-install-program=hostname",
@@ -29,15 +29,14 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
+        makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
         if option("Pass1")
-            makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/sbin")
             moveFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin/chroot","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/sbin/chroot")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/man/man8")
             moveFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/man/man1/chroot.1","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/man/man8/chroot.8")
             fileReplaceText("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/man/man8/chroot.8","\"1\"","\"8\"")
         else
-            makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
             makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/sbin")
             moveFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/chroot","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/sbin/chroot")
             makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/man/man8/")

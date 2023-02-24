@@ -4,7 +4,7 @@ class Target < ISM::Software
         super
 
         if option("Pass1")
-            configureSource([   "--prefix=#{Ism.settings.rootPath}usr",
+            configureSource([   "--prefix=/usr",
                                 "--host=#{Ism.settings.target}"],
                                 buildDirectoryPath)
         else
@@ -26,10 +26,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        if option("Pass1")
-            makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
-        else
-            makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        if !option("Pass1")
             makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/doc/sed-4.8")
             copyFile("#{buildDirectoryPath(false)}/doc/sed.html","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/doc/sed-4.8/sed.html")
             setPermissions("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/doc/sed-4.8",755)
