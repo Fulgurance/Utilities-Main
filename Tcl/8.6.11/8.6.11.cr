@@ -2,11 +2,13 @@ class Target < ISM::Software
 
     def extract
         super
+
         moveFile("#{workDirectoryPath(false)}/tcl8.6.11","#{workDirectoryPath(false)}/tcl8.6.11-src")
     end
 
     def configure
         super
+
         configureSource([   "--prefix=/usr",
                             "--mandir=/usr/share/man",
                             "--enable-64bit"],
@@ -15,11 +17,13 @@ class Target < ISM::Software
 
     def build
         super
+
         makeSource([Ism.settings.makeOptions],"#{buildDirectoryPath}/unix")
     end
 
     def prepareInstallation
         super
+
         fileReplaceText("#{buildDirectoryPath(false)}unix/tclConfig.sh","#{buildDirectoryPath(false)}unix","/usr/lib")
         fileReplaceText("#{buildDirectoryPath(false)}unix/tclConfig.sh","#{buildDirectoryPath(false)}","/usr/include")
         fileReplaceText("#{buildDirectoryPath(false)}unix/pkgs/tdbc1.1.2/tdbcConfig.sh","#{buildDirectoryPath(false)}unix/pkgs/tdbc1.1.2","/usr/lib/tdbc1.1.2")
@@ -37,6 +41,7 @@ class Target < ISM::Software
 
     def install
         super
+
         makeLink("tclsh8.6","#{Ism.settings.rootPath}/usr/bin/tclsh",:symbolicLinkByOverwrite)
     end
 
