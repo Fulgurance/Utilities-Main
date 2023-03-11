@@ -18,7 +18,7 @@ class Target < ISM::Software
 
         makeSource([Ism.settings.makeOptions],buildDirectoryPath)
 
-        if option("Pass2")
+        if !option("Pass1")
             makeSource([Ism.settings.makeOptions,"html"],buildDirectoryPath)
         end
     end
