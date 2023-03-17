@@ -1,0 +1,29 @@
+{
+  "port": "Utilities-Main",
+  "name": "Dbus",
+  "version": "1.12.20",
+  "architectures": ["x86_64"],
+  "description": "Message bus system for applications to talk to one another",
+  "website": "https://dbus.freedesktop.org",
+  "downloadLinks": ["https://dbus.freedesktop.org/releases/dbus/dbus-1.12.20.tar.gz"],
+  "md5sums": ["dfe8a71f412e0b53be26ed4fbfdc91c4"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [],
+  "options": [
+    {
+      "name": "Xorg-Libraries",
+      "description": "Enable xorg libraries support for dbus-launch program",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Xorg-Libraries",
+          "version": "1.20.13",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    }
+  ]
+}
