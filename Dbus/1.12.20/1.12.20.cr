@@ -29,6 +29,12 @@ class Target < ISM::Software
         super
 
         makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+
+        if option("Openrc")
+            makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d")
+            moveFile("#{workDirectoryPath(false)}dbus.initd.in","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d/dbus")
+            runChmodCommand(["+x","dbus"],"#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d")
+        end
     end
 
     def install

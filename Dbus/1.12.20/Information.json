@@ -12,6 +12,20 @@
   "dependencies": [],
   "options": [
     {
+      "name": "Openrc",
+      "description": "Enable openrc support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Openrc",
+          "version": "0.46.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": ["https://gitweb.gentoo.org/repo/gentoo.git/plain/sys-apps/dbus/files/dbus.initd.in"],
+      "md5sums": ["77393a75bdd0618b19d4dea62834aafc"]
+    },
+    {
       "name": "Xorg-Libraries",
       "description": "Enable xorg libraries support for dbus-launch program",
       "active": true,

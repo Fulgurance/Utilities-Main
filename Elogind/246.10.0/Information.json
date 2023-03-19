@@ -18,6 +18,20 @@
   ],
   "options": [
     {
+      "name": "Openrc",
+      "description": "Enable openrc support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Openrc",
+          "version": "0.46.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": ["https://gitweb.gentoo.org/repo/gentoo.git/plain/sys-auth/elogind/files/elogind.init-r1"],
+      "md5sums": ["3d5f82311cf0d282b44f36ad6f444adf"]
+    },
+    {
       "name": "Linux-Pam",
       "description": "Enable linux-pam support for Xorg",
       "active": false,
