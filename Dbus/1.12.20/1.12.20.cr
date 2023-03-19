@@ -32,7 +32,7 @@ class Target < ISM::Software
 
         if option("Openrc")
             makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d")
-            moveFile("#{workDirectoryPath(false)}dbus.initd.in","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d/dbus")
+            moveFile("#{workDirectoryPath(false)}/dbus.initd.in","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d/dbus")
             runChmodCommand(["+x","dbus"],"#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d")
         end
     end
