@@ -61,6 +61,12 @@ class Target < ISM::Software
         password required    pam_deny.so
         CODE
         fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/pam.d/elogind-user",elogindUserData)
+
+        if option("Openrc")
+            makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d")
+            moveFile("#{workDirectoryPath(false)}elogind.init-r1","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d/elogind")
+            runChmodCommand(["+x","elogind"],"#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d")
+        end
     end
 
     def install
