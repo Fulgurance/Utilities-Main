@@ -14,7 +14,7 @@
     {
       "name": "Openrc",
       "description": "Enable openrc support",
-      "active": true,
+      "active": false,
       "dependencies": [
         {
           "name": "Openrc",
