@@ -41,7 +41,7 @@ class Target < ISM::Software
         super
 
         setOwner("#{Ism.settings.rootPath}usr/libexec/dbus-daemon-launch-helper","root","messagebus")
-        setPermissions("#{Ism.settings.rootPath}usr/libexec/dbus-daemon-launch-helper")
+        setPermissions("#{Ism.settings.rootPath}usr/libexec/dbus-daemon-launch-helper",4750)
         runDbusUuidgenCommand(["--ensure"])
         makeLink("/var/lib/dbus/machine-id","#{Ism.settings.rootPath}etc",:symbolicLink)
     end
