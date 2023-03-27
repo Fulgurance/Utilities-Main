@@ -7,7 +7,7 @@ class Target < ISM::Software
             configureSource([   "--prefix=/usr",
                                 "--localstatedir=/var/lib/locate",
                                 "--host=#{Ism.settings.target}",
-                                "--build=#{Ism.settings.target}"],
+                                "--build=#{Ism.settings.chrootTarget}"],
                                 buildDirectoryPath)
         else
             configureSource([   "--prefix=/usr",

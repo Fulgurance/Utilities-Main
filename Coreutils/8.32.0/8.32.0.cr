@@ -6,7 +6,7 @@ class Target < ISM::Software
         if option("Pass1")
             configureSource([   "--prefix=/usr",
                                 "--host=#{Ism.settings.target}",
-                                "--build=#{Ism.settings.target}",
+                                "--build=#{Ism.settings.chrootTarget}",
                                 "--enable-install-program=hostname",
                                 "--enable-no-install-program=kill,uptime"],
                                 buildDirectoryPath)
