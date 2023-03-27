@@ -30,6 +30,6 @@
       ],
       "downloadLinks": ["https://gitweb.gentoo.org/repo/gentoo.git/plain/app-admin/sysklogd/files/sysklogd.rc10"],
       "md5sums": ["cdf2c020ab0ff90d24eeeb4e55c743f5"]
-    },
+    }
   ]
 }
