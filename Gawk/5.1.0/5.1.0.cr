@@ -24,6 +24,7 @@ class Target < ISM::Software
     
     def build
         super
+
         makeSource(path: buildDirectoryPath)
     end
     

@@ -9,7 +9,7 @@ class Target < ISM::Software
                                 "--disable-xzlib",
                                 "--disable-zlib"],
                                 buildDirectoryPath)
-            makeSource([Ism.settings.makeOptions],buildDirectoryPath)
+            makeSource(path: buildDirectoryPath)
             @buildDirectory = false
         else
             super
@@ -34,16 +34,16 @@ class Target < ISM::Software
         super
 
         if option("Pass1")
-            makeSource([Ism.settings.makeOptions,"FILE_COMPILE=#{buildDirectoryPath}build/src/file"],buildDirectoryPath)
+            makeSource(["FILE_COMPILE=#{buildDirectoryPath}build/src/file"],buildDirectoryPath)
         else
-            makeSource([Ism.settings.makeOptions],buildDirectoryPath)
+            makeSource(path: buildDirectoryPath)
         end
     end
 
     def prepareInstallation
         super
 
-        makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
     end
 
 end

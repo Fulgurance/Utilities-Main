@@ -16,17 +16,17 @@ class Target < ISM::Software
     def build
         super
 
-        makeSource([Ism.settings.makeOptions],buildDirectoryPath)
+        makeSource(path: buildDirectoryPath)
 
         if !option("Pass1")
-            makeSource([Ism.settings.makeOptions,"html"],buildDirectoryPath)
+            makeSource(["html"],buildDirectoryPath)
         end
     end
     
     def prepareInstallation
         super
 
-        makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
         if !option("Pass1")
             makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/doc/sed-4.8")
             copyFile("#{buildDirectoryPath(false)}/doc/sed.html","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/doc/sed-4.8/sed.html")
