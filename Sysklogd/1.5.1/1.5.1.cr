@@ -39,8 +39,8 @@ class Target < ISM::Software
             fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/conf.d/sysklogd",sysklogdData)
 
             makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d")
-            moveFile("#{workDirectoryPath(false)}sysklogd.rc10","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d/sysklogd")
-            runChmodCommand(["+x","sysklogd"],"#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d")
+            moveFile("#{workDirectoryPath(false)}/sysklogd.rc10","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d/sysklogd")
+            runChmodCommand(["+x","sysklogd"],"#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/init.d")
         end
     end
 
