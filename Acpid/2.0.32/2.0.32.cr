@@ -37,6 +37,8 @@ class Target < ISM::Software
         runChmodCommand(["+x","lid.sh"],"#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/acpi")
 
         if option("Openrc")
+            makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/conf.d")
+
             acpidData = <<-CODE
             # /etc/conf.d/acpid: config file for /etc/init.d/acpid
             ACPID_ARGS=""
