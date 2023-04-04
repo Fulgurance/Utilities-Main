@@ -4,15 +4,15 @@ class Target < ISM::Software
         @buildDirectory = true
         super
 
-        fileDeleteLine("#{buildDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
-        fileDeleteLine("#{buildDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
-        fileDeleteLine("#{buildDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
-        fileDeleteLine("#{buildDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
-        fileDeleteLine("#{buildDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
-        fileDeleteLine("#{buildDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
-        fileDeleteLine("#{buildDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
-        fileDeleteLine("#{buildDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
-        fileDeleteLine("#{buildDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
+        fileDeleteLine("#{mainWorkDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
+        fileDeleteLine("#{mainWorkDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
+        fileDeleteLine("#{mainWorkDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
+        fileDeleteLine("#{mainWorkDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
+        fileDeleteLine("#{mainWorkDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
+        fileDeleteLine("#{mainWorkDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
+        fileDeleteLine("#{mainWorkDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
+        fileDeleteLine("#{mainWorkDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
+        fileDeleteLine("#{mainWorkDirectoryPath(false)}#{Ism.settings.rootPath}meson.build",1158)
     end
 
     def configure
