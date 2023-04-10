@@ -11,8 +11,18 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "Ncurses",
-      "version": "6.2.0",
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    },
+    {
+      "name": "Acl",
+      "version": "2.3.1",
+      "options": []
+    },
+    {
+      "name": "Attr",
+      "version": "2.5.1",
       "options": []
     }
   ],

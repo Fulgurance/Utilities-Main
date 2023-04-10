@@ -11,8 +11,18 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "Meson",
-      "version": "0.59.1",
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    },
+    {
+      "name": "Gmp",
+      "version": "6.2.1",
+      "options": []
+    },
+    {
+      "name": "Libcap",
+      "version": "2.53.0",
       "options": []
     }
   ],

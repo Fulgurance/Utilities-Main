@@ -11,8 +11,8 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "E2fsprogs",
-      "version": "1.46.4",
+      "name": "SystemBase",
+      "version": "0.2.0",
       "options": []
     }
   ],
