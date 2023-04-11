@@ -11,11 +11,6 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "SystemBase",
-      "version": "0.2.0",
-      "options": []
-    },
-    {
       "name": "Acl",
       "version": "2.3.1",
       "options": []

@@ -9,13 +9,7 @@
   "md5sums": ["0d90823e1426f1da2fd872df0311298d"],
   "patchesLinks": [],
   "installedFiles": [],
-  "dependencies": [
-    {
-      "name": "SystemBase",
-      "version": "0.2.0",
-      "options": []
-    }
-  ],
+  "dependencies": [],
   "options": [
     {
       "name": "Pass1",
