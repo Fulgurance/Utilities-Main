@@ -24,6 +24,11 @@
       "name": "Autoconf",
       "version": "2.71.0",
       "options": []
+    },
+    {
+      "name": "Automake",
+      "version": "1.16.4",
+      "options": []
     }
   ],
   "options": [
