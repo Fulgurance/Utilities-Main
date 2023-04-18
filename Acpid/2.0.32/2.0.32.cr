@@ -47,7 +47,7 @@ class Target < ISM::Software
 
             makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d")
             moveFile("#{workDirectoryPath(false)}/acpid-2.0.26-init.d","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d/acpid")
-            runChmodCommand(["+x","acpid"],"#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d")
+            runChmodCommand(["+x","acpid"],"#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/init.d")
         end
     end
 
