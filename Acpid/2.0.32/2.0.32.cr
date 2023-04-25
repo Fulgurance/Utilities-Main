@@ -45,9 +45,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/conf.d/acpid",acpidData)
 
-            makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d")
-            moveFile("#{workDirectoryPath(false)}/acpid-2.0.26-init.d","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d/acpid")
-            runChmodCommand(["+x","acpid"],"#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/init.d")
+            prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/acpid-2.0.26-init.d","acpid")
         end
     end
 

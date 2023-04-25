@@ -31,9 +31,7 @@ class Target < ISM::Software
         makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
 
         if option("Openrc")
-            makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d")
-            moveFile("#{workDirectoryPath(false)}/dbus.initd.in","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d/dbus")
-            runChmodCommand(["+x","dbus"],"#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/init.d")
+            prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/dbus.initd.in","dbus")
         end
     end
 
