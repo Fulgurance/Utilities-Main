@@ -1,5 +1,12 @@
 class Target < ISM::Software
 
+    def prepare
+        super
+
+        fileReplaceText("#{workDirectoryPath(false)}/dbus.initd.in","pidfile=\"@rundir@/dbus.pid\"","pidfile=\"/var/run/dbus/pid\"")
+        fileReplaceText("#{workDirectoryPath(false)}/dbus.initd.in","@rundir@","/var/run")
+    end
+
     def configure
         super
 
