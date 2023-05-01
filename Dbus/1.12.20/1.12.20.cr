@@ -10,8 +10,6 @@ class Target < ISM::Software
                             "--disable-doxygen-docs",
                             "--disable-xml-docs",
                             "--disable-static",
-                            "--with-systemduserunitdir=no",
-                            "--with-systemdsystemunitdir=no",
                             "--docdir=/usr/share/doc/dbus-1.12.20",
                             "--with-console-auth-dir=/run/console",
                             "--with-system-pid-file=/run/dbus/pid",
