@@ -68,6 +68,12 @@ class Target < ISM::Software
         CODE
         fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/pam.d/elogind-user",elogindUserData)
 
+        elogindConfData = <<-CODE
+        ELOGIND_EXEC=/usr/lib/elogind/elogind
+        ELOGIND_PIDFILE=/var/run/elogind.pid
+        CODE
+        fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/conf.d/elogind",elogindConfData)
+
         if option("Openrc")
             prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/elogind.init-r1","elogind")
         end
