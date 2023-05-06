@@ -19,6 +19,11 @@
       "name": "Eudev",
       "version": "3.2.10",
       "options": []
+    },
+    {
+      "name": "Docbook-Xml",
+      "version": "4.5.0",
+      "options": []
     }
   ],
   "options": [
