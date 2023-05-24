@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "The Tool Command Language and Tk toolkit",
   "website": "http://tcl.sourceforge.net/",
-  "downloadLinks": ["https://downloads.sourceforge.net/tcl/tcl8.6.11-src.tar.gz"],
-  "md5sums": ["8a4c004f48984a03a7747e9ba06e4da4"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {

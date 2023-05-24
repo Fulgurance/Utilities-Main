@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "The new ACPI Daemon",
   "website": "https://sourceforge.net/projects/acpid2/",
-  "downloadLinks": ["https://downloads.sourceforge.net/acpid2/acpid-2.0.32.tar.xz"],
-  "md5sums": ["248995264b9d1cd8bdb923d5b190fd44"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {
@@ -28,8 +25,6 @@
           "options": []
         }
       ],
-      "downloadLinks": ["https://gitweb.gentoo.org/repo/gentoo.git/plain/sys-power/acpid/files/acpid-2.0.26-init.d"],
-      "md5sums": ["4dcb73da97954782b8162f960994790c"]
     }
   ]
 }

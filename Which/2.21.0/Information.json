@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "Utility used to find which executable is executed when entered on the shell prompt",
   "website": "https://ftp.gnu.org/gnu/which/",
-  "downloadLinks": ["https://ftp.gnu.org/gnu/which/which-2.21.tar.gz"],
-  "md5sums": ["097ff1a324ae02e0a3b0369f07a7544a"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {

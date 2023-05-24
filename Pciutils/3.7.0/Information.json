@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "The PCI Utilities",
   "website": "https://github.com/pciutils/pciutils/tags",
-  "downloadLinks": ["https://www.kernel.org/pub/software/utils/pciutils/pciutils-3.7.0.tar.xz"],
-  "md5sums": ["e6e20482b4f25c5186e6a753c5edc361"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {

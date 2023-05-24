@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "The systemd project's logind extracted to a standalone package",
   "website": "https://github.com/elogind/elogind",
-  "downloadLinks": ["https://github.com/elogind/elogind/archive/v246.10/elogind-246.10.tar.gz"],
-  "md5sums": ["32ab2201281f14738d9c045f3669c14d"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {
@@ -38,8 +35,6 @@
           "options": []
         }
       ],
-      "downloadLinks": ["https://gitweb.gentoo.org/repo/gentoo.git/plain/sys-auth/elogind/files/elogind.init-r1"],
-      "md5sums": ["3d5f82311cf0d282b44f36ad6f444adf"]
     },
     {
       "name": "Linux-Pam",
@@ -52,8 +47,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     },
     {
       "name": "Polkit",
@@ -66,8 +59,6 @@
           "options": []
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     }
   ]
 }

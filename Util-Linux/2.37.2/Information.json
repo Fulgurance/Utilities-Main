@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "Random collection of Linux utilities",
   "website": "https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git/",
-  "downloadLinks": ["https://www.kernel.org/pub/linux/utils/util-linux/v2.37/util-linux-2.37.2.tar.xz"],
-  "md5sums": ["d659bf7cd417d93dc609872f6334b019"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {
@@ -28,8 +25,6 @@
           "options": ["Pass1"]
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     }
   ]
 }
