@@ -24,7 +24,7 @@
           "version": "0.46.0",
           "options": []
         }
-      ],
+      ]
     },
     {
       "name": "Xorg-Libraries",
@@ -36,7 +36,7 @@
           "version": "1.20.13",
           "options": []
         }
-      ],
+      ]
     }
   ]
 }

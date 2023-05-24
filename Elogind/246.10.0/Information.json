@@ -34,7 +34,7 @@
           "version": "0.46.0",
           "options": []
         }
-      ],
+      ]
     },
     {
       "name": "Linux-Pam",
@@ -46,7 +46,7 @@
           "version": "1.5.1",
           "options": []
         }
-      ],
+      ]
     },
     {
       "name": "Polkit",
@@ -58,7 +58,7 @@
           "version": "0.119.0",
           "options": []
         }
-      ],
+      ]
     }
   ]
 }
