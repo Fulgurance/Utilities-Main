@@ -45,7 +45,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/conf.d/acpid",acpidData)
 
-            prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/acpid-2.0.26-init.d","acpid")
+            prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/Acpid-Init.d","acpid")
         end
     end
 
