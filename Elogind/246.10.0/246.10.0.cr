@@ -76,7 +76,7 @@ class Target < ISM::Software
         fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/conf.d/elogind",elogindConfData)
 
         if option("Openrc")
-            prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/elogind.init-r1","elogind")
+            prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/Elogind-Init.d","elogind")
         end
     end
 
