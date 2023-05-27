@@ -38,7 +38,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/conf.d/sysklogd",sysklogdData)
 
-            prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/sysklogd.rc10","sysklogd")
+            prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/Sysklogd-Init.d","sysklogd")
         end
     end
 
