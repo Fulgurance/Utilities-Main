@@ -3,8 +3,8 @@ class Target < ISM::Software
     def prepare
         super
 
-        fileReplaceText("#{workDirectoryPath(false)}/dbus.initd.in","pidfile=\"@rundir@/dbus.pid\"","pidfile=\"/var/run/dbus/pid\"")
-        fileReplaceText("#{workDirectoryPath(false)}/dbus.initd.in","@rundir@","/var/run")
+        fileReplaceText("#{workDirectoryPath(false)}/Dbus-Init.d","pidfile=\"@rundir@/dbus.pid\"","pidfile=\"/var/run/dbus/pid\"")
+        fileReplaceText("#{workDirectoryPath(false)}/Dbus-Init.d","@rundir@","/var/run")
     end
 
     def configure
@@ -36,7 +36,7 @@ class Target < ISM::Software
         makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
 
         if option("Openrc")
-            prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/dbus.initd.in","dbus")
+            prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/Dbus-Init.d","dbus")
         end
     end
 
