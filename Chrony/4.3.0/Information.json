@@ -1,0 +1,35 @@
+{
+  "port": "Utilities-Main",
+  "name": "Chrony",
+  "version": "4.3.0",
+  "architectures": ["x86_64"],
+  "description": "Versatile implementation of the Network Time Protocol (NTP)",
+  "website": "https://chrony.tuxfamily.org/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Libseccomp",
+      "version": ">0.0.0",
+      "options": []
+    },
+    {
+      "name": "Gnutls",
+      "version": ">0.0.0",
+      "options": []
+    }
+  ],
+  "options": [
+    {
+      "name": "Openrc",
+      "description": "Enable openrc support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Openrc",
+          "version": "0.46.0",
+          "options": []
+        }
+      ]
+    }
+  ]
+}
