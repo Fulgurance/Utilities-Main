@@ -29,6 +29,8 @@ class Target < ISM::Software
         pool pool.ntp.org iburst auto_offline
         makestep 1.0 3
         rtcsync
+        logdir /var/log/chrony
+        log measurements statistics tracking
         CODE
         fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/chrony.conf",chronyconfData)
 
