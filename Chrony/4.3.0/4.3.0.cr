@@ -43,6 +43,7 @@ class Target < ISM::Software
         super
 
         runGroupAddCommand(["ntp"])
+        runUserAddCommand(["ntp"])
     end
 
 end
