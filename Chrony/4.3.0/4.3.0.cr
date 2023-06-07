@@ -42,7 +42,6 @@ class Target < ISM::Software
     def install
         super
 
-        runGroupAddCommand(["ntp"])
         runUserAddCommand(["ntp"])
     end
 
