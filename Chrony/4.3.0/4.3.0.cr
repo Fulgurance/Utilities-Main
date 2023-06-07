@@ -3,7 +3,8 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource(["--prefix=/usr"],buildDirectoryPath)
+        configureSource([   "--prefix=/usr",
+                            "--enable-scfilter"],buildDirectoryPath)
     end
 
     def build
