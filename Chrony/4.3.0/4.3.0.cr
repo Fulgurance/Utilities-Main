@@ -43,7 +43,8 @@ class Target < ISM::Software
     def install
         super
 
-        runUserAddCommand(["ntp"])
+        runGroupAddCommand(["-r","-g","123","ntp"])
+        runUserAddCommand(["-U","-u123","ntp"])
     end
 
 end
