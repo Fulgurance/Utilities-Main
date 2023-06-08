@@ -44,7 +44,7 @@ class Target < ISM::Software
         super
 
         runGroupAddCommand(["-r","-g","123","ntp"])
-        runUserAddCommand(["-g","ntp","ntp"])
+        runUserAddCommand(["-u123","-g123","ntp"])
     end
 
 end
