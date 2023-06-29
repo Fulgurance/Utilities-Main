@@ -40,8 +40,8 @@ class Target < ISM::Software
 
         fileReplaceTextAtLineNumber("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/elogind/logind.conf","#KillUserProcesses=yes","KillUserProcesses=no",15)
 
-        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/pam.d")
-        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/conf.d")
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/pam.d")
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/conf.d")
 
         if File.exists?("#{Ism.settings.rootPath}etc/pam.d/system-session")
             copyFile("#{Ism.settings.rootPath}etc/pam.d/system-session","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/pam.d/system-session")
@@ -53,7 +53,7 @@ class Target < ISM::Software
         session  required    pam_loginuid.so
         session  optional    pam_elogind.so
         CODE
-        fileUpdateContent("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/pam.d/system-session",systemSessionData)
+        fileUpdateContent("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/pam.d/system-session",systemSessionData)
 
         elogindUserData = <<-CODE
         account  required    pam_access.so
@@ -69,13 +69,13 @@ class Target < ISM::Software
         auth     required    pam_deny.so
         password required    pam_deny.so
         CODE
-        fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/pam.d/elogind-user",elogindUserData)
+        fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/pam.d/elogind-user",elogindUserData)
 
         elogindConfData = <<-CODE
         ELOGIND_EXEC=/usr/lib/elogind/elogind
         ELOGIND_PIDFILE=/var/run/elogind.pid
         CODE
-        fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/conf.d/elogind",elogindConfData)
+        fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/conf.d/elogind",elogindConfData)
 
         if option("Openrc")
             prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/Elogind-Init.d","elogind")
