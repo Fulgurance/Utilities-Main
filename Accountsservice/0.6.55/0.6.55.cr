@@ -12,6 +12,7 @@ class Target < ISM::Software
         runMesonCommand([   "--prefix=/usr",
                             "--buildtype=release",
                             "-Dadmin_group=adm",
+                            "-Dsystemd=false"
                             "-Delogind=#{option("Elogind") ? "true" : "false"}",
                             ".."],
                             buildDirectoryPath)
