@@ -4,7 +4,7 @@ class Target < ISM::Software
         @buildDirectory = true
         super
 
-        runMesonCommand(["setup","build"],mainWorkDirectoryPath)
+        runMesonCommand(["setup","--reconfigure","-Dsystemd=false","build",],mainWorkDirectoryPath)
     end
 
     def configure
