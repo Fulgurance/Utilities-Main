@@ -9,12 +9,11 @@ class Target < ISM::Software
     def configure
         super
 
-        runMesonCommand(["configure","-Dsystemd=false"],mainWorkDirectoryPath)
-
         runMesonCommand([   "--prefix=/usr",
                             "--buildtype=release",
                             "-Dadmin_group=adm",
                             "-Dsystemd=false",
+                            "-Dsystemdsystemunitdir=no",
                             "-Delogind=#{option("Elogind") ? "true" : "false"}",
                             ".."],
                             buildDirectoryPath)
