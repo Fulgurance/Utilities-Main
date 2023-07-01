@@ -9,7 +9,7 @@ class Target < ISM::Software
     def configure
         super
 
-        runMesonCommand(["configure","-Dsystemd=false",".."],buildDirectoryPath)
+        runMesonCommand(["configure","-Dsystemd=false"],mainWorkDirectoryPath)
 
         runMesonCommand([   "--prefix=/usr",
                             "--buildtype=release",
