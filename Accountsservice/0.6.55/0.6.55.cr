@@ -4,11 +4,12 @@ class Target < ISM::Software
         @buildDirectory = true
         super
 
-        runMesonCommand(["-Dsystemd=false","build","."],mainWorkDirectoryPath)
     end
 
     def configure
         super
+
+        runMesonCommand(["configure","-Dsystemd=false",".."],buildDirectoryPath)
 
         runMesonCommand([   "--prefix=/usr",
                             "--buildtype=release",
