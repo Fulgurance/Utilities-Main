@@ -11,7 +11,7 @@ class Target < ISM::Software
 
         runMesonCommand([   "--prefix=/usr",
                             "--buildtype=release",
-                            "-Dadmin_group=adm",
+                            "-Dadmin_group=wheel",
                             "-Dsystemd=false",
                             "-Dsystemdsystemunitdir=no",
                             "-Delogind=#{option("Elogind") ? "true" : "false"}",
