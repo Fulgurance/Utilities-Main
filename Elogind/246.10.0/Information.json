@@ -23,7 +23,7 @@
       "options": []
     }
   ],
-  "kernelDependencies": [],
+  "kernelDependencies": ["CONFIG_CGROUPS","CONFIG_INOTIFY_USER","CONFIG_TMPFS_POSIX_ACL"],
   "options": [
     {
       "name": "Openrc",
