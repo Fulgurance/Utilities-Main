@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Less",
   "version": "590.0.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Free, open-source file pager",
   "website": "https://www.greenwoodsoftware.com/less/",
   "installedFiles": [],

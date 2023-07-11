@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Man-Db",
   "version": "2.9.4",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Implementation of the standard Unix documentation system accessed using the man command",
   "website": "https://www.nongnu.org/man-db/",
   "installedFiles": [],

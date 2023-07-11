@@ -2,15 +2,19 @@
   "port": "Utilities-Main",
   "name": "M4",
   "version": "1.4.19",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "The GNU M4 implementation of the traditional Unix macro processor",
   "website": "https://www.gnu.org/software/m4/",
   "installedFiles": [],
   "dependencies": [
     {
-        "name": "SystemBase",
-        "version": "0.2.0",
-        "options": ["Pass3"]
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": [
+        "Pass3"
+      ]
     }
   ],
   "kernelDependencies": [],
@@ -23,9 +27,12 @@
         {
           "name": "Libstdc++",
           "version": "11.2.0",
-          "options": ["Pass1"]
+          "options": [
+            "Pass1"
+          ]
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Pciutils",
   "version": "3.7.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "The PCI Utilities",
   "website": "https://github.com/pciutils/pciutils/tags",
   "installedFiles": [],

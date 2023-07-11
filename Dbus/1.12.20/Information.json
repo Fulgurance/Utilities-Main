@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Dbus",
   "version": "1.12.20",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Message bus system for applications to talk to one another",
   "website": "https://dbus.freedesktop.org",
   "installedFiles": [],
@@ -25,7 +27,8 @@
           "version": "0.46.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "Xorg-Libraries",
@@ -37,7 +40,8 @@
           "version": "1.20.13",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

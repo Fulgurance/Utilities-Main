@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Expect",
   "version": "5.45.4",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Tool for automating interactive applications",
   "website": "https://core.tcl.tk/expect/",
   "installedFiles": [],

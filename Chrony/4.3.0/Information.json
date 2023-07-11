@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Chrony",
   "version": "4.3.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Versatile implementation of the Network Time Protocol (NTP)",
   "website": "https://chrony.tuxfamily.org/",
   "installedFiles": [],
@@ -30,7 +32,8 @@
           "version": "0.46.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

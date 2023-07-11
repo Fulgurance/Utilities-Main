@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Kbd",
   "version": "2.4.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Utilities for managing Linux console mainly, loading console fonts and keyboard maps",
   "website": "https://kbd-project.org/",
   "installedFiles": [],

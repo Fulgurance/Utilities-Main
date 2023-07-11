@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Texinfo",
   "version": "6.8.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Program to produce output in a number of formats (HTML, PDF, DVI, Info, DocBook, LaTeX, EPUB 3)",
   "website": "https://www.gnu.org/software/texinfo/",
   "installedFiles": [],
@@ -23,9 +25,12 @@
         {
           "name": "Python",
           "version": "3.9.6",
-          "options": ["Pass1"]
+          "options": [
+            "Pass1"
+          ]
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

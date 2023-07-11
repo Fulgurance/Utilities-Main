@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Sed",
   "version": "4.8.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "GNU Sed stream editor and non-interactive command-line text editor",
   "website": "https://www.gnu.org/software/sed/",
   "installedFiles": [],
@@ -28,9 +30,12 @@
         {
           "name": "Patch",
           "version": "2.7.6",
-          "options": ["Pass1"]
+          "options": [
+            "Pass1"
+          ]
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

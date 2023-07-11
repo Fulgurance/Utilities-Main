@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Gperf",
   "version": "3.1.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "GNU perfect hash function generator",
   "website": "https://www.gnu.org/software/gperf/",
   "installedFiles": [],

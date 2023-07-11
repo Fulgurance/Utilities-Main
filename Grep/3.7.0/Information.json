@@ -2,15 +2,19 @@
   "port": "Utilities-Main",
   "name": "Grep",
   "version": "3.7.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Grep searches utility to find specified pattern",
   "website": "https://www.gnu.org/software/grep/",
   "installedFiles": [],
   "dependencies": [
     {
-        "name": "SystemBase",
-        "version": "0.2.0",
-        "options": ["Pass3"]
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": [
+        "Pass3"
+      ]
     }
   ],
   "kernelDependencies": [],
@@ -23,9 +27,12 @@
         {
           "name": "Gawk",
           "version": "5.1.0",
-          "options": ["Pass1"]
+          "options": [
+            "Pass1"
+          ]
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

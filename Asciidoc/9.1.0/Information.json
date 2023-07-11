@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Asciidoc",
   "version": "9.1.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Legacy python processor for AsciiDoc",
   "website": "https://github.com/asciidoc-py/asciidoc-py",
   "installedFiles": [],

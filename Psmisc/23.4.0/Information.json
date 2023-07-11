@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Psmisc",
   "version": "23.4.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Miscellaneous utilities that use the proc file-system",
   "website": "https://gitlab.com/psmisc/psmisc",
   "installedFiles": [],

@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Elogind",
   "version": "246.10.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "The systemd project's logind extracted to a standalone package",
   "website": "https://github.com/elogind/elogind",
   "installedFiles": [],
@@ -23,7 +25,11 @@
       "options": []
     }
   ],
-  "kernelDependencies": ["CONFIG_CGROUPS","CONFIG_INOTIFY_USER","CONFIG_TMPFS_POSIX_ACL"],
+  "kernelDependencies": [
+    "CONFIG_CGROUPS",
+    "CONFIG_INOTIFY_USER",
+    "CONFIG_TMPFS_POSIX_ACL"
+  ],
   "options": [
     {
       "name": "Openrc",
@@ -35,7 +41,8 @@
           "version": "0.46.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "Linux-Pam",
@@ -47,7 +54,8 @@
           "version": "1.5.1",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "Polkit",
@@ -59,7 +67,8 @@
           "version": "0.119.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

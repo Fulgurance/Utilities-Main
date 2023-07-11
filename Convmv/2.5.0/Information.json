@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Convmv",
   "version": "2.5.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Tool to converts filenames from one encoding to another",
   "website": "https://j3e.de/linux/convmv/",
   "installedFiles": [],

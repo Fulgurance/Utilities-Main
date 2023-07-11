@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "File",
   "version": "5.40.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Command-line tool that tells what kind of data a file contains",
   "website": "https://www.darwinsys.com/file/",
   "installedFiles": [],
@@ -28,9 +30,12 @@
         {
           "name": "Diffutils",
           "version": "3.8.0",
-          "options": ["Pass1"]
+          "options": [
+            "Pass1"
+          ]
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

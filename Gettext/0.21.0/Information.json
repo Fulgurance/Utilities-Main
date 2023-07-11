@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Gettext",
   "version": "0.21.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "The GNU gettext Translation Project framework to produce multi-lingual messages",
   "website": "https://www.gnu.org/software/gettext/",
   "installedFiles": [],
@@ -10,7 +12,9 @@
     {
       "name": "SystemBase",
       "version": "0.2.0",
-      "options": ["Pass3"]
+      "options": [
+        "Pass3"
+      ]
     },
     {
       "name": "Acl",
@@ -28,9 +32,12 @@
         {
           "name": "Libstdc++",
           "version": "11.2.0",
-          "options": ["Pass2"]
+          "options": [
+            "Pass2"
+          ]
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Accountsservice",
   "version": "0.6.55",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "D-Bus service for accessing the list of user accounts and information attached to those accounts",
   "website": "https://www.freedesktop.org/wiki/Software/AccountsService/",
   "installedFiles": [],
@@ -30,7 +32,8 @@
           "version": "1.68.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "Elogind",
@@ -42,7 +45,8 @@
           "version": "246.10.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

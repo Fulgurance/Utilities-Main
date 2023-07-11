@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Man-Pages",
   "version": "5.13.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "The Linux man-pages project documents the Linux kernel and C library interfaces that are employed by user-space programs",
   "website": "https://www.kernel.org/doc/man-pages/",
   "installedFiles": [],

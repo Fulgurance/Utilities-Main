@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Tcl",
   "version": "8.6.11",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "The Tool Command Language and Tk toolkit",
   "website": "http://tcl.sourceforge.net/",
   "installedFiles": [],

@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Coreutils",
   "version": "8.32.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Basic file, shell and text manipulation utilities of the GNU operating system",
   "website": "https://www.gnu.org/software/coreutils/",
   "installedFiles": [],
@@ -38,9 +40,12 @@
         {
           "name": "Bash",
           "version": "5.1.8",
-          "options": ["Pass1"]
+          "options": [
+            "Pass1"
+          ]
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Gawk",
   "version": "5.1.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "The Gawk utility interpret to handle simple data-reformatting jobs",
   "website": "https://www.gnu.org/software/gawk/",
   "installedFiles": [],
@@ -33,9 +35,12 @@
         {
           "name": "Findutils",
           "version": "4.8.0",
-          "options": ["Pass1"]
+          "options": [
+            "Pass1"
+          ]
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

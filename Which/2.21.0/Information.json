@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Which",
   "version": "2.21.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Utility used to find which executable is executed when entered on the shell prompt",
   "website": "https://ftp.gnu.org/gnu/which/",
   "installedFiles": [],

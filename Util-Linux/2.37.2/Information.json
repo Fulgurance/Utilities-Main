@@ -2,7 +2,9 @@
   "port": "Utilities-Main",
   "name": "Util-Linux",
   "version": "2.37.2",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Random collection of Linux utilities",
   "website": "https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git/",
   "installedFiles": [],
@@ -23,9 +25,12 @@
         {
           "name": "Texinfo",
           "version": "6.8.0",
-          "options": ["Pass1"]
+          "options": [
+            "Pass1"
+          ]
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }
