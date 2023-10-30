@@ -28,6 +28,11 @@
       "name": "Automake",
       "version": "1.16.4",
       "options": []
+    },
+    {
+      "name": "Gettext",
+      "version": "0.21.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
