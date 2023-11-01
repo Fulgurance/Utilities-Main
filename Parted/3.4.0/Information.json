@@ -1,0 +1,35 @@
+{
+  "port": "Utilities-Main",
+  "name": "Parted",
+  "version": "3.4.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "GNU Parted manipulates partition tables",
+  "website": "https://www.gnu.org/software/parted/parted.html",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Lvm2",
+      "description": "Enable lvm2 support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Lvm2",
+          "version": "2.3.13",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueOptions": []
+}
