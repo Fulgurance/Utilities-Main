@@ -33,7 +33,7 @@
       "name": "Polkit",
       "version": "0.119.0",
       "options": []
-    },
+    }
   ],
   "kernelDependencies": [],
   "options": [
