@@ -4,6 +4,7 @@ class Target < ISM::Software
         super
 
         configureSource([   "--prefix=/usr",
+                            "#{option("Lvm2") ? "--enable-device-mapper" : "--disable-device-mapper"}",
                             "--disable-static"],
                             buildDirectoryPath)
     end
