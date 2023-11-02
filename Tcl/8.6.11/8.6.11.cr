@@ -18,7 +18,7 @@ class Target < ISM::Software
     def build
         super
 
-        makeSource([Ism.settings.makeOptions],"#{buildDirectoryPath}/unix")
+        makeSource(path: "#{buildDirectoryPath}/unix")
     end
 
     def prepareInstallation
@@ -33,9 +33,9 @@ class Target < ISM::Software
         fileReplaceText("#{buildDirectoryPath(false)}unix/pkgs/itcl4.2.1/itclConfig.sh","#{buildDirectoryPath(false)}unix/pkgs/itcl4.2.1","/usr/lib/itcl4.2.1")
         fileReplaceText("#{buildDirectoryPath(false)}unix/pkgs/itcl4.2.1/itclConfig.sh","#{buildDirectoryPath(false)}pkgs/itcl4.2.1/generic","/usr/include")
         fileReplaceText("#{buildDirectoryPath(false)}unix/pkgs/itcl4.2.1/itclConfig.sh","#{buildDirectoryPath(false)}pkgs/itcl4.2.1","/usr/include")
-        makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],"#{buildDirectoryPath}/unix")
+        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],"#{buildDirectoryPath}/unix")
         setPermissions("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libtcl8.6.so",0o644)
-        makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install-private-headers"],"#{buildDirectoryPath}unix")
+        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install-private-headers"],"#{buildDirectoryPath}unix")
         moveFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/man/man3/Thread.3","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/man/man3/Tcl_Thread.3")
     end
 

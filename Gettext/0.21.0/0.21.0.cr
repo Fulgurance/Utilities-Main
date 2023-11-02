@@ -17,7 +17,7 @@ class Target < ISM::Software
     def build
         super
 
-        makeSource([Ism.settings.makeOptions],buildDirectoryPath)
+        makeSource(path: buildDirectoryPath)
     end
     
     def prepareInstallation
@@ -28,7 +28,7 @@ class Target < ISM::Software
             copyDirectory("#{buildDirectoryPath(false)}gettext-tools/src/msgmerge","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/msgmerge")
             copyDirectory("#{buildDirectoryPath(false)}gettext-tools/src/xgettext","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/xgettext")
         else
-            makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+            makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
             setPermissions("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/preloadable_libintl.so",0o755)
         end
     end
