@@ -25,10 +25,10 @@
       "active": false,
       "dependencies": [
         {
-          "name": "Libstdc++",
+          "name": "Gcc",
           "version": "11.2.0",
           "options": [
-            "Pass1"
+            "Pass2"
           ]
         }
       ],
