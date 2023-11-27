@@ -1,0 +1,42 @@
+{
+  "port": "Utilities-Main",
+  "name": "File",
+  "version": "5.45.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Command-line tool that tells what kind of data a file contains",
+  "website": "https://www.darwinsys.com/file/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Bzip2",
+      "version": "1.0.8",
+      "options": []
+    },
+    {
+      "name": "Zlib",
+      "version": "1.2.13",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Pass1",
+      "description": "Enable the phase 1 of the cross toolchain building",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Diffutils",
+          "version": "3.10.0",
+          "options": [
+            "Pass1"
+          ]
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueOptions": []
+}

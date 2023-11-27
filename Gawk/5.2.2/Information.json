@@ -1,0 +1,47 @@
+{
+  "port": "Utilities-Main",
+  "name": "Gawk",
+  "version": "5.2.2",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "The Gawk utility interpret to handle simple data-reformatting jobs",
+  "website": "https://www.gnu.org/software/gawk/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Gmp",
+      "version": "6.3.0",
+      "options": []
+    },
+    {
+      "name": "Mpfr",
+      "version": "4.2.0",
+      "options": []
+    },
+    {
+      "name": "Readline",
+      "version": "8.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Pass1",
+      "description": "Enable the phase 1 of the cross toolchain building",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Findutils",
+          "version": "4.9.0",
+          "options": [
+            "Pass1"
+          ]
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueOptions": []
+}

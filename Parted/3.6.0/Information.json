@@ -1,0 +1,61 @@
+{
+  "port": "Utilities-Main",
+  "name": "Parted",
+  "version": "3.6.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "GNU Parted manipulates partition tables",
+  "website": "https://www.gnu.org/software/parted/parted.html",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Lvm2",
+      "description": "Enable lvm2 support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Lvm2",
+          "version": "2.3.22",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Pth",
+      "description": "Enable pth support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Pth",
+          "version": "2.0.7",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Texlive",
+      "description": "Enable texlive support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Texlive",
+          "version": "0.0.0+20230313",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueOptions": []
+}

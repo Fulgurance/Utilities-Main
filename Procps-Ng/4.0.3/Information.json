@@ -1,0 +1,21 @@
+{
+  "port": "Utilities-Main",
+  "name": "Procps-Ng",
+  "version": "4.0.3",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Command line and full screen utilities for browsing procfs",
+  "website": "https://sourceforge.net/projects/procps-ng/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": ["Pass3"]
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}

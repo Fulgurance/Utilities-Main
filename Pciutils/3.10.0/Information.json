@@ -1,0 +1,48 @@
+{
+  "port": "Utilities-Main",
+  "name": "Pciutils",
+  "version": "3.10.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "The PCI Utilities",
+  "website": "https://github.com/pciutils/pciutils/tags",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Curl",
+      "description": "Enable curl support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Curl",
+          "version": "8.2.1",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Wget",
+      "description": "Enable wget support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Wget",
+          "version": "1.21.4",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueOptions": []
+}

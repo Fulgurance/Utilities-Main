@@ -1,0 +1,36 @@
+{
+  "port": "Utilities-Main",
+  "name": "Kmod",
+  "version": "30.0.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Libraries and utilities for loading kernel modules",
+  "website": "https://www.kernel.org/pub/linux/utils/kernel/kmod",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    },
+    {
+      "name": "Flex",
+      "version": "2.6.4",
+      "options": []
+    },
+    {
+      "name": "Pkgconf",
+      "version": "2.0.1",
+      "options": []
+    },
+    {
+      "name": "Zlib",
+      "version": "1.2.13",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}

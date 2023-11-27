@@ -1,0 +1,21 @@
+{
+  "port": "Utilities-Main",
+  "name": "Tcl",
+  "version": "8.6.13",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "The Tool Command Language and Tk toolkit",
+  "website": "http://tcl.sourceforge.net/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Flex",
+      "version": "2.6.4",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}

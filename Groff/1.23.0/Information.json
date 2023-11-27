@@ -1,0 +1,23 @@
+{
+  "port": "Utilities-Main",
+  "name": "Groff",
+  "version": "1.23.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Typesetting system that reads plain text input files that include formatting commands to produce output in PostScript, PDF, HTML, or DVI formats or for display to a terminal",
+  "website": "https://www.gnu.org/software/groff/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": [
+        "Pass3"
+      ]
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}

@@ -1,0 +1,39 @@
+{
+  "port": "Utilities-Main",
+  "name": "Grep",
+  "version": "3.11.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Grep searches utility to find specified pattern",
+  "website": "https://www.gnu.org/software/grep/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": [
+        "Pass3"
+      ]
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Pass1",
+      "description": "Enable the phase 1 of the cross toolchain building",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Gawk",
+          "version": "5.2.2",
+          "options": [
+            "Pass1"
+          ]
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueOptions": []
+}
