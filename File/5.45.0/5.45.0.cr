@@ -63,7 +63,7 @@ class Target < ISM::Software
         super
 
         if option("Pass1")
-            makeSource(["FILE_COMPILE=#{buildDirectoryPath}build/src/file"],buildDirectoryPath)
+            makeSource(["FILE_COMPILE=#{buildDirectoryPath(entry: "mainBuild")}/src/file"],buildDirectoryPath)
         else
             makeSource(path: buildDirectoryPath(entry: "mainBuild"))
 
