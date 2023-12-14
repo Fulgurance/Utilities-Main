@@ -32,9 +32,7 @@
         {
           "name": "Gcc",
           "version": "13.2.0",
-          "options": [
-            "Pass4"
-          ]
+          "options": ["Pass3"]
         }
       ],
       "kernelDependencies": []
