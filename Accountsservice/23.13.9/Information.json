@@ -13,6 +13,11 @@
       "name": "Polkit",
       "version": "123.0.0",
       "options": []
+    },
+    {
+      "name": "Dbus",
+      "version": ">=1.14.8",
+      "options": []
     }
   ],
   "kernelDependencies": [],
