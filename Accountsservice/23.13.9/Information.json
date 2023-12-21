@@ -18,6 +18,11 @@
       "name": "Dbus",
       "version": ">=1.14.8",
       "options": []
+    },
+    {
+      "name": "Llvm",
+      "version": ">=11.0.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
