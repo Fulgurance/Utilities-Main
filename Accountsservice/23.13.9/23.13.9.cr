@@ -4,7 +4,12 @@ class Target < ISM::Software
         @buildDirectory = true
         super
 
-        runMesonCommand(["setup",@buildDirectoryNames["MainBuild"]],mainWorkDirectoryPath)
+        runMesonCommand([   "setup",
+                            @buildDirectoryNames["MainBuild"],
+                            "-Dsystemdsystemunitdir=no",
+                            "-Delogind=#{option("Elogind") ? "true" : "false"}",
+                            "-Dvapi=false"],
+                            path: mainWorkDirectoryPath)
     end
 
     def configure
@@ -15,11 +20,10 @@ class Target < ISM::Software
                             "--prefix=/usr",
                             "--buildtype=release",
                             "-Dadmin_group=wheel",
-                            "-Dsystemd=false",
                             "-Dsystemdsystemunitdir=no",
                             "-Delogind=#{option("Elogind") ? "true" : "false"}",
-                            ".."],
-                            buildDirectoryPath)
+                            "-Dvapi=false"],
+                            path: buildDirectoryPath)
     end
 
     def build
