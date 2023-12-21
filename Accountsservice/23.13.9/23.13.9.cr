@@ -23,7 +23,7 @@ class Target < ISM::Software
                             "-Dsystemdsystemunitdir=no",
                             "-Delogind=#{option("Elogind") ? "true" : "false"}",
                             "-Dvapi=false"],
-                            path: buildDirectoryPath)
+                            path: mainWorkDirectoryPath)
     end
 
     def build
