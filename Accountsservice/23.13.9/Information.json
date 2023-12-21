@@ -38,7 +38,7 @@
     {
       "name": "Elogind",
       "description": "Enable elogind support",
-      "active": false,
+      "active": true,
       "dependencies": [
         {
           "name": "Elogind",
