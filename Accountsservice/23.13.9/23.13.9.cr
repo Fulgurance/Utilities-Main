@@ -6,6 +6,7 @@ class Target < ISM::Software
 
         runMesonCommand([   "setup",
                             @buildDirectoryNames["MainBuild"],
+                            "-Dadmin_group=wheel",
                             "-Dsystemdsystemunitdir=no",
                             "-Delogind=#{option("Elogind") ? "true" : "false"}",
                             "-Dvapi=false"],
