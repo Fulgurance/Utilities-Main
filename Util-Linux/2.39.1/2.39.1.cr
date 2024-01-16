@@ -38,7 +38,7 @@ class Target < ISM::Software
                                 "--without-python",
                                 "--runstatedir=/run"],
                                 path: buildDirectoryPath(entry: "32Bits"),
-                                environment: {  "CC" =>"gcc -m32")
+                                environment: {"CC" =>"gcc -m32"})
         else
             configureSource([   "ADJTIME_PATH=/var/lib/hwclock/adjtime",
                                 "--libdir=/usr/lib32",
@@ -56,7 +56,7 @@ class Target < ISM::Software
                                 "--without-systemd",
                                 "--without-systemdsystemunitdir"],
                                 path: buildDirectoryPath(entry: "32Bits"),
-                                environment: {  "CC" =>"gcc -m32")
+                                environment: {"CC" =>"gcc -m32"})
         end
     end
 
@@ -78,7 +78,7 @@ class Target < ISM::Software
                                 "--without-systemd",
                                 "--without-systemdsystemunitdir"],
                                 path: buildDirectoryPath(entry: "x32Bits"),
-                                environment: {  "CC" =>"gcc -mx32")
+                                environment: {"CC" =>"gcc -mx32"})
         else
 
         end
