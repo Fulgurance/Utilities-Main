@@ -40,11 +40,4 @@ class Target < ISM::Software
         end
     end
 
-    def install
-        super
-
-        runGroupAddCommand(["-r","-g","123","ntp"])
-        runUserAddCommand(["-u123","-g123","-M","ntp"])
-    end
-
 end

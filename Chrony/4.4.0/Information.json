@@ -18,6 +18,16 @@
       "name": "Gnutls",
       "version": ">0.0.0",
       "options": []
+    },
+    {
+      "name": "@SystemUsers-Main:Ntp",
+      "version": ">=0.1.0",
+      "options": []
+    },
+    {
+      "name": "@SystemGroups-Main:Ntp",
+      "version": ">=0.1.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
