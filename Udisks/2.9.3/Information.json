@@ -33,6 +33,11 @@
       "name": "Polkit",
       "version": "0.119.0",
       "options": []
+    },
+    {
+      "name": "@SystemGroups-Main:Plugdev",
+      "version": ">=0.1.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
