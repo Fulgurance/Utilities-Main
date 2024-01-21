@@ -30,9 +30,9 @@
       "active": false,
       "dependencies": [
         {
-          "name": "Gcc",
-          "version": "13.2.0",
-          "options": ["Pass3"]
+          "name": "SystemBase",
+          "version": ">=0.2.0",
+          "options": ["Pass2"]
         }
       ],
       "kernelDependencies": []
