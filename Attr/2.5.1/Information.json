@@ -34,5 +34,6 @@
       "kernelDependencies": ["CONFIG_X86_X32"]
     }
   ],
+  "uniqueDependencies": [],
   "uniqueOptions": []
 }

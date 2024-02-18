@@ -27,5 +27,6 @@
                           "CONFIG_SENSORS_CORETEMP"
   ],
   "options": [],
+  "uniqueDependencies": [],
   "uniqueOptions": []
 }
