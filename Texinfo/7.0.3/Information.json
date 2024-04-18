@@ -13,6 +13,11 @@
       "name": "Tar",
       "version": "1.35.0",
       "options": []
+    },
+    {
+      "name": "Perl",
+      "version": "5.38.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
