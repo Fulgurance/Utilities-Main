@@ -18,7 +18,10 @@ class Target < ISM::Software
     def configure
         super
 
-        runMesonCommand([   "--prefix=/usr",
+        runMesonCommand([   "setup",
+                            "--reconfigure",
+                            "-Dauto_features=disabled",
+                            "--prefix=/usr",
                             "--buildtype=release",
                             "-Dcgroup-controller=elogind",
                             "-Ddbuspolicydir=/etc/dbus-1/system.d",
