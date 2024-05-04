@@ -14,8 +14,8 @@ class Target < ISM::Software
                             "--with-console-auth-dir=/run/console",
                             "--with-system-pid-file=/run/dbus/pid",
                             "--with-system-socket=/run/dbus/system_bus_socket",
-                            "--with-systemduserunitdir=no",
-                            "--with-systemdsystemunitdir=no"],
+                            "--with-systemduserunitdir=",
+                            "--with-systemdsystemunitdir="],
                             buildDirectoryPath)
     end
 
