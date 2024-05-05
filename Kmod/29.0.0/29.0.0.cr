@@ -22,6 +22,9 @@ class Target < ISM::Software
 
         makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
 
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/sbin")
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin")
+
         makeLink("../bin/kmod","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/sbin/depmod",:symbolicLinkByOverwrite)
         makeLink("../bin/kmod","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/sbin/insmod",:symbolicLinkByOverwrite)
         makeLink("../bin/kmod","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/sbin/modinfo",:symbolicLinkByOverwrite)

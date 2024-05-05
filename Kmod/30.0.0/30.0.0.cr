@@ -99,6 +99,9 @@ class Target < ISM::Software
                             "#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/libx32")
         end
 
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/sbin")
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin")
+
         makeLink("../bin/kmod","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/sbin/depmod",:symbolicLinkByOverwrite)
         makeLink("../bin/kmod","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/sbin/insmod",:symbolicLinkByOverwrite)
         makeLink("../bin/kmod","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/sbin/modinfo",:symbolicLinkByOverwrite)
