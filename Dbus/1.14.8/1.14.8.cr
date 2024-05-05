@@ -33,6 +33,8 @@ class Target < ISM::Software
         if option("Openrc")
             prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/Dbus-Init.d","dbus")
         end
+
+        makeLink("/var/lib/dbus/machine-id","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc",:symbolicLink)
     end
 
     def install
@@ -41,7 +43,6 @@ class Target < ISM::Software
         setOwner("#{Ism.settings.rootPath}usr/libexec/dbus-daemon-launch-helper","root","messagebus")
         runChmodCommand(["u+s","/usr/libexec/dbus-daemon-launch-helper"])
         runDbusUuidgenCommand(["--ensure"])
-        makeLink("/var/lib/dbus/machine-id","#{Ism.settings.rootPath}etc",:symbolicLink)
     end
 
 end

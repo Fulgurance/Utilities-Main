@@ -98,17 +98,13 @@ class Target < ISM::Software
             copyDirectory(  "#{buildDirectoryPath(false, entry: "x32Bits")}/x32Bits/usr/libx32",
                             "#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/libx32")
         end
-    end
 
-    def install
-        super
-
-        makeLink("../bin/kmod","#{Ism.settings.rootPath}/usr/sbin/depmod",:symbolicLinkByOverwrite)
-        makeLink("../bin/kmod","#{Ism.settings.rootPath}/usr/sbin/insmod",:symbolicLinkByOverwrite)
-        makeLink("../bin/kmod","#{Ism.settings.rootPath}/usr/sbin/modinfo",:symbolicLinkByOverwrite)
-        makeLink("../bin/kmod","#{Ism.settings.rootPath}/usr/sbin/modprobe",:symbolicLinkByOverwrite)
-        makeLink("../bin/kmod","#{Ism.settings.rootPath}/usr/sbin/rmmod",:symbolicLinkByOverwrite)
-        makeLink("kmod","#{Ism.settings.rootPath}/usr/bin/lsmod",:symbolicLinkByOverwrite)
+        makeLink("../bin/kmod","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/sbin/depmod",:symbolicLinkByOverwrite)
+        makeLink("../bin/kmod","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/sbin/insmod",:symbolicLinkByOverwrite)
+        makeLink("../bin/kmod","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/sbin/modinfo",:symbolicLinkByOverwrite)
+        makeLink("../bin/kmod","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/sbin/modprobe",:symbolicLinkByOverwrite)
+        makeLink("../bin/kmod","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/sbin/rmmod",:symbolicLinkByOverwrite)
+        makeLink("kmod","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/lsmod",:symbolicLinkByOverwrite)
     end
 
 end

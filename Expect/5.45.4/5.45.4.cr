@@ -21,12 +21,8 @@ class Target < ISM::Software
         super
 
         makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-    end
 
-    def install
-        super
-
-        makeLink("expect5.45.4/libexpect5.45.4.so","#{Ism.settings.rootPath}/usr/lib",:symbolicLinkByOverwrite)
+        makeLink("expect5.45.4/libexpect5.45.4.so","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/lib",:symbolicLinkByOverwrite)
     end
 
 end

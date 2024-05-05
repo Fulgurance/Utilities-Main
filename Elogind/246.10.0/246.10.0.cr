@@ -82,13 +82,9 @@ class Target < ISM::Software
         if option("Openrc")
             prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/Elogind-Init.d","elogind")
         end
-    end
 
-    def install
-        super
-
-        makeLink("libelogind.pc","#{Ism.settings.rootPath}usr/lib/pkgconfig/libsystemd.pc",:symbolicLinkByOverwrite)
-        makeLink("elogind","#{Ism.settings.rootPath}usr/include/systemd",:symbolicLinkByOverwrite)
+        makeLink("libelogind.pc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/pkgconfig/libsystemd.pc",:symbolicLinkByOverwrite)
+        makeLink("elogind","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/include/systemd",:symbolicLinkByOverwrite)
     end
 
 end
