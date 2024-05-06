@@ -39,7 +39,7 @@ class Target < ISM::Software
             prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/Dbus-Init.d","dbus")
         end
 
-        makeLink("/var/lib/dbus/machine-id","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc",:symbolicLink)
+        makeLink("/var/lib/dbus/machine-id","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/machine-id",:symbolicLink)
     end
 
     def install
