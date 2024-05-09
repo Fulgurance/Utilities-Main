@@ -23,7 +23,7 @@ class Target < ISM::Software
 
         makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
 
-        deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}tmp/cupsinit")
+        deleteDirectoryRecursively("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}tmp")
 
         clientConfData = <<-CODE
         ServerName /run/cups/cups.sock
