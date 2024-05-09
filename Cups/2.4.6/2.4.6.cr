@@ -43,6 +43,8 @@ class Target < ISM::Software
             prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/Cups-Init.d","cups")
         end
 
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/doc")
+
         makeLink("../cups/doc-2.4.6","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/doc/cups-2.4.6",:symbolicLinkByOverwrite)
     end
 
