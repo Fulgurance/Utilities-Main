@@ -1,0 +1,195 @@
+{
+  "port": "Utilities-Main",
+  "name": "Cups",
+  "version": "2.4.6",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "The current standards-based, open source printing system developed by OpenPrinting for Linux® and other Unix®-like operating systems",
+  "website": "https://openprinting.github.io/cups",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Gnutls",
+      "version": "3.8.1",
+      "options": []
+    },
+    {
+      "name": "@SystemGroups-Main:Lpadmin",
+      "version": "0.1.0",
+      "options": []
+    },
+    {
+      "name": "@SystemUsers-Main:Lp",
+      "version": "0.1.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [ "USB_SUPPORT",
+                          "USB_PRINTER",
+                          "PARPORT",
+                          "PARPORT_PC",
+                          "PRINTER"],
+  "options": [
+    {
+      "name": "Colord",
+      "description": "Enable colord support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Colord",
+          "version": "1.4.6",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Dbus",
+      "description": "Enable dbus support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Dbus",
+          "version": "1.14.8",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Libusb",
+      "description": "Enable libusb support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Libusb",
+          "version": "1.0.26",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Linux-Pam",
+      "description": "Enable linux-pam support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Linux-Pam",
+          "version": "1.5.3",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Xdg-Utils",
+      "description": "Enable xdg-utils support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Xdg-Utils",
+          "version": "1.1.3",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Avahi",
+      "description": "Enable avahi support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Avahi",
+          "version": "0.8.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Libpaper",
+      "description": "Enable libpaper support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Libpaper",
+          "version": "2.1.1",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Krb5",
+      "description": "Enable krb5 support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Krb5",
+          "version": "1.21.2",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Php",
+      "description": "Enable php support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Php",
+          "version": "8.2.9",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Python",
+      "description": "Enable python support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Python",
+          "version": "2.7.18",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Cups-Filter",
+      "description": "Enable cups-filter support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Cups-Filter",
+          "version": "1.28.16",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Gutenprint",
+      "description": "Enable gutenprint support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Gutenprint",
+          "version": "5.3.4",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
