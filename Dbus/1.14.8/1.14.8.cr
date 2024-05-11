@@ -14,8 +14,8 @@ class Target < ISM::Software
                             "--with-console-auth-dir=/run/console",
                             "--with-system-pid-file=/run/dbus/pid",
                             "--with-system-socket=/run/dbus/system_bus_socket",
-                            "--with-systemduserunitdir=",
-                            "--with-systemdsystemunitdir="],
+                            "--with-systemduserunitdir=no",
+                            "--with-systemdsystemunitdir=no"],
                             buildDirectoryPath)
     end
 
@@ -35,6 +35,8 @@ class Target < ISM::Software
         end
 
         makeLink("/var/lib/dbus/machine-id","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/machine-id",:symbolicLink)
+
+        deleteDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}no")
     end
 
     def install
