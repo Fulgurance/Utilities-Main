@@ -2,26 +2,27 @@
   "port": "Utilities-Main",
   "name": "Gawk",
   "version": "5.2.2",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "The Gawk utility interpret to handle simple data-reformatting jobs",
   "website": "https://www.gnu.org/software/gawk/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "BaseLibraries-Main",
       "name": "Gmp",
-      "version": "6.3.0",
+      "version": ">=6.3.0",
       "options": []
     },
     {
+      "port": "BaseLibraries-Main",
       "name": "Mpfr",
-      "version": "4.2.0",
+      "version": ">=4.2.0",
       "options": []
     },
     {
+      "port": "BaseLibraries-Main",
       "name": "Readline",
-      "version": "8.2.0",
+      "version": ">=8.2.0",
       "options": []
     }
   ],
@@ -33,11 +34,10 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Utilities-Main",
           "name": "Findutils",
-          "version": "4.9.0",
-          "options": [
-            "Pass1"
-          ]
+          "version": ">=4.9.0",
+          "options": ["Pass1"]
         }
       ],
       "kernelDependencies": []

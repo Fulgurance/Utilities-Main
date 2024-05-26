@@ -2,14 +2,13 @@
   "port": "Utilities-Main",
   "name": "Sysklogd",
   "version": "1.5.1",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Daemon providing logging of messages received from programs and facilities on the local host as well as from remote hosts",
   "website": "https://www.infodrom.org/projects/sysklogd/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
       "version": ">=0.2.0",
       "options": []
@@ -23,6 +22,7 @@
       "active": true,
       "dependencies": [
         {
+          "port": "InitSystems-Main",
           "name": "Openrc",
           "version": ">=0.46.0",
           "options": []

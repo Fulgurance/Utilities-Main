@@ -2,16 +2,15 @@
   "port": "Utilities-Main",
   "name": "Acpid",
   "version": "2.0.34",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "The new ACPI Daemon",
   "website": "https://sourceforge.net/projects/acpid2/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
-      "version": "0.2.0",
+      "version": ">=0.2.0",
       "options": []
     }
   ],
@@ -23,8 +22,9 @@
       "active": true,
       "dependencies": [
         {
+          "port": "InitSystems-Main",
           "name": "Openrc",
-          "version": "0.52.1",
+          "version": ">=0.52.1",
           "options": []
         }
       ],

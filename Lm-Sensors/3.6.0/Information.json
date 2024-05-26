@@ -2,14 +2,13 @@
   "port": "Utilities-Main",
   "name": "Lm-Sensors",
   "version": "3.6.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Provides user-space support for the hardware monitoring drivers in Linux 2.6.5 and later",
   "website": "https://github.com/lm-sensors/lm-sensors",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "Utilities-Main",
       "name": "Which",
       "version": ">=2.21.0",
       "options": []

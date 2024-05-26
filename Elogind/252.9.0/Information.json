@@ -2,31 +2,33 @@
   "port": "Utilities-Main",
   "name": "Elogind",
   "version": "252.9.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "The systemd project's logind extracted to a standalone package",
   "website": "https://github.com/elogind/elogind",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "Utilities-Main",
       "name": "Dbus",
-      "version": "1.14.8",
+      "version": ">=1.14.8",
       "options": []
     },
     {
+      "port": "FileSystems-Main",
       "name": "Eudev",
-      "version": "3.2.14",
+      "version": ">=3.2.14",
       "options": []
     },
     {
+      "port": "Xml-Main",
       "name": "Docbook-Xml",
-      "version": "4.5.0",
+      "version": ">=4.5.0",
       "options": []
     },
     {
+      "port": "ProgrammingTools-Main",
       "name": "Jinja2",
-      "version": "3.1.2",
+      "version": ">=3.1.2",
       "options": []
     }
   ],
@@ -45,8 +47,9 @@
       "active": true,
       "dependencies": [
         {
+          "port": "InitSystems-Main",
           "name": "Openrc",
-          "version": "0.52.1",
+          "version": ">=0.52.1",
           "options": []
         }
       ],
@@ -58,8 +61,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Security-Main",
           "name": "Linux-Pam",
-          "version": "1.5.3",
+          "version": ">=1.5.3",
           "options": []
         }
       ],
@@ -71,8 +75,9 @@
       "active": true,
       "dependencies": [
         {
+          "port": "Security-Main",
           "name": "Polkit",
-          "version": "123.0.0",
+          "version": ">=123.0.0",
           "options": []
         }
       ],

@@ -2,21 +2,21 @@
   "port": "Utilities-Main",
   "name": "Sed",
   "version": "4.9.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "GNU Sed stream editor and non-interactive command-line text editor",
   "website": "https://www.gnu.org/software/sed/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "Security-Main",
       "name": "Acl",
-      "version": "2.3.1",
+      "version": ">=2.3.1",
       "options": []
     },
     {
+      "port": "Utilities-Main",
       "name": "Attr",
-      "version": "2.5.1",
+      "version": ">=2.5.1",
       "options": []
     }
   ],
@@ -28,11 +28,10 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Utilities-Main",
           "name": "Patch",
-          "version": "2.7.6",
-          "options": [
-            "Pass1"
-          ]
+          "version": ">=2.7.6",
+          "options": ["Pass1"]
         }
       ],
       "kernelDependencies": []

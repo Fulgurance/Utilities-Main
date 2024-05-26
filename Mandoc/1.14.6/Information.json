@@ -2,14 +2,13 @@
   "port": "Utilities-Main",
   "name": "Mandoc",
   "version": "1.14.6",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Suite of tools compiling mdoc",
   "website": "https://mandoc.bsd.lv/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
       "version": ">=0.2.0",
       "options": []

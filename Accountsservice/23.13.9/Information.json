@@ -2,19 +2,19 @@
   "port": "Utilities-Main",
   "name": "Accountsservice",
   "version": "23.13.9",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "D-Bus service for accessing the list of user accounts and information attached to those accounts",
   "website": "https://www.freedesktop.org/wiki/Software/AccountsService/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "Security-Main",
       "name": "Polkit",
-      "version": "123.0.0",
+      "version": ">=123.0.0",
       "options": []
     },
     {
+      "port": "Utilities-Main",
       "name": "Dbus",
       "version": ">=1.14.8",
       "options": []
@@ -28,8 +28,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "BaseLibraries-Main",
           "name": "Gobject-Introspection",
-          "version": "1.76.1",
+          "version": ">=1.76.1",
           "options": []
         }
       ],
@@ -41,8 +42,9 @@
       "active": true,
       "dependencies": [
         {
+          "port": "Utilities-Main",
           "name": "Elogind",
-          "version": "252.9.0",
+          "version": ">=252.9.0",
           "options": []
         }
       ],
@@ -54,8 +56,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "ProgrammingLanguages-Main",
           "name": "Vala",
-          "version": "0.56.11",
+          "version": ">=0.56.11",
           "options": []
         }
       ],

@@ -2,16 +2,15 @@
   "port": "Utilities-Main",
   "name": "Util-Linux",
   "version": "2.39.1",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Random collection of Linux utilities",
   "website": "https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "Utilities-Main",
       "name": "Procps-Ng",
-      "version": "4.0.3",
+      "version": ">=4.0.3",
       "options": []
     }
   ],
@@ -37,11 +36,10 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Utilities-Main",
           "name": "Texinfo",
-          "version": "7.0.3",
-          "options": [
-            "Pass1"
-          ]
+          "version": ">=7.0.3",
+          "options": ["Pass1"]
         }
       ],
       "kernelDependencies": []

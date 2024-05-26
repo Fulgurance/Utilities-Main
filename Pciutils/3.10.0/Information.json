@@ -2,16 +2,15 @@
   "port": "Utilities-Main",
   "name": "Pciutils",
   "version": "3.10.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "The PCI Utilities",
   "website": "https://github.com/pciutils/pciutils/tags",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
-      "version": "0.2.0",
+      "version": ">=0.2.0",
       "options": []
     }
   ],
@@ -23,8 +22,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "NetworkingLibraries-Main",
           "name": "Curl",
-          "version": "8.2.1",
+          "version": ">=8.2.1",
           "options": []
         }
       ],
@@ -36,8 +36,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "NetworkingSoftwares-Main",
           "name": "Wget",
-          "version": "1.21.4",
+          "version": ">=1.21.4",
           "options": []
         }
       ],

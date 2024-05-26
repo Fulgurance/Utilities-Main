@@ -2,19 +2,16 @@
   "port": "Utilities-Main",
   "name": "Attr",
   "version": "2.5.1",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Commands for Manipulating Filesystem Extended Attributes",
   "website": "https://savannah.nongnu.org/projects/attr",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
       "version": ">=0.2.0",
-      "options": [
-        "Pass3"
-      ]
+      "options": ["Pass3"]
     }
   ],
   "kernelDependencies": [],

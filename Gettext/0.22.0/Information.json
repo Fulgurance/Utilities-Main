@@ -2,23 +2,21 @@
   "port": "Utilities-Main",
   "name": "Gettext",
   "version": "0.22.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "The GNU gettext Translation Project framework to produce multi-lingual messages",
   "website": "https://www.gnu.org/software/gettext/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
-      "version": "0.2.0",
-      "options": [
-        "Pass3"
-      ]
+      "version": ">=0.2.0",
+      "options": ["Pass3"]
     },
     {
+      "port": "Security-Main",
       "name": "Acl",
-      "version": "2.3.1",
+      "version": ">=2.3.1",
       "options": []
     }
   ],
@@ -30,6 +28,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "SystemBase-Main",
           "name": "SystemBase",
           "version": ">=0.2.0",
           "options": ["Pass2"]

@@ -2,21 +2,21 @@
   "port": "Utilities-Main",
   "name": "File",
   "version": "5.45.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Command-line tool that tells what kind of data a file contains",
   "website": "https://www.darwinsys.com/file/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "Archivers-Main",
       "name": "Bzip2",
-      "version": "1.0.8",
+      "version": ">=1.0.8",
       "options": []
     },
     {
+      "port": "BaseLibraries-Main",
       "name": "Zlib",
-      "version": "1.2.13",
+      "version": ">=1.2.13",
       "options": []
     }
   ],
@@ -42,11 +42,10 @@
       "active": false,
       "dependencies": [
         {
+          "port": "ProgrammingTools-Main",
           "name": "Diffutils",
-          "version": "3.10.0",
-          "options": [
-            "Pass1"
-          ]
+          "version": ">=3.10.0",
+          "options": ["Pass1"]
         }
       ],
       "kernelDependencies": []

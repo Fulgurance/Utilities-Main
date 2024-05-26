@@ -2,16 +2,15 @@
   "port": "Utilities-Main",
   "name": "Procps-Ng",
   "version": "4.0.3",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Command line and full screen utilities for browsing procfs",
   "website": "https://sourceforge.net/projects/procps-ng/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "BaseLibraries-Main",
       "name": "Ncurses",
-      "version": "6.4.0",
+      "version": ">=6.4.0",
       "options": []
     }
   ],

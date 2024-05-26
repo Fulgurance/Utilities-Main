@@ -2,26 +2,27 @@
   "port": "Utilities-Main",
   "name": "Cups",
   "version": "2.4.6",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "The current standards-based, open source printing system developed by OpenPrinting for Linux® and other Unix®-like operating systems",
   "website": "https://openprinting.github.io/cups",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SecurityLibraries-Main",
       "name": "Gnutls",
-      "version": "3.8.1",
+      "version": ">=3.8.1",
       "options": []
     },
     {
-      "name": "@SystemGroups-Main:Lpadmin",
-      "version": "0.1.0",
+      "port": "SystemGroups-Main",
+      "name": "Lpadmin",
+      "version": ">=0.1.0",
       "options": []
     },
     {
-      "name": "@SystemUsers-Main:Lp",
-      "version": "0.1.0",
+      "port": "SystemUsers-Main",
+      "name": "Lp",
+      "version": ">=0.1.0",
       "options": []
     }
   ],
@@ -37,8 +38,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Utilities-Main",
           "name": "Colord",
-          "version": "1.4.6",
+          "version": ">=1.4.6",
           "options": []
         }
       ],
@@ -50,8 +52,9 @@
       "active": true,
       "dependencies": [
         {
+          "port": "Utilities-Main",
           "name": "Dbus",
-          "version": "1.14.8",
+          "version": ">=1.14.8",
           "options": []
         }
       ],
@@ -63,8 +66,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "BaseLibraries-Main",
           "name": "Libusb",
-          "version": "1.0.26",
+          "version": ">=1.0.26",
           "options": []
         }
       ],
@@ -76,8 +80,9 @@
       "active": true,
       "dependencies": [
         {
+          "port": "Security-Main",
           "name": "Linux-Pam",
-          "version": "1.5.3",
+          "version": ">=1.5.3",
           "options": []
         }
       ],
@@ -89,8 +94,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Utilities-Main",
           "name": "Xdg-Utils",
-          "version": "1.1.3",
+          "version": ">=1.1.3",
           "options": []
         }
       ],
@@ -102,8 +108,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "NetworkingTools-Extra",
           "name": "Avahi",
-          "version": "0.8.0",
+          "version": ">=0.8.0",
           "options": []
         }
       ],
@@ -115,21 +122,23 @@
       "active": false,
       "dependencies": [
         {
+          "port": "BaseLibraries-Main",
           "name": "Libpaper",
-          "version": "2.1.1",
+          "version": ">=2.1.1",
           "options": []
         }
       ],
       "kernelDependencies": []
     },
     {
-      "name": "Krb5",
+      "name": "Mit-Krb5",
       "description": "Enable krb5 support",
       "active": false,
       "dependencies": [
         {
-          "name": "Krb5",
-          "version": "1.21.2",
+          "port": "NetworkingTools-Main",
+          "name": "Mit-Krb5",
+          "version": ">=1.21.2",
           "options": []
         }
       ],
@@ -141,8 +150,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "ProgrammingLanguages-Main",
           "name": "Php",
-          "version": "8.2.9",
+          "version": ">=8.2.9",
           "options": []
         }
       ],
@@ -154,8 +164,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "ProgrammingLanguages-Main",
           "name": "Python",
-          "version": "2.7.18",
+          "version": ">=2.7.18",
           "options": []
         }
       ],
@@ -167,8 +178,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Utilities-Main",
           "name": "Cups-Filter",
-          "version": "1.28.16",
+          "version": ">=1.28.16",
           "options": []
         }
       ],
@@ -180,8 +192,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Utilities-Main",
           "name": "Gutenprint",
-          "version": "5.3.4",
+          "version": ">=5.3.4",
           "options": []
         }
       ],
