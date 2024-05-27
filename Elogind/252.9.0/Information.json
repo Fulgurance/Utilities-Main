@@ -26,7 +26,7 @@
       "options": []
     },
     {
-      "port": "ProgrammingTools-Main",
+      "port": "BaseLibraries-Main",
       "name": "Jinja2",
       "version": ">=3.1.2",
       "options": []
