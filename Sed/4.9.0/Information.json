@@ -28,7 +28,7 @@
       "active": false,
       "dependencies": [
         {
-          "port": "Utilities-Main",
+          "port": "ProgrammingTools-Main",
           "name": "Patch",
           "version": ">=2.7.6",
           "options": ["Pass1"]
