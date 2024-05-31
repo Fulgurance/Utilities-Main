@@ -135,7 +135,7 @@ class Target < ISM::Software
     def build
         super
 
-        makeSource(path: buildDirectoryPath(entry: "mainBuild"))
+        makeSource(path: buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits")
             makeSource(path: buildDirectoryPath(entry: "32Bits"))
@@ -151,7 +151,7 @@ class Target < ISM::Software
 
         makeSource( ["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}",
                     "install"],
-                    path: buildDirectoryPath(entry: "mainBuild"))
+                    path: buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits")
             makeDirectory("#{buildDirectoryPath(false, entry: "32Bits")}/32Bits")

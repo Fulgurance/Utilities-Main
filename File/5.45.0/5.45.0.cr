@@ -39,7 +39,7 @@ class Target < ISM::Software
                                 buildDirectoryPath)
         else
             configureSource([   "--prefix=/usr"],
-                                path: buildDirectoryPath(entry: "mainBuild"))
+                                path: buildDirectoryPath(entry: "MainBuild"))
 
             if option("32Bits")
                 configureSource([   "--host=i686-#{Ism.settings.targetName}-linux-gnu",
@@ -63,9 +63,9 @@ class Target < ISM::Software
         super
 
         if option("Pass1")
-            makeSource(["FILE_COMPILE=#{buildDirectoryPath(entry: "mainBuild")}/src/file"],buildDirectoryPath)
+            makeSource(["FILE_COMPILE=#{buildDirectoryPath(entry: "MainBuild")}/src/file"],buildDirectoryPath)
         else
-            makeSource(path: buildDirectoryPath(entry: "mainBuild"))
+            makeSource(path: buildDirectoryPath(entry: "MainBuild"))
 
             if option("32Bits")
                 makeSource(path: buildDirectoryPath(entry: "32Bits"))
@@ -82,7 +82,7 @@ class Target < ISM::Software
 
         makeSource( ["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}",
                     "install"],
-                    path: buildDirectoryPath(entry: "mainBuild"))
+                    path: buildDirectoryPath(entry: "MainBuild"))
 
         if option("Pass1")
             deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/lib/libmagic.la")
