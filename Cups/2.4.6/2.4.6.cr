@@ -25,6 +25,8 @@ class Target < ISM::Software
 
         deleteDirectoryRecursively("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}tmp")
 
+        deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/cups.desktop")
+
         clientConfData = <<-CODE
         ServerName /run/cups/cups.sock
         CODE
