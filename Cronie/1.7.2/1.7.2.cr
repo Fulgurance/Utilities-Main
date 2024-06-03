@@ -6,6 +6,8 @@ class Target < ISM::Software
         runScript("autogen.sh", path: buildDirectoryPath)
 
         configureSource([   "--prefix=/usr",
+                            "--with-daemon_username=cronie",
+                            "--with-daemon_groupname=cronie",
                             "#{option("Linux-Pam") ? "--with-pam" : "--without-pam"}"],
                             path: buildDirectoryPath)
     end
