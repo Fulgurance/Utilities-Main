@@ -43,7 +43,7 @@ class Target < ISM::Software
         super
 
         setOwner("#{Ism.settings.rootPath}usr/libexec/dbus-daemon-launch-helper","root","messagebus")
-        runChmodCommand(["u+s","#{Ism.settings.rootPath}usr/libexec/dbus-daemon-launch-helper"])
+        runChmodCommand(["u+s","/usr/libexec/dbus-daemon-launch-helper"])
         runDbusUuidgenCommand(["--ensure"])
     end
 
