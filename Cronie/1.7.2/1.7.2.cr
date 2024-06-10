@@ -3,7 +3,7 @@ class Target < ISM::Software
     def configure
         super
 
-        runScript("autogen.sh", path: buildDirectoryPath)
+        runFile("autogen.sh", path: buildDirectoryPath)
 
         configureSource([   "--prefix=/usr",
                             "--with-daemon_username=cronie",
