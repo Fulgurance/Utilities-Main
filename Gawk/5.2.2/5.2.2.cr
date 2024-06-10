@@ -4,7 +4,7 @@ class Target < ISM::Software
         super
 
         if !option("Pass1")
-            fileReplaceText("#{buildDirectoryPath(false)}/Makefile.in","extras","")
+            fileReplaceText("#{buildDirectoryPath}/Makefile.in","extras","")
         end
     end
 
@@ -35,8 +35,8 @@ class Target < ISM::Software
 
         makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
 
-        makeLink("flex","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/lex",:symbolicLink)
-        makeLink("flex.1","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/share/man/man1/lex.1",:symbolicLink)
+        makeLink("flex","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lex",:symbolicLink)
+        makeLink("flex.1","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/share/man/man1/lex.1",:symbolicLink)
     end
 
 end

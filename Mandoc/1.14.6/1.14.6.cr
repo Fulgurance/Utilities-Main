@@ -15,11 +15,11 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin")
-        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/share/man/man1")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/share/man/man1")
 
-        copyFile("#{buildDirectoryPath(false)}/mandoc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/mandoc")
-        copyFile("#{buildDirectoryPath(false)}/mandoc.1","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/share/man/man1/mandoc.1")
+        copyFile("#{buildDirectoryPath}/mandoc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/mandoc")
+        copyFile("#{buildDirectoryPath}/mandoc.1","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/share/man/man1/mandoc.1")
     end
 
     def install

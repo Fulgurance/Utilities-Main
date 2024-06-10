@@ -20,7 +20,7 @@ class Target < ISM::Software
 
         makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
 
-        makeLink("flex","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/lex",:symbolicLink)
+        makeLink("flex","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lex",:symbolicLink)
     end
 
 end

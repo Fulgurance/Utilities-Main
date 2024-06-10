@@ -23,14 +23,14 @@ class Target < ISM::Software
 
         makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
 
-        deleteDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}tmp")
+        deleteDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}tmp")
 
-        deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/cups.desktop")
+        deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/cups.desktop")
 
         clientConfData = <<-CODE
         ServerName /run/cups/cups.sock
         CODE
-        fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/cups/client.conf",clientConfData)
+        fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/cups/client.conf",clientConfData)
 
         if option("Linux-Pam")
             cupsData = <<-CODE
@@ -38,16 +38,16 @@ class Target < ISM::Software
             account include system-account
             session include system-session
             CODE
-            fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/pam.d/cups",cupsData)
+            fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/pam.d/cups",cupsData)
         end
 
         if option("Openrc")
-            prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/Cups-Init.d","cups")
+            prepareOpenrcServiceInstallation("#{workDirectoryPath}/Cups-Init.d","cups")
         end
 
-        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/doc")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc")
 
-        makeLink("../cups/doc-2.4.6","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/doc/cups-2.4.6",:symbolicLinkByOverwrite)
+        makeLink("../cups/doc-2.4.6","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/cups-2.4.6",:symbolicLinkByOverwrite)
     end
 
 end

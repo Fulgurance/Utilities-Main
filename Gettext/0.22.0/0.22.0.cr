@@ -23,13 +23,13 @@ class Target < ISM::Software
     def prepareInstallation
         super
         if option("Pass1")
-            makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/")
-            copyDirectory("#{buildDirectoryPath(false)}gettext-tools/src/msgfmt","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/msgfmt")
-            copyDirectory("#{buildDirectoryPath(false)}gettext-tools/src/msgmerge","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/msgmerge")
-            copyDirectory("#{buildDirectoryPath(false)}gettext-tools/src/xgettext","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/xgettext")
+            makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin/")
+            copyDirectory("#{buildDirectoryPath}gettext-tools/src/msgfmt","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin/msgfmt")
+            copyDirectory("#{buildDirectoryPath}gettext-tools/src/msgmerge","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin/msgmerge")
+            copyDirectory("#{buildDirectoryPath}gettext-tools/src/xgettext","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin/xgettext")
         else
             makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-            setPermissions("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/preloadable_libintl.so",0o755)
+            setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/preloadable_libintl.so",0o755)
         end
     end
 

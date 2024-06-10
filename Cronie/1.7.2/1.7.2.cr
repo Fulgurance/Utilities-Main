@@ -24,7 +24,7 @@ class Target < ISM::Software
         makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
 
         if option("Linux-Pam")
-            makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/pam.d")
+            makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/pam.d")
 
             croniePamData = <<-CODE
             auth       include    system-auth
@@ -33,7 +33,7 @@ class Target < ISM::Software
             session    required   pam_loginuid.so
             session    include    system-auth
             CODE
-            fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/pam.d/cronie",croniePamData)
+            fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/pam.d/cronie",croniePamData)
         end
 
         crontabData = <<-CODE
@@ -50,10 +50,10 @@ class Target < ISM::Software
         # |  |  |  |  |
         # *  *  *  *  * user-name  command to be executed
         CODE
-        fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/crontab",crontabData)
+        fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/crontab",crontabData)
 
         if option("Openrc")
-            prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/Cronie-Init.d","cronie")
+            prepareOpenrcServiceInstallation("#{workDirectoryPath}/Cronie-Init.d","cronie")
         end
     end
 

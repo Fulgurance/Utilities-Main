@@ -39,11 +39,11 @@ class Target < ISM::Software
             moveFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/man/man1/chroot.1","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/man/man8/chroot.8")
             fileReplaceText("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/man/man8/chroot.8","\"1\"","\"8\"")
         else
-            makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/sbin")
-            moveFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/chroot","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/sbin/chroot")
-            makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/man/man8/")
-            moveFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/man/man1/chroot.1","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/man/man8/chroot.8")
-            fileReplaceText("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/man/man8/chroot.8","\"1\"","\"8\"")
+            makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/sbin")
+            moveFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin/chroot","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/sbin/chroot")
+            makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/man/man8/")
+            moveFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/man/man1/chroot.1","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/man/man8/chroot.8")
+            fileReplaceText("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/man/man8/chroot.8","\"1\"","\"8\"")
         end
     end
 

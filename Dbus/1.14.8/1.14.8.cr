@@ -31,12 +31,12 @@ class Target < ISM::Software
         makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
 
         if option("Openrc")
-            prepareOpenrcServiceInstallation("#{workDirectoryPath(false)}/Dbus-Init.d","dbus")
+            prepareOpenrcServiceInstallation("#{workDirectoryPath}/Dbus-Init.d","dbus")
         end
 
-        makeLink("/var/lib/dbus/machine-id","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/machine-id",:symbolicLink)
+        makeLink("/var/lib/dbus/machine-id","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/machine-id",:symbolicLink)
 
-        deleteDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}no")
+        deleteDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}no")
     end
 
     def install
