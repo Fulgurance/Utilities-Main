@@ -1,0 +1,23 @@
+{
+  "port": "Utilities-Main",
+  "name": "Lsb-Release",
+  "version": "3.3.0",
+  "architectures": ["x86_64"],
+  "description": "LSB version query program with support of /etc/os-release",
+  "website": "https://github.com/thkukuk/lsb-release_os-release",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
