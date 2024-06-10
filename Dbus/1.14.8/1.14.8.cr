@@ -36,7 +36,7 @@ class Target < ISM::Software
 
         makeLink("/var/lib/dbus/machine-id","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/machine-id",:symbolicLink)
 
-        deleteDirectoryRecursively("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}no")
+        deleteDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}no")
     end
 
     def install

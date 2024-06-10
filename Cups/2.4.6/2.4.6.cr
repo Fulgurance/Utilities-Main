@@ -23,7 +23,7 @@ class Target < ISM::Software
 
         makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
 
-        deleteDirectoryRecursively("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}tmp")
+        deleteDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}tmp")
 
         deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/cups.desktop")
 
