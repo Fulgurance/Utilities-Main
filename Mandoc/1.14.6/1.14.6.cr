@@ -25,8 +25,8 @@ class Target < ISM::Software
     def install
         super
 
-        setPermissions("#{Ism.settings.rootPath}/usr/bin/mandoc",0o755)
-        setPermissions("#{Ism.settings.rootPath}/usr/share/man/man1/mandoc.1",0o644)
+        runChmodCommand(["0755","/usr/bin/mandoc"])
+        runChmodCommand(["0644","/usr/share/man/man1/mandoc.1"])
     end
 
 end

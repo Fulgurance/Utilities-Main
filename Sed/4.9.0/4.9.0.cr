@@ -27,11 +27,19 @@ class Target < ISM::Software
         super
 
         makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+
         if !option("Pass1")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/sed-4.8")
             copyFile("#{buildDirectoryPath}/doc/sed.html","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/sed-4.8/sed.html")
-            setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/sed-4.8",755)
-            setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/sed-4.8/sed.html",644)
+        end
+    end
+
+    def install
+        super
+
+        if !option("Pass1")
+            runChmodCommand(["0755","/usr/share/doc/sed-4.8"])
+            runChmodCommand(["0644","/usr/share/doc/sed-4.8/sed.html"])
         end
     end
 

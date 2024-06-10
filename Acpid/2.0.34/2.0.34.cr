@@ -51,7 +51,7 @@ class Target < ISM::Software
     def install
         super
 
-        setPermissions("#{Ism.settings.rootPath}etc/acpi/events",0o755)
+        runChmodCommand(["0755","/etc/acpi/events"])
     end
 
 end

@@ -29,13 +29,17 @@ class Target < ISM::Software
 
         makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],"#{buildDirectoryPath}/unix")
 
-        setPermissions("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libtcl8.6.so",0o644)
-
         makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install-private-headers"],"#{buildDirectoryPath}unix")
 
         moveFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/man/man3/Thread.3","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/man/man3/Tcl_Thread.3")
 
         makeLink("tclsh8.6","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/tclsh",:symbolicLinkByOverwrite)
+    end
+
+    def install
+        super
+
+        runChmodCommand(["0644","/usr/lib/libtcl8.6.so"])
     end
 
 end
