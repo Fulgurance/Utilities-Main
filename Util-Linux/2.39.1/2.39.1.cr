@@ -25,7 +25,7 @@ class Target < ISM::Software
         if option("Pass1")
             configureSource([   "ADJTIME_PATH=/var/lib/hwclock/adjtime",
                                 "--libdir=/usr/lib32",
-                                "--host=i686-#{Ism.settings.targetName}-linux-gnu",
+                                "--host=i686-#{Ism.settings.systemTargetName}-linux-gnu",
                                 "--docdir=/usr/share/doc/util-linux-2.39.1",
                                 "--disable-chfn-chsh",
                                 "--disable-login",
@@ -42,7 +42,7 @@ class Target < ISM::Software
         else
             configureSource([   "ADJTIME_PATH=/var/lib/hwclock/adjtime",
                                 "--libdir=/usr/lib32",
-                                "--host=i686-#{Ism.settings.targetName}-linux-gnu",
+                                "--host=i686-#{Ism.settings.systemTargetName}-linux-gnu",
                                 "--docdir=/usr/share/doc/util-linux-2.39.1",
                                 "--disable-chfn-chsh",
                                 "--disable-login",
@@ -64,7 +64,7 @@ class Target < ISM::Software
         if option("Pass1")
             configureSource([   "ADJTIME_PATH=/var/lib/hwclock/adjtime",
                                 "--libdir=/usr/libx32",
-                                "--host=#{Ism.settings.target}x32",
+                                "--host=#{Ism.settings.systemTarget}x32",
                                 "--docdir=/usr/share/doc/util-linux-2.39.1",
                                 "--disable-chfn-chsh",
                                 "--disable-login",
