@@ -3,13 +3,13 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource([   "--libdir=/usr/lib",
-                            "--disable-systemd",
-                            "--with-rcdir=/tmp/cupsinit",
-                            "--with-rundir=/run/cups",
-                            "--with-system-groups=lpadmin",
-                            "--with-docdir=/usr/share/cups/doc-2.4.6"],
-                            buildDirectoryPath)
+        configureSource(arguments:  "--libdir=/usr/lib              \
+                                    --disable-systemd               \
+                                    --with-rcdir=/tmp/cupsinit      \
+                                    --with-rundir=/run/cups         \
+                                    --with-system-groups=lpadmin    \
+                                    --with-docdir=/usr/share/cups/doc-2.4.6",
+                        path:       buildDirectoryPath)
     end
 
     def build
@@ -21,7 +21,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
 
         deleteDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}tmp")
 
@@ -42,12 +43,15 @@ class Target < ISM::Software
         end
 
         if option("Openrc")
-            prepareOpenrcServiceInstallation("#{workDirectoryPath}/Cups-Init.d","cups")
+            prepareOpenrcServiceInstallation(   path:   "#{workDirectoryPath}/Cups-Init.d",
+                                                name:   "cups")
         end
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc")
 
-        makeLink("../cups/doc-2.4.6","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/cups-2.4.6",:symbolicLinkByOverwrite)
+        makeLink(   target: "../cups/doc-2.4.6",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/cups-2.4.6",
+                    type:   :symbolicLinkByOverwrite)
     end
 
 end

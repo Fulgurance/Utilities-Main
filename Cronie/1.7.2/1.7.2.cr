@@ -3,13 +3,14 @@ class Target < ISM::Software
     def configure
         super
 
-        runFile("autogen.sh", path: buildDirectoryPath)
+        runFile(file: "autogen.sh",
+                path: buildDirectoryPath)
 
-        configureSource([   "--prefix=/usr",
-                            "--with-daemon_username=cronie",
-                            "--with-daemon_groupname=cronie",
-                            "#{option("Linux-Pam") ? "--with-pam" : "--without-pam"}"],
-                            path: buildDirectoryPath)
+        configureSource(arguments:  "--prefix=/usr                  \
+                                    --with-daemon_username=cronie   \
+                                    --with-daemon_groupname=cronie  \
+                                    #{option("Linux-Pam") ? "--with-pam" : "--without-pam"}",
+                        path:       buildDirectoryPath)
     end
 
     def build
@@ -21,7 +22,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
 
         if option("Linux-Pam")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/pam.d")
@@ -53,7 +55,8 @@ class Target < ISM::Software
         fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/crontab",crontabData)
 
         if option("Openrc")
-            prepareOpenrcServiceInstallation("#{workDirectoryPath}/Cronie-Init.d","cronie")
+            prepareOpenrcServiceInstallation(   path:   "#{workDirectoryPath}/Cronie-Init.d",
+                                                name:   "cronie")
         end
     end
 

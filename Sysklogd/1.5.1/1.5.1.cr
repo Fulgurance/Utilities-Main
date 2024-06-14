@@ -4,7 +4,10 @@ class Target < ISM::Software
         super
 
         fileDeleteLine("#{buildDirectoryPath}ksym_mod.c",192)
-        fileReplaceText("#{buildDirectoryPath}syslogd.c","union wait","int")
+
+        fileReplaceText(path:       "#{buildDirectoryPath}syslogd.c",
+                        text:       "union wait",
+                        newText:    "int")
     end
     
     def build
@@ -16,7 +19,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["BINDIR=/sbin","DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "BINDIR=/sbin DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/conf.d")
 
@@ -38,7 +42,8 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/conf.d/sysklogd",sysklogdData)
 
-            prepareOpenrcServiceInstallation("#{workDirectoryPath}/Sysklogd-Init.d","sysklogd")
+            prepareOpenrcServiceInstallation(   path:   "#{workDirectoryPath}/Sysklogd-Init.d",
+                                                name:   "sysklogd")
         end
     end
 

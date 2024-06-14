@@ -3,10 +3,10 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource([   "--prefix=/usr",
-                            "--docdir=/usr/share/doc/flex-2.6.4",
-                            "--disable-static"],
-                            buildDirectoryPath)
+        configureSource(arguments:  "--prefix=/usr                      \
+                                    --docdir=/usr/share/doc/flex-2.6.4  \
+                                    --disable-static",
+                        path:       buildDirectoryPath)
     end
 
     def build
@@ -18,9 +18,12 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
 
-        makeLink("flex","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lex",:symbolicLink)
+        makeLink(   target: "flex",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lex",
+                    type:   :symbolicLink)
     end
 
 end

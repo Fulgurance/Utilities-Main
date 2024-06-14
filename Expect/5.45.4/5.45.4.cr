@@ -3,12 +3,12 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource([   "--prefix=/usr",
-                            "--with-tcl=/usr/lib",
-                            "--enable-shared",
-                            "--mandir=/usr/share/man",
-                            "--with-tclinclude=/usr/include"],
-                            buildDirectoryPath)
+        configureSource(arguments:  "--prefix=/usr          \
+                                    --with-tcl=/usr/lib     \
+                                    --enable-shared         \
+                                    --mandir=/usr/share/man \
+                                    --with-tclinclude=/usr/include",
+                        path:       buildDirectoryPath)
     end
 
     def build
@@ -20,9 +20,12 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
 
-        makeLink("expect5.45.4/libexpect5.45.4.so","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/lib",:symbolicLinkByOverwrite)
+        makeLink(   target: "expect5.45.4/libexpect5.45.4.so",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/lib",
+                    type:   :symbolicLinkByOverwrite)
     end
 
 end

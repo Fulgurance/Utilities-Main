@@ -8,16 +8,16 @@ class Target < ISM::Software
     def configure
         super
 
-        runMesonCommand([   "setup",
-                            "--reconfigure",
-                            @buildDirectoryNames["MainBuild"],
-                            "--prefix=/usr",
-                            "--buildtype=release",
-                            "-Dman=auto",
-                            "-Ddocdir=/usr/share/doc/elogind-252.9",
-                            "-Dcgroup-controller=elogind",
-                            "-Ddbuspolicydir=/etc/dbus-1/system.d"],
-                            mainWorkDirectoryPath)
+        runMesonCommand(arguments:  "setup                                  \
+                                    --reconfigure                           \
+                                    #{@buildDirectoryNames["MainBuild"]}    \
+                                    --prefix=/usr                           \
+                                    --buildtype=release                     \
+                                    -Dman=auto                              \
+                                    -Ddocdir=/usr/share/doc/elogind-252.9   \
+                                    -Dcgroup-controller=elogind             \
+                                    -Ddbuspolicydir=/etc/dbus-1/system.d",
+                        path:       mainWorkDirectoryPath)
     end
 
     def build
@@ -29,15 +29,21 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        runNinjaCommand(["install"],buildDirectoryPath,{"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
+        runNinjaCommand(arguments:      "install",
+                        path:           buildDirectoryPath,
+                        environment:    {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
 
-        fileReplaceTextAtLineNumber("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/elogind/logind.conf","#KillUserProcesses=yes","KillUserProcesses=no",15)
+        fileReplaceTextAtLineNumber(path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/elogind/logind.conf",
+                                    text:       "#KillUserProcesses=yes",
+                                    newText:    "KillUserProcesses=no",
+                                    lineNumber: 15)
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/pam.d")
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/conf.d")
 
         if File.exists?("#{Ism.settings.rootPath}etc/pam.d/system-session")
-            copyFile("#{Ism.settings.rootPath}etc/pam.d/system-session","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/pam.d/system-session")
+            copyFile(   "#{Ism.settings.rootPath}etc/pam.d/system-session",
+                        "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/pam.d/system-session")
         else
             generateEmptyFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/pam.d/system-session")
         end
@@ -71,11 +77,17 @@ class Target < ISM::Software
         fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/conf.d/elogind",elogindConfData)
 
         if option("Openrc")
-            prepareOpenrcServiceInstallation("#{workDirectoryPath}/Elogind-Init.d","elogind")
+            prepareOpenrcServiceInstallation(   path:   "#{workDirectoryPath}/Elogind-Init.d",
+                                                name:   "elogind")
         end
 
-        makeLink("libelogind.pc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/pkgconfig/libsystemd.pc",:symbolicLinkByOverwrite)
-        makeLink("elogind","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/include/systemd",:symbolicLinkByOverwrite)
+        makeLink(   target: "libelogind.pc",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/pkgconfig/libsystemd.pc",
+                    type:   :symbolicLinkByOverwrite)
+
+        makeLink(   target: "elogind",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/include/systemd",
+                    type:   :symbolicLinkByOverwrite)
     end
 
 end

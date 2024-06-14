@@ -4,12 +4,12 @@ class Target < ISM::Software
         super
 
         if option("Pass1")
-            configureSource([   "--prefix=/usr",
-                                "--host=#{Ism.settings.chrootTarget}"],
-                                buildDirectoryPath)
+            configureSource(arguments:  "--prefix=/usr  \
+                                        --host=#{Ism.settings.chrootTarget}",
+                            path:       buildDirectoryPath)
         else
-            configureSource([   "--prefix=/usr"],
-                                buildDirectoryPath)
+            configureSource(arguments:  "--prefix=/usr",
+                            path:       buildDirectoryPath)
         end
     end
     
@@ -19,18 +19,22 @@ class Target < ISM::Software
         makeSource(path: buildDirectoryPath)
 
         if !option("Pass1")
-            makeSource(["html"],buildDirectoryPath)
+            makeSource( arguments:  "html",
+                        path:       buildDirectoryPath)
         end
     end
     
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
 
         if !option("Pass1")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/sed-4.8")
-            copyFile("#{buildDirectoryPath}/doc/sed.html","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/sed-4.8/sed.html")
+
+            copyFile(   "#{buildDirectoryPath}/doc/sed.html",
+                        "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/sed-4.8/sed.html")
         end
     end
 
@@ -38,8 +42,8 @@ class Target < ISM::Software
         super
 
         if !option("Pass1")
-            runChmodCommand(["0755","/usr/share/doc/sed-4.8"])
-            runChmodCommand(["0644","/usr/share/doc/sed-4.8/sed.html"])
+            runChmodCommand("0755 /usr/share/doc/sed-4.8")
+            runChmodCommand("0644 /usr/share/doc/sed-4.8/sed.html")
         end
     end
 

@@ -3,9 +3,9 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource([   "--prefix=/usr",
-                            "--docdir=/usr/share/doc/acpid-2.0.34"],
-                            buildDirectoryPath)
+        configureSource(arguments:  "--prefix=/usr  \
+                                    --docdir=/usr/share/doc/acpid-2.0.34",
+                        path:       buildDirectoryPath)
     end
 
     def build
@@ -17,7 +17,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/acpi/events")
 
@@ -33,7 +34,6 @@ class Target < ISM::Software
         /usr/sbin/pm-suspend
         CODE
         fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/acpi/lid.sh",lidData)
-        runChmodCommand(["+x","lid.sh"],"#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/acpi")
 
         if option("Openrc")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/conf.d")
@@ -44,14 +44,18 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/conf.d/acpid",acpidData)
 
-            prepareOpenrcServiceInstallation("#{workDirectoryPath}/Acpid-Init.d","acpid")
+            prepareOpenrcServiceInstallation(   path:   "#{workDirectoryPath}/Acpid-Init.d",
+                                                name:   "acpid")
         end
     end
 
     def install
         super
 
-        runChmodCommand(["0755","/etc/acpi/events"])
+        runChmodCommand(arguments:  "+x lid.sh",
+                        path:       "/etc/acpi")
+
+        runChmodCommand("0755 /etc/acpi/events")
     end
 
 end

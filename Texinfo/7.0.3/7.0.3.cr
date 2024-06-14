@@ -3,9 +3,9 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource([   "--prefix=/usr"],
-                            path: buildDirectoryPath,
-                            environment: {"FORCE_UNSAFE_CONFIGURE" => "1"})
+        configureSource(arguments:      "--prefix=/usr",
+                        path:           buildDirectoryPath,
+                        environment:    {"FORCE_UNSAFE_CONFIGURE" => "1"})
     end
     
     def build
@@ -17,7 +17,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
     end
 
 end

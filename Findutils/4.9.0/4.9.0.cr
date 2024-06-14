@@ -4,15 +4,15 @@ class Target < ISM::Software
         super
 
         if option("Pass1")
-            configureSource([   "--prefix=/usr",
-                                "--localstatedir=/var/lib/locate",
-                                "--host=#{Ism.settings.chrootTarget}",
-                                "--build=$(build-aux/config.guess)"],
-                                buildDirectoryPath)
+            configureSource(arguments:  "--prefix=/usr                      \
+                                        --localstatedir=/var/lib/locate     \
+                                        --host=#{Ism.settings.chrootTarget} \
+                                        --build=$(build-aux/config.guess)",
+                            path:       buildDirectoryPath)
         else
-            configureSource([   "--prefix=/usr",
-                                "--localstatedir=/var/lib/locate"],
-                                buildDirectoryPath)
+            configureSource(arguments:  "--prefix=/usr  \
+                                        --localstatedir=/var/lib/locate",
+                            path:       buildDirectoryPath)
         end
     end
     
@@ -25,7 +25,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
     end
 
 end

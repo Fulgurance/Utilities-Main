@@ -3,8 +3,9 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource([   "--prefix=/usr",
-                            "--enable-scfilter"],buildDirectoryPath)
+        configureSource(arguments:  "--prefix=/usr  \
+                                    --enable-scfilter",
+                        path:       buildDirectoryPath)
     end
 
     def build
@@ -16,7 +17,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/conf.d")
 
@@ -36,7 +38,8 @@ class Target < ISM::Software
         fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/chrony.conf",chronyconfData)
 
         if option("Openrc")
-            prepareOpenrcServiceInstallation("#{workDirectoryPath}/Chrony-Init.d","chronyd")
+            prepareOpenrcServiceInstallation(   path:   "#{workDirectoryPath}/Chrony-Init.d",
+                                                name:   "chronyd")
         end
     end
 

@@ -9,7 +9,8 @@ class Target < ISM::Software
     def build
         super
 
-        makeSource(["mandoc"],path: buildDirectoryPath)
+        makeSource( arguments:   "mandoc",
+                    path: buildDirectoryPath)
     end
 
     def prepareInstallation
@@ -18,15 +19,18 @@ class Target < ISM::Software
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin")
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/share/man/man1")
 
-        copyFile("#{buildDirectoryPath}/mandoc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/mandoc")
-        copyFile("#{buildDirectoryPath}/mandoc.1","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/share/man/man1/mandoc.1")
+        copyFile(   "#{buildDirectoryPath}/mandoc",
+                    "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/mandoc")
+
+        copyFile(   "#{buildDirectoryPath}/mandoc.1",
+                    "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/share/man/man1/mandoc.1")
     end
 
     def install
         super
 
-        runChmodCommand(["0755","/usr/bin/mandoc"])
-        runChmodCommand(["0644","/usr/share/man/man1/mandoc.1"])
+        runChmodCommand("0755 /usr/bin/mandoc")
+        runChmodCommand("0644 /usr/share/man/man1/mandoc.1")
     end
 
 end

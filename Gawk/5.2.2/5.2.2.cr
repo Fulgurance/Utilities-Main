@@ -4,7 +4,9 @@ class Target < ISM::Software
         super
 
         if !option("Pass1")
-            fileReplaceText("#{buildDirectoryPath}/Makefile.in","extras","")
+            fileReplaceText(path:       "#{buildDirectoryPath}/Makefile.in",
+                            text:       "extras",
+                            newText:    "")
         end
     end
 
@@ -12,15 +14,15 @@ class Target < ISM::Software
         super
 
         if option("Pass1")
-            configureSource([   "--prefix=/usr",
-                                "--host=#{Ism.settings.chrootTarget}",
-                                "--build=$(./config.guess)"],
-                                buildDirectoryPath)
+            configureSource(arguments:  "--prefix=/usr                      \
+                                        --host=#{Ism.settings.chrootTarget} \
+                                        --build=$(./config.guess)",
+                            path:       buildDirectoryPath)
         else
-            configureSource([   "--prefix=/usr",
-                                "--docdir=/usr/share/doc/flex-2.6.4",
-                                "--disable-static"],
-                                buildDirectoryPath)
+            configureSource(arguments:  "--prefix=/usr                      \
+                                        --docdir=/usr/share/doc/flex-2.6.4  \
+                                        --disable-static",
+                            path:       buildDirectoryPath)
         end
     end
     
@@ -33,10 +35,16 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
 
-        makeLink("flex","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lex",:symbolicLink)
-        makeLink("flex.1","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/share/man/man1/lex.1",:symbolicLink)
+        makeLink(   target: "flex",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lex",
+                    type:   :symbolicLink)
+
+        makeLink(   target: "flex.1",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/share/man/man1/lex.1",
+                    type:   :symbolicLink)
     end
 
 end

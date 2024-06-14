@@ -23,62 +23,62 @@ class Target < ISM::Software
 
     def configure32Bits
         if option("Pass1")
-            configureSource([   "ADJTIME_PATH=/var/lib/hwclock/adjtime",
-                                "--libdir=/usr/lib32",
-                                "--host=i686-#{Ism.settings.systemTargetName}-linux-gnu",
-                                "--docdir=/usr/share/doc/util-linux-2.39.1",
-                                "--disable-chfn-chsh",
-                                "--disable-login",
-                                "--disable-nologin",
-                                "--disable-su",
-                                "--disable-setpriv",
-                                "--disable-runuser",
-                                "--disable-pylibmount",
-                                "--disable-static",
-                                "--without-python",
-                                "--runstatedir=/run"],
-                                path: buildDirectoryPath(entry: "32Bits"),
-                                environment: {"CC" =>"gcc -m32"})
+            configureSource(arguments:      "ADJTIME_PATH=/var/lib/hwclock/adjtime                  \
+                                            --libdir=/usr/lib32                                     \
+                                            --host=i686-#{Ism.settings.systemTargetName}-linux-gnu  \
+                                            --docdir=/usr/share/doc/util-linux-2.39.1               \
+                                            --disable-chfn-chsh                                     \
+                                            --disable-login                                         \
+                                            --disable-nologin                                       \
+                                            --disable-su                                            \
+                                            --disable-setpriv                                       \
+                                            --disable-runuser                                       \
+                                            --disable-pylibmount                                    \
+                                            --disable-static                                        \
+                                            --without-python                                        \
+                                            --runstatedir=/run",
+                            path:           buildDirectoryPath(entry: "32Bits"),
+                            environment:    {"CC" =>"gcc -m32"})
         else
-            configureSource([   "ADJTIME_PATH=/var/lib/hwclock/adjtime",
-                                "--libdir=/usr/lib32",
-                                "--host=i686-#{Ism.settings.systemTargetName}-linux-gnu",
-                                "--docdir=/usr/share/doc/util-linux-2.39.1",
-                                "--disable-chfn-chsh",
-                                "--disable-login",
-                                "--disable-nologin",
-                                "--disable-su",
-                                "--disable-setpriv",
-                                "--disable-runuser",
-                                "--disable-pylibmount",
-                                "--disable-static",
-                                "--without-python",
-                                "--without-systemd",
-                                "--without-systemdsystemunitdir"],
-                                path: buildDirectoryPath(entry: "32Bits"),
-                                environment: {"CC" =>"gcc -m32"})
+            configureSource(arguments:      "ADJTIME_PATH=/var/lib/hwclock/adjtime                  \
+                                            --libdir=/usr/lib32                                     \
+                                            --host=i686-#{Ism.settings.systemTargetName}-linux-gnu  \
+                                            --docdir=/usr/share/doc/util-linux-2.39.1               \
+                                            --disable-chfn-chsh                                     \
+                                            --disable-login                                         \
+                                            --disable-nologin                                       \
+                                            --disable-su                                            \
+                                            --disable-setpriv                                       \
+                                            --disable-runuser                                       \
+                                            --disable-pylibmount                                    \
+                                            --disable-static                                        \
+                                            --without-python                                        \
+                                            --without-systemd                                       \
+                                            --without-systemdsystemunitdir",
+                            path:           buildDirectoryPath(entry: "32Bits"),
+                            environment:    {"CC" =>"gcc -m32"})
         end
     end
 
     def configurex32Bits
         if option("Pass1")
-            configureSource([   "ADJTIME_PATH=/var/lib/hwclock/adjtime",
-                                "--libdir=/usr/libx32",
-                                "--host=#{Ism.settings.systemTarget}x32",
-                                "--docdir=/usr/share/doc/util-linux-2.39.1",
-                                "--disable-chfn-chsh",
-                                "--disable-login",
-                                "--disable-nologin",
-                                "--disable-su",
-                                "--disable-setpriv",
-                                "--disable-runuser",
-                                "--disable-pylibmount",
-                                "--disable-static",
-                                "--without-python",
-                                "--without-systemd",
-                                "--without-systemdsystemunitdir"],
-                                path: buildDirectoryPath(entry: "x32Bits"),
-                                environment: {"CC" =>"gcc -mx32"})
+            configureSource(arguments:      "ADJTIME_PATH=/var/lib/hwclock/adjtime      \
+                                            --libdir=/usr/libx32                        \
+                                            --host=#{Ism.settings.systemTarget}x32      \
+                                            --docdir=/usr/share/doc/util-linux-2.39.1   \
+                                            --disable-chfn-chsh                         \
+                                            --disable-login                             \
+                                            --disable-nologin                           \
+                                            --disable-su                                \
+                                            --disable-setpriv                           \
+                                            --disable-runuser                           \
+                                            --disable-pylibmount                        \
+                                            --disable-static                            \
+                                            --without-python                            \
+                                            --without-systemd                           \
+                                            --without-systemdsystemunitdir",
+                            path:           buildDirectoryPath(entry: "x32Bits"),
+                            environment:    {"CC" =>"gcc -mx32"})
         else
 
         end
@@ -88,39 +88,39 @@ class Target < ISM::Software
         super
 
         if option("Pass1")
-            configureSource([   "ADJTIME_PATH=/var/lib/hwclock/adjtime",
-                                "--libdir=/usr/lib",
-                                "--docdir=/usr/share/doc/util-linux-2.39.1",
-                                "--disable-chfn-chsh",
-                                "--disable-login",
-                                "--disable-nologin",
-                                "--disable-su",
-                                "--disable-setpriv",
-                                "--disable-runuser",
-                                "--disable-pylibmount",
-                                "--disable-static",
-                                "--without-python",
-                                "--runstatedir=/run"],
-                                buildDirectoryPath)
+            configureSource(arguments:      "ADJTIME_PATH=/var/lib/hwclock/adjtime      \
+                                            --libdir=/usr/lib                           \
+                                            --docdir=/usr/share/doc/util-linux-2.39.1   \
+                                            --disable-chfn-chsh                         \
+                                            --disable-login                             \
+                                            --disable-nologin                           \
+                                            --disable-su                                \
+                                            --disable-setpriv                           \
+                                            --disable-runuser                           \
+                                            --disable-pylibmount                        \
+                                            --disable-static                            \
+                                            --without-python                            \
+                                            --runstatedir=/run",
+                            path:           buildDirectoryPath)
         else
-            configureSource([   "ADJTIME_PATH=/var/lib/hwclock/adjtime",
-                                "--bindir=/usr/bin",
-                                "--libdir=/usr/lib",
-                                "--docdir=/usr/share/doc/util-linux-2.39.1",
-                                "--runstatedir=/run",
-                                "--sbindir=/usr/sbin",
-                                "--disable-chfn-chsh",
-                                "--disable-login",
-                                "--disable-nologin",
-                                "--disable-su",
-                                "--disable-setpriv",
-                                "--disable-runuser",
-                                "--disable-pylibmount",
-                                "--disable-static",
-                                "--without-python",
-                                "--without-systemd",
-                                "--without-systemdsystemunitdir"],
-                                buildDirectoryPath)
+            configureSource(arguments:      "ADJTIME_PATH=/var/lib/hwclock/adjtime      \
+                                            --bindir=/usr/bin                           \
+                                            --libdir=/usr/lib                           \
+                                            --docdir=/usr/share/doc/util-linux-2.39.1   \
+                                            --runstatedir=/run                          \
+                                            --sbindir=/usr/sbin                         \
+                                            --disable-chfn-chsh                         \
+                                            --disable-login                             \
+                                            --disable-nologin                           \
+                                            --disable-su                                \
+                                            --disable-setpriv                           \
+                                            --disable-runuser                           \
+                                            --disable-pylibmount                        \
+                                            --disable-static                            \
+                                            --without-python                            \
+                                            --without-systemd                           \
+                                            --without-systemdsystemunitdir",
+                            path:           buildDirectoryPath)
         end
 
         if option("32Bits")
@@ -149,17 +149,15 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource( ["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}",
-                    "install"],
-                    path: buildDirectoryPath(entry: "MainBuild"))
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits")
             makeDirectory("#{buildDirectoryPath(entry: "32Bits")}/32Bits")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr")
 
-            makeSource( ["DESTDIR=#{buildDirectoryPath(entry: "32Bits")}/32Bits",
-                        "install"],
-                        path: buildDirectoryPath(entry: "32Bits"))
+            makeSource( arguments:  "DESTDIR=#{buildDirectoryPath(entry: "32Bits")}/32Bits install",
+                        path:       buildDirectoryPath(entry: "32Bits"))
 
             copyDirectory(  "#{buildDirectoryPath(entry: "32Bits")}/32Bits/usr/lib32",
                             "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/lib32")
@@ -169,9 +167,8 @@ class Target < ISM::Software
             makeDirectory("#{buildDirectoryPath(entry: "x32Bits")}/x32Bits")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr")
 
-            makeSource( ["DESTDIR=#{buildDirectoryPath(entry: "x32Bits")}/x32Bits",
-                        "install"],
-                        path: buildDirectoryPath(entry: "x32Bits"))
+            makeSource( arguments:  "DESTDIR=#{buildDirectoryPath(entry: "x32Bits")}/x32Bits install",
+                        path:       buildDirectoryPath(entry: "x32Bits"))
 
             copyDirectory(  "#{buildDirectoryPath(entry: "x32Bits")}/x32Bits/usr/libx32",
                             "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/libx32")

@@ -3,16 +3,21 @@ class Target < ISM::Software
     def prepare
         super
 
-        fileReplaceText("#{buildDirectoryPath}/configure","RESIZECONS_PROGS=yes","RESIZECONS_PROGS=no")
-        fileReplaceText("#{buildDirectoryPath}/docs/man/man8/Makefile.in","resizecons.8 ","")
+        fileReplaceText(path:       "#{buildDirectoryPath}/configure",
+                        text:       "RESIZECONS_PROGS=yes",
+                        newText:    "RESIZECONS_PROGS=no")
+
+        fileReplaceText(path:       "#{buildDirectoryPath}/docs/man/man8/Makefile.in",
+                        text:       "resizecons.8 ",
+                        newText:    "")
     end
 
     def configure
         super
 
-        configureSource([   "--prefix=/usr",
-                            "--disable-vlock"],
-                            buildDirectoryPath)
+        configureSource(arguments:  "--prefix=/usr  \
+                                    --disable-vlock",
+                        path:       buildDirectoryPath)
     end
 
     def build
@@ -24,7 +29,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
     end
 
 end

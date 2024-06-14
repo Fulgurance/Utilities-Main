@@ -3,10 +3,10 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource([   "--prefix=/usr",
-                            "#{option("Lvm2") ? "--enable-device-mapper" : "--disable-device-mapper"}",
-                            "--disable-static"],
-                            buildDirectoryPath)
+        configureSource(arguments:  "--prefix=/usr                                                              \
+                                    #{option("Lvm2") ? "--enable-device-mapper" : "--disable-device-mapper"}    \
+                                    --disable-static",
+                        path:       buildDirectoryPath)
     end
 
     def build
@@ -18,7 +18,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
     end
 
 end

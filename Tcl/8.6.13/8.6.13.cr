@@ -3,9 +3,9 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource([   "--prefix=/usr",
-                            "--mandir=/usr/share/man"],
-                            "#{buildDirectoryPath}unix")
+        configureSource(arguments:  "--prefix=/usr  \
+                                    --mandir=/usr/share/man",
+                        path:       "#{buildDirectoryPath}/unix")
     end
 
     def build
@@ -17,29 +17,60 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        fileReplaceText("#{buildDirectoryPath}unix/tclConfig.sh","#{buildDirectoryPath}unix","/usr/lib")
-        fileReplaceText("#{buildDirectoryPath}unix/tclConfig.sh","#{buildDirectoryPath}","/usr/include")
-        fileReplaceText("#{buildDirectoryPath}unix/pkgs/tdbc1.1.5/tdbcConfig.sh","#{buildDirectoryPath}unix/pkgs/tdbc1.1.5","/usr/lib/tdbc1.1.5")
-        fileReplaceText("#{buildDirectoryPath}unix/pkgs/tdbc1.1.5/tdbcConfig.sh","#{buildDirectoryPath}pkgs/tdbc1.1.5/generic","/usr/include")
-        fileReplaceText("#{buildDirectoryPath}unix/pkgs/tdbc1.1.5/tdbcConfig.sh","#{buildDirectoryPath}pkgs/tdbc1.1.5/library","/usr/lib/tcl8.6")
-        fileReplaceText("#{buildDirectoryPath}unix/pkgs/tdbc1.1.5/tdbcConfig.sh","#{buildDirectoryPath}pkgs/tdbc1.1.5","/usr/include")
-        fileReplaceText("#{buildDirectoryPath}unix/pkgs/itcl4.2.3/itclConfig.sh","#{buildDirectoryPath}unix/pkgs/itcl4.2.3","/usr/lib/itcl4.2.3")
-        fileReplaceText("#{buildDirectoryPath}unix/pkgs/itcl4.2.3/itclConfig.sh","#{buildDirectoryPath}pkgs/itcl4.2.3/generic","/usr/include")
-        fileReplaceText("#{buildDirectoryPath}unix/pkgs/itcl4.2.3/itclConfig.sh","#{buildDirectoryPath}pkgs/itcl4.2.3","/usr/include")
+        fileReplaceText(path:       "#{buildDirectoryPath}unix/tclConfig.sh",
+                        text:       "#{buildDirectoryPath}unix",
+                        newText:    "/usr/lib")
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],"#{buildDirectoryPath}/unix")
+        fileReplaceText(path:       "#{buildDirectoryPath}unix/tclConfig.sh",
+                        text:       "#{buildDirectoryPath}",
+                        newText:    "/usr/include")
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install-private-headers"],"#{buildDirectoryPath}unix")
+        fileReplaceText(path:       "#{buildDirectoryPath}unix/pkgs/tdbc1.1.5/tdbcConfig.sh",
+                        text:       "#{buildDirectoryPath}unix/pkgs/tdbc1.1.5",
+                        newText:    "/usr/lib/tdbc1.1.5")
 
-        moveFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/man/man3/Thread.3","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/man/man3/Tcl_Thread.3")
+        fileReplaceText(path:       "#{buildDirectoryPath}unix/pkgs/tdbc1.1.5/tdbcConfig.sh",
+                        text:       "#{buildDirectoryPath}pkgs/tdbc1.1.5/generic",
+                        newText:    "/usr/include")
 
-        makeLink("tclsh8.6","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/tclsh",:symbolicLinkByOverwrite)
+        fileReplaceText(path:       "#{buildDirectoryPath}unix/pkgs/tdbc1.1.5/tdbcConfig.sh",
+                        text:       "#{buildDirectoryPath}pkgs/tdbc1.1.5/library",
+                        newText:    "/usr/lib/tcl8.6")
+
+        fileReplaceText(path:       "#{buildDirectoryPath}unix/pkgs/tdbc1.1.5/tdbcConfig.sh",
+                        text:       "#{buildDirectoryPath}pkgs/tdbc1.1.5",
+                        newText:    "/usr/include")
+
+        fileReplaceText(path:       "#{buildDirectoryPath}unix/pkgs/itcl4.2.3/itclConfig.sh",
+                        text:       "#{buildDirectoryPath}unix/pkgs/itcl4.2.3",
+                        newText:    "/usr/lib/itcl4.2.3")
+
+        fileReplaceText(path:       "#{buildDirectoryPath}unix/pkgs/itcl4.2.3/itclConfig.sh",
+                        text:       "#{buildDirectoryPath}pkgs/itcl4.2.3/generic",
+                        newText:    "/usr/include")
+
+        fileReplaceText(path:       "#{buildDirectoryPath}unix/pkgs/itcl4.2.3/itclConfig.sh",
+                        text:       "#{buildDirectoryPath}pkgs/itcl4.2.3",
+                        newText:    "/usr/include")
+
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath} install",
+                    path:       "#{buildDirectoryPath}/unix")
+
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install-private-headers",
+                    path:       "#{buildDirectoryPath}unix")
+
+        moveFile(   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/man/man3/Thread.3",
+                    "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/man/man3/Tcl_Thread.3")
+
+        makeLink(   target: "tclsh8.6",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/tclsh",
+                    type:   :symbolicLinkByOverwrite)
     end
 
     def install
         super
 
-        runChmodCommand(["0644","/usr/lib/libtcl8.6.so"])
+        runChmodCommand("0644 /usr/lib/libtcl8.6.so")
     end
 
 end

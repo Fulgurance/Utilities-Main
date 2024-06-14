@@ -4,13 +4,13 @@ class Target < ISM::Software
         super
 
         if option("Pass1")
-            configureSource([   "--disable-shared"],
-                                buildDirectoryPath)
+            configureSource(arguments:  "--disable-shared",
+                            path:       buildDirectoryPath)
         else
-            configureSource([   "--prefix=/usr",
-                                "--disable-static",
-                                "--docdir=/usr/share/doc/gettext-0.22"],
-                                buildDirectoryPath)
+            configureSource(arguments:  "--prefix=/usr      \
+                                        --disable-static    \
+                                        --docdir=/usr/share/doc/gettext-0.22",
+                            path:       buildDirectoryPath)
         end
     end
     
@@ -26,13 +26,25 @@ class Target < ISM::Software
         if option("Pass1")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin/")
 
-            copyDirectory("#{buildDirectoryPath}gettext-tools/src/msgfmt","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin/msgfmt")
-            copyDirectory("#{buildDirectoryPath}gettext-tools/src/msgmerge","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin/msgmerge")
-            copyDirectory("#{buildDirectoryPath}gettext-tools/src/xgettext","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin/xgettext")
-        else
-            makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+            copyDirectory(  "#{buildDirectoryPath}gettext-tools/src/msgfmt",
+                            "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin/msgfmt")
 
-            runChmodCommand(["0755","/usr/lib/preloadable_libintl.so"])
+            copyDirectory(  "#{buildDirectoryPath}gettext-tools/src/msgmerge",
+                            "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin/msgmerge")
+
+            copyDirectory(  "#{buildDirectoryPath}gettext-tools/src/xgettext",
+                            "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin/xgettext")
+        else
+            makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                        path:       buildDirectoryPath)
+        end
+    end
+
+    def install
+        super
+
+        if !option("Pass1")
+            runChmodCommand("0755 /usr/lib/preloadable_libintl.so")
         end
     end
 
