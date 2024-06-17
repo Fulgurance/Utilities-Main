@@ -50,7 +50,7 @@ class Target < ISM::Software
 
         runChmodCommand("u+s /usr/libexec/dbus-daemon-launch-helper")
 
-        runDbusUuidgenCommand([\"--ensure"]\)
+        runDbusUuidgenCommand("--ensure")
     end
 
 end
