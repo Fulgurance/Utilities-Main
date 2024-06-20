@@ -17,7 +17,7 @@ class Target < ISM::Software
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/profile.d")
 
         if File.exists?("#{Ism.settings.rootPath}etc/profile.d/python.sh")
-            copyFile(   "#{Ism.settings.rootPath}etc/profile.d/python.sh",
+            copyFile(   "/etc/profile.d/python.sh",
                         "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/profile.d/python.sh")
         else
             generateEmptyFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/profile.d/python.sh")
