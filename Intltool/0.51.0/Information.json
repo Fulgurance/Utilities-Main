@@ -1,6 +1,6 @@
 {
-  "port": "NetworkingTools-Main",
-  "name": "Utilities-Main",
+  "port": "Utilities-Main",
+  "name": "Intltool",
   "version": "0.51.0",
   "architectures": ["x86_64"],
   "description": "Set of tools to centralize translation of many different file formats using GNU gettext-compatible PO files",
