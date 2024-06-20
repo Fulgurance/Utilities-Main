@@ -1,0 +1,41 @@
+{
+  "port": "NetworkingTools-Main",
+  "name": "Utilities-Main",
+  "version": "0.51.0",
+  "architectures": ["x86_64"],
+  "description": "Set of tools to centralize translation of many different file formats using GNU gettext-compatible PO files",
+  "website": "https://freedesktop.org/wiki/Software/intltool",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    },
+    {
+      "port": "Xml-Main",
+      "name": "XML-Parser",
+      "version": ">=2.46.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Autoconf",
+      "version": ">=2.71.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Automake",
+      "version": ">=1.16.4",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
