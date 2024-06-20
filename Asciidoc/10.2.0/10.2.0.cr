@@ -6,7 +6,8 @@ class Target < ISM::Software
         runPythonCommand(   arguments:  "setup.py install bdist",
                             path:       buildDirectoryPath)
 
-        extractArchive("#{buildDirectoryPath}/dist/Asciidoc-10.2.0.linux-x86_64.tar.gz")
+        runTarCommand(  arguments: "-xf Asciidoc-10.2.0.linux-x86_64.tar.gz",
+                        path:       "#{buildDirectoryPath}/dist/")
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr")
 
