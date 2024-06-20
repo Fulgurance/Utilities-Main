@@ -11,7 +11,7 @@ class Target < ISM::Software
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr")
 
-        copyDirectory(  "#{workDirectoryPath}/usr",
+        copyDirectory(  "#{buildDirectoryPath}/dist/",
                         "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr")
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/profile.d")
