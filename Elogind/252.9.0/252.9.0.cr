@@ -42,7 +42,7 @@ class Target < ISM::Software
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/conf.d")
 
         if File.exists?("#{Ism.settings.rootPath}etc/pam.d/system-session")
-            copyFile(   "#{Ism.settings.rootPath}etc/pam.d/system-session",
+            copyFile(   "/etc/pam.d/system-session",
                         "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/pam.d/system-session")
         else
             generateEmptyFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/pam.d/system-session")
