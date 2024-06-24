@@ -15,7 +15,22 @@
     }
   ],
   "kernelDependencies": [],
-  "options": [],
+  "options": [
+    {
+      "name": "Libusb",
+      "description": "Enable libusb support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "BaseLibraries-Main",
+          "name": "Libusb",
+          "version": ">=1.0.26",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
   "uniqueDependencies": [],
   "uniqueOptions": [],
   "selectedDependencies": [],
