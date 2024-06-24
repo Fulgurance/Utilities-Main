@@ -13,7 +13,8 @@ class Target < ISM::Software
                                     #{@buildDirectoryNames["MainBuild"]}                \
                                     --prefix=/usr                                       \
                                     --buildtype=release                                 \
-                                    -Dusb=#{option("Libusb") ? "true" : "false"}",
+                                    -Dusb=#{option("Libusb") ? "true" : "false"}        \
+                                    -Dcompile_server=false",
                             path: mainWorkDirectoryPath)
     end
 
