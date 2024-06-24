@@ -19,7 +19,7 @@
     {
       "name": "Libusb",
       "description": "Enable libusb support",
-      "active": false,
+      "active": true,
       "dependencies": [
         {
           "port": "BaseLibraries-Main",
