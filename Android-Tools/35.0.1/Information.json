@@ -12,6 +12,12 @@
       "name": "Libusb",
       "version": ">=1.0.26",
       "options": []
+    },
+    {
+      "port": "ProgrammingLanguages-Main",
+      "name": "Go",
+      "version": ">=1.23.0-rc.1",
+      "options": []
     }
   ],
   "kernelDependencies": [],
