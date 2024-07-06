@@ -82,7 +82,7 @@ class Target < ISM::Software
         end
 
         makeLink(   target: "libelogind.pc",
-                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/pkgconfig/libsystemd.pc",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib64/pkgconfig/libsystemd.pc",
                     type:   :symbolicLinkByOverwrite)
 
         makeLink(   target: "elogind",
