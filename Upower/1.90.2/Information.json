@@ -1,0 +1,29 @@
+{
+  "port": "Utilities-Main",
+  "name": "Upower",
+  "version": "1.90.2",
+  "architectures": ["x86_64"],
+  "description": "Power management support for DeviceKit",
+  "website": "https://gitlab.freedesktop.org/upower/upower",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Libgudev",
+      "version": ">=238.0.0",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Libusb",
+      "version": ">=1.0.26",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
