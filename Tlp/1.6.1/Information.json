@@ -1,0 +1,23 @@
+{
+  "port": "Utilities-Main",
+  "name": "Tlp",
+  "version": "1.6.1",
+  "architectures": ["x86_64"],
+  "description": "Optimize Linux Laptop Battery Life ",
+  "website": "https://github.com/linrunner/TLP",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
