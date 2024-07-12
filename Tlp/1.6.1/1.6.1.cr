@@ -5,6 +5,11 @@ class Target < ISM::Software
 
         makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath} install",
                     path:       buildDirectoryPath)
+
+        if option("Openrc")
+            prepareOpenrcServiceInstallation(   path:   "#{workDirectoryPath}/Tlp-Init.d",
+                                                name:   "tlp")
+        end
     end
 
 end
