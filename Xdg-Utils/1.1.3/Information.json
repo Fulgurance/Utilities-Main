@@ -11,7 +11,7 @@
       "port": "Xml-Main",
       "name": "Xmlto",
       "version": ">=0.0.28",
-      "options": []
+      "options": ["Links"]
     },
     {
       "port": "XorgBase-Main",
