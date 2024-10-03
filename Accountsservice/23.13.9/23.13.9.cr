@@ -8,14 +8,15 @@ class Target < ISM::Software
     def configure
         super
 
-        runMesonCommand(arguments:  "setup                                              \
-                                    --reconfigure                                       \
-                                    #{@buildDirectoryNames["MainBuild"]}                \
-                                    --prefix=/usr                                       \
-                                    --buildtype=release                                 \
-                                    -Dadmin_group=wheel                                 \
-                                    -Dsystemdsystemunitdir=no                           \
-                                    -Delogind=#{option("Elogind") ? "true" : "false"}   \
+        runMesonCommand(arguments:  "setup                                                          \
+                                    --reconfigure                                                   \
+                                    #{@buildDirectoryNames["MainBuild"]}                            \
+                                    --prefix=/usr                                                   \
+                                    --buildtype=release                                             \
+                                    -Dadmin_group=wheel                                             \
+                                    -Dsystemdsystemunitdir=no                                       \
+                                    -Delogind=#{option("Elogind") ? "true" : "false"}               \
+                                    -Dintrospection=#{option("Introspection") ? "true" : "false"}   \
                                     -Dvapi=false",
                             path: mainWorkDirectoryPath)
     end
