@@ -58,7 +58,7 @@
     {
       "name": "Linux-Pam",
       "description": "Enable linux-pam support for Xorg",
-      "active": false,
+      "active": true,
       "dependencies": [
         {
           "port": "Security-Main",
