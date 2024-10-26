@@ -1,0 +1,24 @@
+{
+  "port": "Utilities-Main",
+  "name": "Socat",
+  "version": "1.8.0-r1",
+  "architectures": ["x86_64"],
+  "description": "Relay for bidirectional data transfer between two independent data
+channels",
+  "website": "http://www.dest-unreach.org/socat/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
