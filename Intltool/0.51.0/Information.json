@@ -15,7 +15,7 @@
     },
     {
       "port": "Xml-Main",
-      "name": "XML-Parser",
+      "name": "Xml-Parser",
       "version": ">=2.46.0",
       "options": []
     },
