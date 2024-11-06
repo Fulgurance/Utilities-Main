@@ -23,6 +23,7 @@ class Target < ISM::Software
                                             --disable-runuser                           \
                                             --disable-pylibmount                        \
                                             --disable-static                            \
+                                            --disable-liblastlog2                       \
                                             --without-python                            \
                                             --runstatedir=/run",
                             path:           buildDirectoryPath)
@@ -40,6 +41,7 @@ class Target < ISM::Software
                                             --disable-setpriv                           \
                                             --disable-runuser                           \
                                             --disable-pylibmount                        \
+                                            --disable-liblastlog2                       \
                                             --disable-static                            \
                                             --without-python                            \
                                             --without-systemd                           \
