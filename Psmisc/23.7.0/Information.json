@@ -1,10 +1,10 @@
 {
   "port": "Utilities-Main",
-  "name": "Asciidoc",
-  "version": "10.2.0",
+  "name": "Psmisc",
+  "version": "23.7.0",
   "architectures": ["x86_64"],
-  "description": "Legacy python processor for AsciiDoc",
-  "website": "https://pypi.org/project/asciidoc/",
+  "description": "Miscellaneous utilities that use the proc file-system",
+  "website": "https://gitlab.com/psmisc/psmisc",
   "installedFiles": [],
   "dependencies": [
     {

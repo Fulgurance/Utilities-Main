@@ -1,10 +1,10 @@
 {
   "port": "Utilities-Main",
-  "name": "Asciidoc",
-  "version": "10.2.0",
+  "name": "Man-Pages",
+  "version": "6.9.0",
   "architectures": ["x86_64"],
-  "description": "Legacy python processor for AsciiDoc",
-  "website": "https://pypi.org/project/asciidoc/",
+  "description": "The Linux man-pages project documents the Linux kernel and C library interfaces that are employed by user-space programs",
+  "website": "https://www.kernel.org/doc/man-pages/",
   "installedFiles": [],
   "dependencies": [
     {

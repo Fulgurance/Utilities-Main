@@ -1,7 +1,7 @@
 {
   "port": "Utilities-Main",
   "name": "Asciidoc",
-  "version": "10.2.0",
+  "version": "10.2.1",
   "architectures": ["x86_64"],
   "description": "Legacy python processor for AsciiDoc",
   "website": "https://pypi.org/project/asciidoc/",

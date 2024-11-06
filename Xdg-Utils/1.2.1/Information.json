@@ -1,0 +1,44 @@
+{
+  "port": "Utilities-Main",
+  "name": "Xdg-Utils",
+  "version": "1.2.1",
+  "architectures": ["x86_64"],
+  "description": "Set of tools that allows applications to easily integrate with the desktop environment of the user, regardless of the specific desktop environment that the user runs.",
+  "website": "https://www.freedesktop.org/wiki/Software/xdg-utils/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "Xml-Main",
+      "name": "Xmlto",
+      "version": ">=0.0.28",
+      "options": ["Links"]
+    },
+    {
+      "port": "XorgBase-Main",
+      "name": "Xorg-Applications",
+      "version": ">=21.1.8",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Dbus",
+      "description": "Enable dbus support",
+      "active": true,
+      "dependencies": [
+        {
+          "port": "Utilities-Main",
+          "name": "Dbus",
+          "version": ">=1.14.8",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}

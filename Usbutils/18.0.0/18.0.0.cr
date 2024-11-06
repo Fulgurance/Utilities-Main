@@ -3,10 +3,10 @@ class Target < ISM::Software
     def configure
         super
 
+        runAutoreconfCommand(arguments: "-fiv")
+
         configureSource(arguments:  "--prefix=/usr      \
-                                    --disable-static    \
-                                    --sysconfdir=/etc   \
-                                    --docdir=/usr/share/doc/#{versionName}",
+                                    --datadir=/usr/share/hwdata",
                         path:       buildDirectoryPath)
     end
 

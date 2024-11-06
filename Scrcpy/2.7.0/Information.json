@@ -1,0 +1,38 @@
+{
+  "port": "Utilities-Main",
+  "name": "Scrcpy",
+  "version": "2.7.0",
+  "architectures": ["x86_64"],
+  "description": "Display and control your Android device",
+  "website": "https://github.com/Genymobile/scrcpy",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "GraphicsLibraries-Main",
+      "name": "Sdl2",
+      "version": ">=2.0.5",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Libusb",
+      "description": "Enable libusb support",
+      "active": true,
+      "dependencies": [
+        {
+          "port": "BaseLibraries-Main",
+          "name": "Libusb",
+          "version": ">=1.0.26",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}

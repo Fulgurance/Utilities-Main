@@ -12,7 +12,7 @@ class Target < ISM::Software
                                     --disable-static                                    \
                                     --docdir=/usr/share/doc/#{versionName}              \
                                     --with-console-auth-dir=/run/console                \
-                                    --with-system-pid-file=/run/dbus/pid                \
+                                    --with-system-pid-file=/run/dbus/dbus.pid           \
                                     --with-system-socket=/run/dbus/system_bus_socket    \
                                     --with-systemduserunitdir=no                        \
                                     --with-systemdsystemunitdir=no",

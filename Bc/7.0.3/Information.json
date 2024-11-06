@@ -1,10 +1,10 @@
 {
   "port": "Utilities-Main",
-  "name": "Asciidoc",
-  "version": "10.2.0",
+  "name": "Bc",
+  "version": "7.0.3",
   "architectures": ["x86_64"],
-  "description": "Legacy python processor for AsciiDoc",
-  "website": "https://pypi.org/project/asciidoc/",
+  "description": "Implementation of the POSIX bc calculator that implements GNU bc extensions",
+  "website": "https://git.yzena.com/gavin/bc",
   "installedFiles": [],
   "dependencies": [
     {

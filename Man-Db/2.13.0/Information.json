@@ -1,0 +1,65 @@
+{
+  "port": "Utilities-Main",
+  "name": "Man-Db",
+  "version": "2.11.2",
+  "architectures": ["x86_64"],
+  "description": "Implementation of the standard Unix documentation system accessed using the man command",
+  "website": "https://www.nongnu.org/man-db/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    },
+    {
+      "port": "Archivers-Main",
+      "name": "Bzip2",
+      "version": ">=1.0.8",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Flex",
+      "version": ">=2.6.4",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Gdbm",
+      "version": ">=1.23.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Groff",
+      "version": ">=1.23.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Less",
+      "version": ">=643.0.0",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Libpipeline",
+      "version": ">=1.5.7",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Zlib",
+      "version": ">=1.2.13",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}

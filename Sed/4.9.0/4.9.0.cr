@@ -31,10 +31,10 @@ class Target < ISM::Software
                     path:       buildDirectoryPath)
 
         if !option("Pass1")
-            makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/sed-4.8")
+            makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/#{versionName}")
 
             copyFile(   "#{buildDirectoryPath}/doc/sed.html",
-                        "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/sed-4.8/sed.html")
+                        "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/#{versionName}/sed.html")
         end
     end
 
@@ -42,8 +42,8 @@ class Target < ISM::Software
         super
 
         if !option("Pass1")
-            runChmodCommand("0755 /usr/share/doc/sed-4.8")
-            runChmodCommand("0644 /usr/share/doc/sed-4.8/sed.html")
+            runChmodCommand("0755 /usr/share/doc/#{versionName}")
+            runChmodCommand("0644 /usr/share/doc/#{versionName}/sed.html")
         end
     end
 

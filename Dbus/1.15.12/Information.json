@@ -1,10 +1,10 @@
 {
   "port": "Utilities-Main",
-  "name": "Pciutils",
-  "version": "3.10.0",
+  "name": "Dbus",
+  "version": "1.15.12",
   "architectures": ["x86_64"],
-  "description": "The PCI Utilities",
-  "website": "https://github.com/pciutils/pciutils/",
+  "description": "Message bus system for applications to talk to one another",
+  "website": "https://dbus.freedesktop.org",
   "installedFiles": [],
   "dependencies": [
     {
@@ -17,28 +17,28 @@
   "kernelDependencies": [],
   "options": [
     {
-      "name": "Curl",
-      "description": "Enable curl support",
-      "active": false,
+      "name": "Openrc",
+      "description": "Enable openrc support",
+      "active": true,
       "dependencies": [
         {
-          "port": "NetworkingLibraries-Main",
-          "name": "Curl",
-          "version": ">=8.2.1",
+          "port": "InitSystems-Main",
+          "name": "Openrc",
+          "version": ">=0.52.1",
           "options": []
         }
       ],
       "kernelDependencies": []
     },
     {
-      "name": "Wget",
-      "description": "Enable wget support",
-      "active": false,
+      "name": "Xorg-Libraries",
+      "description": "Enable xorg libraries support for dbus-launch program",
+      "active": true,
       "dependencies": [
         {
-          "port": "NetworkingSoftwares-Main",
-          "name": "Wget",
-          "version": ">=1.21.4",
+          "port": "XorgBase-Main",
+          "name": "Xorg-Libraries",
+          "version": ">=21.1.8",
           "options": []
         }
       ],

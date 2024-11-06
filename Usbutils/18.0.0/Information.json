@@ -1,16 +1,16 @@
 {
   "port": "Utilities-Main",
-  "name": "Asciidoc",
-  "version": "10.2.0",
+  "name": "Usbutils",
+  "version": "18.0.0",
   "architectures": ["x86_64"],
-  "description": "Legacy python processor for AsciiDoc",
-  "website": "https://pypi.org/project/asciidoc/",
+  "description": "USB utilities for Linux, including lsusb",
+  "website": "https://github.com/gregkh/usbutils",
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "SystemBase-Main",
-      "name": "SystemBase",
-      "version": ">=0.2.0",
+      "port": "BaseLibraries-Main",
+      "name": "Libusb",
+      "version": ">=1.0.26",
       "options": []
     }
   ],

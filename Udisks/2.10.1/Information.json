@@ -1,0 +1,180 @@
+{
+  "port": "Utilities-Main",
+  "name": "Udisks",
+  "version": "2.10.1",
+  "architectures": ["x86_64"],
+  "description": "The UDisks project provides a daemon, tools and libraries to access and manipulate disks, storage devices and technologies",
+  "website": "https://github.com/storaged-project/udisks",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Libatasmart",
+      "version": ">=0.19.0",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Libblockdev",
+      "version": ">=3.0.2",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Libgudev",
+      "version": ">=238.0.0",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Libxslt",
+      "version": ">=1.1.38",
+      "options": []
+    },
+    {
+      "port": "Security-Main",
+      "name": "Polkit",
+      "version": ">=123.0.0",
+      "options": []
+    },
+    {
+      "port": "SystemGroups-Main",
+      "name": "Plugdev",
+      "version": ">=0.1.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Btrfs-Progs",
+      "description": "Enable btrfs-progs support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "FileSystems-Main",
+          "name": "Btrfs-Progs",
+          "version": ">=6.3.3",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Dbus",
+      "description": "Enable dbus support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "Utilities-Main",
+          "name": "Dbus",
+          "version": ">=1.14.8",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Dosfstools",
+      "description": "Enable dosfstools support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "FileSystems-Main",
+          "name": "Dosfstools",
+          "version": ">=4.2.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Gptfdisk",
+      "description": "Enable gptfdisk support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "Utilities-Main",
+          "name": "Gptfdisk",
+          "version": ">=1.0.9",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Mdadm",
+      "description": "Enable mdadm support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "Utilities-Main",
+          "name": "Mdadm",
+          "version": "4.2.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Xfsprogs",
+      "description": "Enable xfsprogs support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "FileSystems-Main",
+          "name": "Xfsprogs",
+          "version": ">=6.4.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Elogind",
+      "description": "Enable elogind support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "Utilities-Main",
+          "name": "Elogind",
+          "version": ">=252.9.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Gobject-Introspection",
+      "description": "Enable dbus support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "BaseLibraries-Main",
+          "name": "Gobject-Introspection",
+          "version": ">=1.76.1",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Lvm2",
+      "description": "Enable lvm2 support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "FileSystems-Main",
+          "name": "Lvm2",
+          "version": ">=2.3.22",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}

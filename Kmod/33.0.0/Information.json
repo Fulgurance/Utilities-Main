@@ -1,0 +1,56 @@
+{
+  "port": "Utilities-Main",
+  "name": "Kmod",
+  "version": "33.0.0",
+  "architectures": ["x86_64"],
+  "description": "Libraries and utilities for loading kernel modules",
+  "website": "https://www.kernel.org/pub/linux/utils/kernel/kmod",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Flex",
+      "version": ">=2.6.4",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Pkgconf",
+      "version": ">=2.0.1",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Zlib",
+      "version": ">=1.2.13",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "32Bits",
+      "description": "Enable 32 bits support",
+      "active": false,
+      "dependencies": [],
+      "kernelDependencies": ["CONFIG_IA32_EMULATION"]
+    },
+    {
+      "name": "x32Bits",
+      "description": "Enable x32 bits support",
+      "active": false,
+      "dependencies": [],
+      "kernelDependencies": ["CONFIG_X86_X32"]
+    }
+  ],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}

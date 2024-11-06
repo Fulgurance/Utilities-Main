@@ -3,11 +3,11 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource(arguments:  "--prefix=/usr      \
-                                    --disable-static    \
-                                    --sysconfdir=/etc   \
-                                    --docdir=/usr/share/doc/#{versionName}",
-                        path:       buildDirectoryPath)
+        configureSource(arguments:      "--prefix=/usr  \
+                                        -G              \
+                                        -O3",
+                        path:           buildDirectoryPath,
+                        environment:    {"CC" => "gcc"})
     end
 
     def build

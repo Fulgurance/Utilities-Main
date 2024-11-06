@@ -1,0 +1,56 @@
+{
+  "port": "Utilities-Main",
+  "name": "Chrony",
+  "version": "4.6.1",
+  "architectures": ["x86_64"],
+  "description": "Versatile implementation of the Network Time Protocol (NTP)",
+  "website": "https://chrony.tuxfamily.org/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Libseccomp",
+      "version": ">0.0.0",
+      "options": []
+    },
+    {
+      "port": "SecurityLibraries-Main",
+      "name": "Gnutls",
+      "version": ">0.0.0",
+      "options": []
+    },
+    {
+      "port": "SystemUsers-Main",
+      "name": "Ntp",
+      "version": ">=0.1.0",
+      "options": []
+    },
+    {
+      "port": "SystemGroups-Main",
+      "name": "Ntp",
+      "version": ">=0.1.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Openrc",
+      "description": "Enable openrc support",
+      "active": true,
+      "dependencies": [
+        {
+          "port": "InitSystems-Main",
+          "name": "Openrc",
+          "version": ">=0.52.1",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
