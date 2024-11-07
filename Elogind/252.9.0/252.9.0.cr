@@ -14,7 +14,7 @@ class Target < ISM::Software
                                     --prefix=/usr                           \
                                     --buildtype=release                     \
                                     -Dman=auto                              \
-                                    -Ddocdir=/usr/share/doc/#{versioName}   \
+                                    -Ddocdir=/usr/share/doc/#{versionName}   \
                                     -Dcgroup-controller=elogind             \
                                     -Ddbuspolicydir=/etc/dbus-1/system.d",
                         path:       mainWorkDirectoryPath)
