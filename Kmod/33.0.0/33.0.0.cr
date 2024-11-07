@@ -7,6 +7,7 @@ class Target < ISM::Software
                                     --sysconfdir=/etc   \
                                     --with-xz           \
                                     --with-zstd         \
+                                    --disable-manpages  \
                                     --with-zlib",
                         path:       buildDirectoryPath)
     end
