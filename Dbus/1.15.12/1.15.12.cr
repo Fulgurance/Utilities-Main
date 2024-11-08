@@ -1,35 +1,41 @@
 class Target < ISM::Software
 
+    def prepare
+        @buildDirectory = true
+        super
+    end
+
     def configure
         super
 
-        configureSource(arguments:  "--prefix=/usr                                      \
-                                    --sysconfdir=/etc                                   \
-                                    --localstatedir=/var                                \
-                                    --enable-user-session                               \
-                                    --disable-doxygen-docs                              \
-                                    --disable-xml-docs                                  \
-                                    --disable-static                                    \
-                                    --docdir=/usr/share/doc/#{versionName}              \
-                                    --with-console-auth-dir=/run/console                \
-                                    --with-system-pid-file=/run/dbus/dbus.pid           \
-                                    --with-system-socket=/run/dbus/system_bus_socket    \
-                                    --with-systemduserunitdir=no                        \
-                                    --with-systemdsystemunitdir=no",
-                        path:       buildDirectoryPath)
+        runMesonCommand(arguments:  "setup                                                  \
+                                    --reconfigure                                           \
+                                    #{@buildDirectoryNames["MainBuild"]}                    \
+                                    --prefix=/usr                                           \
+                                    --localstatedir=/var                                    \
+                                    -Dxml_docs=disabled                                     \
+                                    -Ddoxygen_docs=disabled                                 \
+                                    -Dducktype_docs=disabled                                \
+                                    -Ddbus_user=messagebus                                  \
+                                    -Dembedded_tests=false                                  \
+                                    -Dinstalled_tests=false                                 \
+                                    -Dsystem_pid_file=/run/dbus/dbus.pid                    \
+                                    -Dsystem_socket=/run/dbus/system_bus_socket",
+                        path:       mainWorkDirectoryPath)
     end
 
     def build
         super
 
-        makeSource(path: buildDirectoryPath)
+        runNinjaCommand(path: buildDirectoryPath)
     end
 
     def prepareInstallation
         super
 
-        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
-                    path:       buildDirectoryPath)
+        runNinjaCommand(arguments:      "install",
+                        path:           buildDirectoryPath,
+                        environment:    {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
 
         if option("Openrc")
             prepareOpenrcServiceInstallation(   path:   "#{workDirectoryPath}/Dbus-Init.d",
@@ -39,8 +45,6 @@ class Target < ISM::Software
         makeLink(   target: "/var/lib/dbus/machine-id",
                     path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/machine-id",
                     type:   :symbolicLink)
-
-        deleteDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}no")
     end
 
     def install
