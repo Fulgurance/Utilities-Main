@@ -7,6 +7,7 @@ class Target < ISM::Software
                                     --sysconfdir=/etc       \
                                     --localstatedir=/var    \
                                     --disable-gtk-doc-html  \
+                                    --enable-introspection=#{option("Gobject-Introspection") ? "yes" : "no"}    \
                                     --disable-static",
                         path:       buildDirectoryPath)
     end
