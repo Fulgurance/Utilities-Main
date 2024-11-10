@@ -13,6 +13,7 @@ class Target < ISM::Software
         configureSource(arguments:  "--prefix=/usr          \
                                     --sysconfdir=/etc       \
                                     --localstatedir=/var    \
+                                    --disable-gtk-doc-html  \
                                     --disable-static",
                         path:       buildDirectoryPath)
     end
