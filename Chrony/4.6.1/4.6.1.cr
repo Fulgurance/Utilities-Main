@@ -38,7 +38,7 @@ class Target < ISM::Software
         fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/chrony.conf",chronyconfData)
 
         if option("Openrc")
-            prepareOpenrcServiceInstallation(   path:   "#{workDirectoryPath}/Chrony-Init.d",
+            prepareOpenrcServiceInstallation(   path:   "#{workDirectoryPath}/Chronyd-Init.d",
                                                 name:   "chronyd")
         end
     end
