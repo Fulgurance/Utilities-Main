@@ -13,9 +13,9 @@ class Target < ISM::Software
                                     #{@buildDirectoryNames["MainBuild"]}    \
                                     --prefix=/usr                           \
                                     --buildtype=release                     \
-                                    --libexecdir=\"lib/elogind\"
+                                    --libexecdir=\"lib/elogind\"            \
                                     -Dman=auto                              \
-                                    -Ddocdir=/usr/share/doc/#{versionName}   \
+                                    -Ddocdir=/usr/share/doc/#{versionName}  \
                                     -Dcgroup-controller=elogind             \
                                     -Ddbuspolicydir=/etc/dbus-1/system.d",
                         path:       mainWorkDirectoryPath)
