@@ -16,6 +16,7 @@ class Target < ISM::Software
                                     -Dgtk-doc=false                         \
                                     -Dman=false                             \
                                     -Dsystemdsystemunitdir=no               \
+                                    -Dintrospection=#{option("Gobject-Introspection") ? "true" : "false"}   \
                                     -Dudevrulesdir=/usr/lib/udev/rules.d",
                         path:       mainWorkDirectoryPath)
     end
