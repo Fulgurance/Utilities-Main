@@ -13,7 +13,7 @@ class Target < ISM::Software
                                     #{@buildDirectoryNames["MainBuild"]}    \
                                     --prefix=/usr                           \
                                     --buildtype=release                     \
-                                    --libexecdir=\"lib/elogind\"            \
+                                    --libexecdir=lib/elogind                \
                                     -Dman=auto                              \
                                     -Ddocdir=/usr/share/doc/#{versionName}  \
                                     -Dcgroup-controller=elogind             \
