@@ -1,0 +1,23 @@
+{
+  "port": "Utilities-Main",
+  "name": "Power-Profiles-Daemon",
+  "version": "0.23.0",
+  "architectures": ["x86_64"],
+  "description": "Makes power profiles handling available over D-Bus.",
+  "website": "https://gitlab.freedesktop.org/upower/power-profiles-daemon/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "Utilities-Main",
+      "name": "Dbus",
+      "version": ">=1.15.12",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
