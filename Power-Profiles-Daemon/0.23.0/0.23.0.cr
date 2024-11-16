@@ -13,7 +13,7 @@ class Target < ISM::Software
                                     #{@buildDirectoryNames["MainBuild"]}    \
                                     --prefix=/usr                           \
                                     --buildtype=release                     \
-                                    -Dgtk-doc=false                         \
+                                    -Dgtk_doc=false                         \
                                     -Dsystemdsystemunitdir=no",
                         path:       mainWorkDirectoryPath)
     end
