@@ -14,6 +14,7 @@ class Target < ISM::Software
                                     --prefix=/usr                           \
                                     --buildtype=release                     \
                                     -Dgtk_doc=false                         \
+                                    -Dtests=false                           \
                                     -Dsystemdsystemunitdir=no",
                         path:       mainWorkDirectoryPath)
     end
