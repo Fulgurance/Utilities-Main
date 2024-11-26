@@ -61,7 +61,7 @@
       "active": true,
       "dependencies": [
         {
-          "port": "Security-Main",
+          "port": "SecuritySoftwares-Main",
           "name": "Linux-Pam",
           "version": ">=1.5.3",
           "options": []
@@ -75,7 +75,7 @@
       "active": true,
       "dependencies": [
         {
-          "port": "Security-Main",
+          "port": "SecuritySoftwares-Main",
           "name": "Polkit",
           "version": ">=123.0.0",
           "options": []
@@ -87,5 +87,5 @@
   "uniqueDependencies": [],
   "uniqueOptions": [],
   "selectedDependencies": [],
-  "allowCodependencies": ["@Security-Main:Polkit"]
+  "allowCodependencies": ["@SecuritySoftwares-Main:Polkit"]
 }

@@ -8,7 +8,7 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "Security-Main",
+      "port": "SecuritySoftwares-Main",
       "name": "Polkit",
       "version": ">=123.0.0",
       "options": []
