@@ -12,6 +12,12 @@
       "name": "Dbus",
       "version": ">=1.15.12",
       "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Upower",
+      "version": ">=1.90.2",
+      "options": []
     }
   ],
   "kernelDependencies": [],
