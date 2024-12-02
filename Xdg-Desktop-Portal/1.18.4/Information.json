@@ -1,0 +1,23 @@
+{
+  "port": "Utilities-Main",
+  "name": "Xdg-Desktop-Portal",
+  "version": "1.18.4",
+  "architectures": ["x86_64"],
+  "description": "Desktop integration portal",
+  "website": "https://github.com/flatpak/xdg-desktop-portal",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "QtLibraries-Main",
+      "name": "Qtbase",
+      "version": ">=6.0.0 ~ <7.0.0",
+      "options": ["Cups"]
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
