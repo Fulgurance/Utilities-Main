@@ -1,0 +1,23 @@
+{
+  "port": "Utilities-Main",
+  "name": "Bubblewrap",
+  "version": "0.23.0",
+  "architectures": ["x86_64"],
+  "description": "Low-level unprivileged sandboxing tool used by Flatpak and similar projects",
+  "website": "https://github.com/containers/bubblewrap/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
