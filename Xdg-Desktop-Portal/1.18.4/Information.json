@@ -36,6 +36,12 @@
       "name": "Dbus",
       "version": ">=1.14.8",
       "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Bubblewrap",
+      "version": ">=0.11.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
