@@ -8,10 +8,34 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "QtLibraries-Main",
-      "name": "Qtbase",
-      "version": ">=6.0.0 ~ <7.0.0",
-      "options": ["Cups"]
+      "port": "BaseLibraries-Main",
+      "name": "Libfuse",
+      "version": ">=3.16.2",
+      "options": []
+    },
+    {
+      "port": "GraphicsLibraries-Main",
+      "name": "Gdk-Pixbuf",
+      "version": ">=2.42.10",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Json-Glib",
+      "version": ">=1.10.0",
+      "options": []
+    },
+    {
+      "port": "MultimediaSoftwares-Main",
+      "name": "Pipewire",
+      "version": ">=1.2.6",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Dbus",
+      "version": ">=1.14.8",
+      "options": []
     }
   ],
   "kernelDependencies": [],
