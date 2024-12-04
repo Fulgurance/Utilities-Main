@@ -35,6 +35,8 @@ class Target < ISM::Software
         if option("Openrc")
             prepareOpenrcServiceInstallation(   path:   "#{workDirectoryPath}/Power-Profiles-Daemon-Init.d",
                                                 name:   "power-profiles-daemon")
+        else
+            deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/no")
         end
     end
 
