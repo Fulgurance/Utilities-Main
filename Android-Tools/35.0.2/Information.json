@@ -26,6 +26,12 @@
       "options": []
     },
     {
+      "port": "BaseLibraries-Main",
+      "name": "Lz4",
+      "version": ">=1.10.0",
+      "options": []
+    },
+    {
       "port": "ProgrammingLanguages-Main",
       "name": "Go",
       "version": ">=1.23.4",
