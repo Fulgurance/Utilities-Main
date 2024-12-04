@@ -20,6 +20,12 @@
       "options": []
     },
     {
+      "port": "BaseLibraries-Main",
+      "name": "Brotli",
+      "version": ">=1.1.0",
+      "options": []
+    },
+    {
       "port": "ProgrammingLanguages-Main",
       "name": "Go",
       "version": ">=1.23.4",
