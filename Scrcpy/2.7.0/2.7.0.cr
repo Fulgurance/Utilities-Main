@@ -30,6 +30,9 @@ class Target < ISM::Software
         runNinjaCommand(arguments:      "install",
                         path:           buildDirectoryPath,
                         environment:    {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
+
+        deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/share/applications/scrcpy-console.desktop")
+        deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/share/applications/scrcpy.desktop")
     end
 
 end
