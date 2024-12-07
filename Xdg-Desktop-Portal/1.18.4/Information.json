@@ -27,8 +27,8 @@
     },
     {
       "port": "MultimediaSoftwares-Main",
-      "name": "Pipewire",
-      "version": ">=1.2.6",
+      "name": "Wireplumber",
+      "version": ">=0.5.6",
       "options": []
     },
     {
