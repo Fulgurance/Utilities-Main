@@ -13,6 +13,7 @@ class Target < ISM::Software
                                     #{@buildDirectoryNames["MainBuild"]}                \
                                     --prefix=/usr                                       \
                                     --buildtype=release                                 \
+                                    -Dprebuilt_server=../scrcpy-server.apk              \
                                     -Dusb=#{option("Libusb") ? "true" : "false"}",
                             path: mainWorkDirectoryPath)
     end
