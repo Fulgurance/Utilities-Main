@@ -4,8 +4,9 @@ class Target < ISM::Software
         super
 
         configureSource(arguments:  "--prefix=/usr                          \
-                                    --docdir=/usr/share/doc/procps-ng-4.0.3 \
+                                    --docdir=/usr/share/doc/procps-ng-4.0.4 \
                                     --disable-static                        \
+                                    --disable-modern-top                    \
                                     --disable-kill",
                         path:       buildDirectoryPath)
     end
