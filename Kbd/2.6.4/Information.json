@@ -8,12 +8,6 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "SystemBase-Main",
-      "name": "SystemBase",
-      "version": ">=0.2.0",
-      "options": []
-    },
-    {
       "port": "Utilities-Main",
       "name": "Flex",
       "version": ">=2.6.4",
