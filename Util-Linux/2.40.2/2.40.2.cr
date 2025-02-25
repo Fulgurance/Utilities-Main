@@ -15,6 +15,7 @@ class Target < ISM::Software
             configureSource(arguments:      "ADJTIME_PATH=/var/lib/hwclock/adjtime      \
                                             --libdir=/usr/lib                           \
                                             --docdir=/usr/share/doc/#{versionName}      \
+                                            --disable-makeinstall-chown                 \
                                             --disable-chfn-chsh                         \
                                             --disable-login                             \
                                             --disable-nologin                           \
@@ -34,6 +35,7 @@ class Target < ISM::Software
                                             --docdir=/usr/share/doc/#{versionName}      \
                                             --runstatedir=/run                          \
                                             --sbindir=/usr/sbin                         \
+                                            --disable-makeinstall-chown                 \
                                             --disable-chfn-chsh                         \
                                             --disable-login                             \
                                             --disable-nologin                           \
