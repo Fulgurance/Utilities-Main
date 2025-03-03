@@ -40,12 +40,4 @@ class Target < ISM::Software
         end
     end
 
-    def install
-        super
-
-        if !option("Pass1")
-            runChmodCommand("0755 /usr/lib/preloadable_libintl.so")
-        end
-    end
-
 end
