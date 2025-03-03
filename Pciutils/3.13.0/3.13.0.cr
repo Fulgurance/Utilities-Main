@@ -20,10 +20,4 @@ class Target < ISM::Software
                     path: buildDirectoryPath)
     end
 
-    def install
-        super
-
-        runChmodCommand("0755 /usr/lib/libpci.so")
-    end
-
 end
