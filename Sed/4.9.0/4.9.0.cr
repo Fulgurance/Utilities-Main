@@ -29,22 +29,6 @@ class Target < ISM::Software
 
         makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
                     path:       buildDirectoryPath)
-
-        if !option("Pass1")
-            makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/#{versionName}")
-
-            copyFile(   "#{buildDirectoryPath}/doc/sed.html",
-                        "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/#{versionName}/sed.html")
-        end
-    end
-
-    def install
-        super
-
-        if !option("Pass1")
-            runChmodCommand("0755 /usr/share/doc/#{versionName}")
-            runChmodCommand("0644 /usr/share/doc/#{versionName}/sed.html")
-        end
     end
 
 end
