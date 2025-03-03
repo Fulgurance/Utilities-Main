@@ -46,10 +46,6 @@ class Target < ISM::Software
     def install
         super
 
-        runChownCommand("root:messagebus /usr/libexec/dbus-daemon-launch-helper")
-
-        runChmodCommand("u+s /usr/libexec/dbus-daemon-launch-helper")
-
         runDbusUuidgenCommand("--ensure")
     end
 
