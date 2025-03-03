@@ -26,11 +26,4 @@ class Target < ISM::Software
                     "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/share/man/man1/mandoc.1")
     end
 
-    def install
-        super
-
-        runChmodCommand("0755 /usr/bin/mandoc")
-        runChmodCommand("0644 /usr/share/man/man1/mandoc.1")
-    end
-
 end
