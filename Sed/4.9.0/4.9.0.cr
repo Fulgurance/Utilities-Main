@@ -17,11 +17,6 @@ class Target < ISM::Software
         super
 
         makeSource(path: buildDirectoryPath)
-
-        if !option("Pass1")
-            makeSource( arguments:  "html",
-                        path:       buildDirectoryPath)
-        end
     end
     
     def prepareInstallation
