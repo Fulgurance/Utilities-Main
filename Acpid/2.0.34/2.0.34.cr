@@ -49,13 +49,4 @@ class Target < ISM::Software
         end
     end
 
-    def install
-        super
-
-        runChmodCommand(arguments:  "+x lid.sh",
-                        path:       "/etc/acpi")
-
-        runChmodCommand("0755 /etc/acpi/events")
-    end
-
 end
