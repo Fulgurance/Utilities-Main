@@ -67,10 +67,4 @@ class Target < ISM::Software
                     type:   :symbolicLinkByOverwrite)
     end
 
-    def install
-        super
-
-        runChmodCommand("0644 /usr/lib/libtcl8.6.so")
-    end
-
 end
