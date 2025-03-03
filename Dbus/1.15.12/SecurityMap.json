@@ -10,7 +10,7 @@
       "target": "/usr/libexec/dbus-daemon-launch-helper",
       "user":   "root",
       "group":  "messagebus",
-      "mode":   "4000"
+      "mode":   "u+s"
     }
   ]
 }
