@@ -3,11 +3,20 @@ class Target < ISM::Software
     def prepare
         super
 
-        fileDeleteLine("#{buildDirectoryPath}ksym_mod.c",192)
+        runAutoreconfCommand(   arguments: "-fiv",
+                                path: buildDirectoryPath)
+    end
 
-        fileReplaceText(path:       "#{buildDirectoryPath}syslogd.c",
-                        text:       "union wait",
-                        newText:    "int")
+    def configure
+        super
+
+        configureSource(arguments:  "--prefix=/usr          \
+                                    --sysconfdir=/etc       \
+                                    --runstatedir=/run      \
+                                    --without-logger        \
+                                    --disable-static        \
+                                    --disable-doc",
+                        path:       buildDirectoryPath)
     end
     
     def build
@@ -19,7 +28,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource( arguments:  "BINDIR=/sbin DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
                     path:       buildDirectoryPath)
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/conf.d")
@@ -32,6 +41,7 @@ class Target < ISM::Software
         mail.* -/var/log/mail.log
         user.* -/var/log/user.log
         *.emerg *
+        secure_mode 2
         CODE
         fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/syslog.conf",syslogData)
 

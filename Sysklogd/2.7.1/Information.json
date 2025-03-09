@@ -1,10 +1,10 @@
 {
   "port": "Utilities-Main",
   "name": "Sysklogd",
-  "version": "1.5.1",
+  "version": "2.7.1",
   "architectures": ["x86_64"],
-  "description": "Daemon providing logging of messages received from programs and facilities on the local host as well as from remote hosts",
-  "website": "https://www.infodrom.org/projects/sysklogd/",
+  "description": "BSD syslog daemon with syslog/syslogp API replacement for Linux",
+  "website": "https://github.com/troglobit/sysklogd",
   "installedFiles": [],
   "dependencies": [
     {
