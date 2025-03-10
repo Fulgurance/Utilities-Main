@@ -9,7 +9,7 @@ class Target < ISM::Software
         else
             configureSource(arguments:  "--prefix=/usr      \
                                         --disable-static    \
-                                        --docdir=/usr/share/doc/#{versionName}",
+                                        --disable-doc",
                             path:       buildDirectoryPath)
         end
     end
