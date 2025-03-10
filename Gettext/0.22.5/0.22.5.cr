@@ -4,7 +4,8 @@ class Target < ISM::Software
         super
 
         if option("Pass1")
-            configureSource(arguments:  "--build=#{Ism.settings.chrootTarget}   \                                                                             \
+            configureSource(arguments:  "--prefix=/usr                          \
+                                        --build=#{Ism.settings.chrootTarget}    \
                                         --host=#{Ism.settings.chrootTarget}     \
                                         --disable-shared",
                             path:       buildDirectoryPath)
