@@ -19,7 +19,9 @@ class Target < ISM::Software
                                     -Ddocdir=/usr/share/doc/#{versionName}  \
                                     -Dcgroup-controller=elogind             \
                                     -Ddbuspolicydir=/etc/dbus-1/system.d",
-                        path:       mainWorkDirectoryPath)
+                        path:       mainWorkDirectoryPath,
+                        environment:    {   "PATH" => "/usr/bin/python3.12:/usr/lib/llvm/#{softwareMajorVersion("@ProgrammingLanguages-Main:Llvm")}/bin:$PATH",
+                                                "PYTHONPATH" => "/usr/lib/python3.12/site-packages"})
     end
 
     def build
