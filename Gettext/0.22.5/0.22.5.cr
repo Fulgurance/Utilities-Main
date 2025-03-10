@@ -7,6 +7,7 @@ class Target < ISM::Software
             configureSource(arguments:  "--prefix=/usr                          \
                                         --build=#{Ism.settings.chrootTarget}    \
                                         --host=#{Ism.settings.chrootTarget}     \
+                                        --disable-dependency-tracking           \
                                         --disable-shared",
                             path:       buildDirectoryPath)
         else
