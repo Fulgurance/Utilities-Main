@@ -21,7 +21,7 @@ class Target < ISM::Software
                                     -Ddbuspolicydir=/etc/dbus-1/system.d",
                         path:       mainWorkDirectoryPath,
                         environment:    {   "PATH" => "/usr/bin/python3.12:/usr/lib/llvm/#{softwareMajorVersion("@ProgrammingLanguages-Main:Llvm")}/bin:$PATH",
-                                                "PYTHONPATH" => "/usr/lib/python3.12/site-packages"})
+                                            "PYTHONPATH" => "/usr/lib/python3.12/site-packages"})
     end
 
     def build
