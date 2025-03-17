@@ -9,5 +9,12 @@
       "directoryMode":  "0755",
 
   },
-  "descriptors": []
+  "descriptors": [
+    {
+      "target": "/usr/lib/libtcl8.6.so",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "0644"
+    }
+  ]
 }

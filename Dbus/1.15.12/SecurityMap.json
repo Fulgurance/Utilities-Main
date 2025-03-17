@@ -9,5 +9,12 @@
       "directoryMode":  "0755",
 
   },
-  "descriptors": []
+  "descriptors": [
+    {
+      "target": "/usr/libexec/dbus-daemon-launch-helper",
+      "user":   "root",
+      "group":  "messagebus",
+      "mode":   "u+s"
+    }
+  ]
 }
