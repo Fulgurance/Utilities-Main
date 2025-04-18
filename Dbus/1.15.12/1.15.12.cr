@@ -53,4 +53,12 @@ class Target < ISM::Software
         runDbusUuidgenCommand("--ensure")
     end
 
+    def deploy
+        super
+
+        if Ism.settings.autoDeployServices
+            runRcUpdateCommand("add dbus default")
+        end
+    end
+
 end

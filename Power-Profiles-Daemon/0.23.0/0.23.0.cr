@@ -40,4 +40,12 @@ class Target < ISM::Software
         end
     end
 
+    def deploy
+        super
+
+        if Ism.settings.autoDeployServices
+            runRcUpdateCommand("add power-profiles-daemon default")
+        end
+    end
+
 end

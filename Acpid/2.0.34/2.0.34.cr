@@ -49,4 +49,12 @@ class Target < ISM::Software
         end
     end
 
+    def deploy
+        super
+
+        if Ism.settings.autoDeployServices
+            runRcUpdateCommand("add acpid default")
+        end
+    end
+
 end

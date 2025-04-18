@@ -94,4 +94,12 @@ class Target < ISM::Software
                     type:   :symbolicLinkByOverwrite)
     end
 
+    def deploy
+        super
+
+        if Ism.settings.autoDeployServices
+            runRcUpdateCommand("add elogind default")
+        end
+    end
+
 end
