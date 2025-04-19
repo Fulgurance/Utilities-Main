@@ -12,6 +12,12 @@
       "name": "Which",
       "version": ">=2.21.0",
       "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Flex",
+      "version": ">=2.6.4",
+      "options": []
     }
   ],
   "kernelDependencies": [ "CONFIG_ACPI",
