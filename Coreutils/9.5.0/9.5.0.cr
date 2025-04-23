@@ -6,7 +6,7 @@ class Target < ISM::Software
         if option("Pass1")
             configureSource(arguments:  "--prefix=/usr                          \
                                         --host=#{Ism.settings.chrootTarget}     \
-                                        --build=$(build-aux/config.guess)       \
+                                        --build=#{Ism.settings.chrootTarget}    \
                                         --enable-install-program=hostname       \
                                         --enable-no-install-program=kill,uptime \
                                         gl_cv_macro_MB_CUR_MAX_good=y",

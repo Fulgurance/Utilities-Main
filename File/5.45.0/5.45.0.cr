@@ -23,7 +23,7 @@ class Target < ISM::Software
         if option("Pass1")
             configureSource(arguments:  "--prefix=/usr                      \
                                         --host=#{Ism.settings.chrootTarget} \
-                                        --build=$(./config.guess)",
+                                        --build=#{Ism.settings.chrootTarget}",
                             path:       buildDirectoryPath)
         else
             configureSource(arguments:  "--prefix=/usr",
