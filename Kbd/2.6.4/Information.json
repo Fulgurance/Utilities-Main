@@ -12,6 +12,12 @@
       "name": "Flex",
       "version": ">=2.6.4",
       "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Autoconf",
+      "version": ">=2.72.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
