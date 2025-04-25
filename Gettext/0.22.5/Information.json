@@ -12,12 +12,6 @@
       "name": "SystemBase",
       "version": ">=0.2.0",
       "options": []
-    },
-    {
-      "port": "SecuritySoftwares-Main",
-      "name": "Acl",
-      "version": ">=2.3.1",
-      "options": []
     }
   ],
   "kernelDependencies": [],
