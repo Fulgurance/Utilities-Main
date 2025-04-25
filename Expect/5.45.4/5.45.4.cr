@@ -8,7 +8,8 @@ class Target < ISM::Software
                                     --enable-shared         \
                                     --mandir=/usr/share/man \
                                     --with-tclinclude=/usr/include",
-                        path:       buildDirectoryPath)
+                        path:       buildDirectoryPath,
+                        environment: {"CFLAGS" => "-fpermissive"})
     end
 
     def build
