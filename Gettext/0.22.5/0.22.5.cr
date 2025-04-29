@@ -7,7 +7,10 @@ class Target < ISM::Software
             configureSource(arguments:  "--disable-shared",
                             path:       buildDirectoryPath)
         else
-            configureSource(arguments:  "--prefix=/usr      \
+            configureSource(arguments:  "--prefix=/usr                          \
+                                        --host=#{Ism.settings.systemTarget}     \
+                                        --build=#{Ism.settings.systemTarget}    \
+                                        --target=#{Ism.settings.systemTarget}   \
                                         --disable-static    \
                                         --disable-doc",
                             path:       buildDirectoryPath)
