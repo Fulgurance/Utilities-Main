@@ -16,9 +16,6 @@ class Target < ISM::Software
                                     path:       buildDirectoryPath)
 
             configureSource(arguments:      "--prefix=/usr                          \
-                                            --host=#{Ism.settings.systemTarget}     \
-                                            --build=#{Ism.settings.systemTarget}    \
-                                            --target=#{Ism.settings.systemTarget}   \
                                             --enable-no-install-program=kill,uptime",
                             path:           buildDirectoryPath,
                             environment:    {"FORCE_UNSAFE_CONFIGURE" => "1"})

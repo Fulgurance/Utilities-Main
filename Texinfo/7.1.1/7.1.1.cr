@@ -3,10 +3,7 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource(arguments:      "--prefix=/usr                          \
-                                        --host=#{Ism.settings.systemTarget}     \
-                                        --build=#{Ism.settings.systemTarget}    \
-                                        --target=#{Ism.settings.systemTarget}   ",
+        configureSource(arguments:      "--prefix=/usr",
                         path:           buildDirectoryPath,
                         environment:    {"FORCE_UNSAFE_CONFIGURE" => "1"})
     end

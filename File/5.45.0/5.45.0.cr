@@ -26,10 +26,7 @@ class Target < ISM::Software
                                         --build=$(./config.guess)",
                             path:       buildDirectoryPath)
         else
-            configureSource(arguments:  "--prefix=/usr                          \
-                                        --host=#{Ism.settings.systemTarget}     \
-                                        --build=#{Ism.settings.systemTarget}    \
-                                        --target=#{Ism.settings.systemTarget}   ",
+            configureSource(arguments:  "--prefix=/usr",
                             path:       buildDirectoryPath)
         end
     end
