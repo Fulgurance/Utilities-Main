@@ -12,6 +12,12 @@
       "name": "Ncurses",
       "version": ">=6.4.0",
       "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Pkgconf",
+      "version": ">=2.3.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
