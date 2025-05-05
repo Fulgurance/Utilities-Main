@@ -35,9 +35,6 @@ class Target < ISM::Software
                                             --docdir=/usr/share/doc/#{versionName}      \
                                             --runstatedir=/run                          \
                                             --sbindir=/usr/sbin                         \
-                                            --host=#{Ism.settings.systemTarget}         \
-                                            --build=#{Ism.settings.systemTarget}        \
-                                            --target=#{Ism.settings.systemTarget}       \
                                             --disable-makeinstall-chown                 \
                                             --disable-chfn-chsh                         \
                                             --disable-login                             \
