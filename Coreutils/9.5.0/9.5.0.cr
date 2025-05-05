@@ -4,11 +4,11 @@ class Target < ISM::Software
         super
 
         if option("Pass1")
-            configureSource(arguments:  "--prefix=/usr                          \
-                                        --host=#{Ism.settings.chrootTarget}     \
-                                        --build=$(build-aux/config.guess)       \
-                                        --enable-install-program=hostname       \
-                                        --enable-no-install-program=kill,uptime \
+            configureSource(arguments:  "--prefix=/usr                                                  \
+                                        --host=#{Ism.settings.chrootTarget}                             \
+                                        --build=#{Ism.settings.systemTarget(relatedToChroot: false)}    \
+                                        --enable-install-program=hostname                               \
+                                        --enable-no-install-program=kill,uptime                         \
                                         gl_cv_macro_MB_CUR_MAX_good=y",
                             path:       buildDirectoryPath)
         else
