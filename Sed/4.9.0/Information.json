@@ -8,6 +8,24 @@
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "ProgrammingTools-Main",
+      "name": "Binutils",
+      "version": ">=2.43.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Gcc",
+      "version": ">=14.2.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Glibc",
+      "version": ">=2.40.0",
+      "options": []
+    },
+    {
       "port": "SecuritySoftwares-Main",
       "name": "Acl",
       "version": ">=2.3.1",
