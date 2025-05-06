@@ -8,9 +8,9 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "SystemBase-Main",
-      "name": "SystemBase",
-      "version": ">=0.2.0",
+      "port": "ProgrammingTools-Main",
+      "name": "Glibc",
+      "version": ">=2.40.0",
       "options": []
     }
   ],
