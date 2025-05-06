@@ -8,15 +8,69 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "Archivers-Main",
-      "name": "Tar",
-      "version": ">=1.35.0",
+      "port": "BaseLibraries-Main",
+      "name": "Ncurses",
+      "version": ">=6.5.0",
       "options": []
     },
     {
-      "port": "ProgrammingLanguages-Main",
-      "name": "Perl",
-      "version": ">=5.38.0",
+      "port": "Shells-Main",
+      "name": "Bash",
+      "version": ">=5.2.37",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Binutils",
+      "version": ">=2.43.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Gcc",
+      "version": ">=14.2.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Glibc",
+      "version": ">=2.40.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Make",
+      "version": ">=4.4.1",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Patch",
+      "version": ">=2.7.6",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Coreutils",
+      "version": ">=9.3.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Gettext",
+      "version": ">=0.22.5",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Grep",
+      "version": ">=3.11.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Sed",
+      "version": ">=4.9.0",
       "options": []
     }
   ],
