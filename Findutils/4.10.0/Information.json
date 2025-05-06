@@ -58,7 +58,7 @@
     {
       "port": "Utilities-Main",
       "name": "Texinfo",
-      "version": ">=8.6.13",
+      "version": ">=7.1.1",
       "options": []
     }
   ],
