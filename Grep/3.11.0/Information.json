@@ -26,12 +26,6 @@
       "options": []
     },
     {
-      "port": "ProgrammingTools-Main",
-      "name": "Diffutils",
-      "version": ">=3.10.0",
-      "options": []
-    },
-    {
       "port": "Utilities-Main",
       "name": "Coreutils",
       "version": ">=9.3.0",
