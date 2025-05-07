@@ -27,12 +27,6 @@
     },
     {
       "port": "Utilities-Main",
-      "name": "Coreutils",
-      "version": ">=9.3.0",
-      "options": []
-    },
-    {
-      "port": "Utilities-Main",
       "name": "Gettext",
       "version": ">=0.22.5",
       "options": []
