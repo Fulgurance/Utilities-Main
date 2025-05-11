@@ -39,7 +39,7 @@
     },
     {
       "port": "BaseLibraries-Main",
-      "name": "Markupsafe",
+      "name": "MarkupSafe",
       "version": ">=3.0.2",
       "options": ["Python-3.12"]
     }
