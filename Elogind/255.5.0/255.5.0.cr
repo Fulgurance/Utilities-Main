@@ -20,7 +20,7 @@ class Target < ISM::Software
                                     -Dcgroup-controller=elogind             \
                                     -Ddbuspolicydir=/etc/dbus-1/system.d",
                         path:       mainWorkDirectoryPath,
-                        environment:    {   "PATH" => "/usr/bin/python3.12:/usr/lib/llvm/#{softwareMajorVersion("@ProgrammingLanguages-Main:Llvm")}/bin:$PATH",
+                        environment:    {   "PATH" => "/usr/bin/python3.12:$PATH",
                                             "PYTHONPATH" => "/usr/lib/python3.12/site-packages"})
     end
 
@@ -28,7 +28,7 @@ class Target < ISM::Software
         super
 
         runNinjaCommand(path: buildDirectoryPath,
-                        environment:    {   "PATH" => "/usr/bin/python3.12:/usr/lib/llvm/#{softwareMajorVersion("@ProgrammingLanguages-Main:Llvm")}/bin:$PATH",
+                        environment:    {   "PATH" => "/usr/bin/python3.12:$PATH",
                                             "PYTHONPATH" => "/usr/lib/python3.12/site-packages"})
     end
 
