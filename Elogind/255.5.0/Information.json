@@ -29,7 +29,7 @@
       "port": "BaseLibraries-Main",
       "name": "Jinja2",
       "version": ">=3.1.2",
-      "options": []
+      "options": ["Python-3.12"]
     },
     {
       "port": "BaseLibraries-Main",
