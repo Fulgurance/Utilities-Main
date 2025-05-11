@@ -27,7 +27,9 @@ class Target < ISM::Software
     def build
         super
 
-        runNinjaCommand(path: buildDirectoryPath)
+        runNinjaCommand(path: buildDirectoryPath,
+                        environment:    {   "PATH" => "/usr/bin/python3.12:/usr/lib/llvm/#{softwareMajorVersion("@ProgrammingLanguages-Main:Llvm")}/bin:$PATH",
+                                            "PYTHONPATH" => "/usr/lib/python3.12/site-packages"})
     end
 
     def prepareInstallation
