@@ -15,7 +15,8 @@ class Target < ISM::Software
                                     --buildtype=release                     \
                                     --localstatedir=/var                    \
                                     --libexecdir=\"lib/elogind\"            \
-                                    -Dman=auto                              \
+                                    -Dman=false                             \
+                                    -Dhtml=false                            \
                                     -Ddocdir=/usr/share/doc/#{versionName}  \
                                     -Dcgroup-controller=elogind             \
                                     -Ddbuspolicydir=/etc/dbus-1/system.d",
