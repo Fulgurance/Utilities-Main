@@ -97,4 +97,12 @@ class Target < ISM::Software
                     type:   :symbolicLinkByOverwrite)
     end
 
+    def deploy
+        if autoDeployServices
+            if option("Openrc")
+                runRcUpdateCommand("add elogind boot")
+            end
+        end
+    end
+
 end

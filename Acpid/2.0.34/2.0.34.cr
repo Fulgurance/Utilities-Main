@@ -49,4 +49,12 @@ class Target < ISM::Software
         end
     end
 
+    def deploy
+        if autoDeployServices
+            if option("Openrc")
+                runRcUpdateCommand("add acpid default")
+            end
+        end
+    end
+
 end

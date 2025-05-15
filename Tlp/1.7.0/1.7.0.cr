@@ -12,4 +12,12 @@ class Target < ISM::Software
         end
     end
 
+    def deploy
+        if autoDeployServices
+            if option("Openrc")
+                runRcUpdateCommand("add tlp default")
+            end
+        end
+    end
+
 end

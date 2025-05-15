@@ -60,4 +60,12 @@ class Target < ISM::Software
         end
     end
 
+    def deploy
+        if autoDeployServices
+            if option("Openrc")
+                runRcUpdateCommand("add cronie default")
+            end
+        end
+    end
+
 end

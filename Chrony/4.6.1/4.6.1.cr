@@ -43,4 +43,12 @@ class Target < ISM::Software
         end
     end
 
+    def deploy
+        if autoDeployServices
+            if option("Openrc")
+                runRcUpdateCommand("add chronyd default")
+            end
+        end
+    end
+
 end
