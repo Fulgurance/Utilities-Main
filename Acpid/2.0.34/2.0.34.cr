@@ -50,6 +50,11 @@ class Target < ISM::Software
     end
 
     def deploy
+        super
+
+        runChownCommand("root:root /etc/acpi/lid.sh")
+        runChmodCommand("+x /etc/acpi/lid.sh")
+
         if autoDeployServices
             if option("Openrc")
                 runRcUpdateCommand("add acpid default")

@@ -67,4 +67,11 @@ class Target < ISM::Software
                     type:   :symbolicLinkByOverwrite)
     end
 
+    def deploy
+        super
+
+        runChownCommand("root:root /usr/lib/libtcl8.6.so")
+        runChmodCommand("0644 /usr/lib/libtcl8.6.so")
+    end
+
 end

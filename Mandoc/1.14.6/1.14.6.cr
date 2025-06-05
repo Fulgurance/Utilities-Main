@@ -26,4 +26,11 @@ class Target < ISM::Software
                     "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/share/man/man1/mandoc.1")
     end
 
+    def deploy
+        super
+
+        runChownCommand("root:root /usr/share/man/man1/mandoc.1")
+        runChmodCommand("0644 /usr/share/man/man1/mandoc.1")
+    end
+
 end

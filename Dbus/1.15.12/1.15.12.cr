@@ -54,6 +54,11 @@ class Target < ISM::Software
     end
 
     def deploy
+        super
+
+        runChownCommand("root:messagebus /usr/libexec/dbus-daemon-launch-helper")
+        runChmodCommand("u+s /usr/libexec/dbus-daemon-launch-helper")
+
         if autoDeployServices
             if option("Openrc")
                 runRcUpdateCommand("add dbus default")
