@@ -58,6 +58,8 @@ class Target < ISM::Software
     end
 
     def deploy
+        super
+
         if autoDeployServices
             if option("Openrc")
                 runRcUpdateCommand("add sysklogd default")
