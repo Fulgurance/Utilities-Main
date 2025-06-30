@@ -1,0 +1,12 @@
+diff -ur gptfdisk-1.0.10-old/gptcurses.cc gptfdisk-1.0.10/gptcurses.cc
+--- gptfdisk-1.0.10-old/gptcurses.cc	2024-02-20 00:55:41.000000000 +0000
++++ gptfdisk-1.0.10/gptcurses.cc	2025-06-30 11:19:40.017924046 +0100
+@@ -26,7 +26,7 @@
+ #if defined (__APPLE__) || (__FreeBSD__)
+ #include <ncurses.h>
+ #else
+-#include <ncursesw/ncurses.h>
++#include <ncurses.h>
+ #endif
+ #include "gptcurses.h"
+ #include "support.h"

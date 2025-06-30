@@ -1,0 +1,23 @@
+{
+  "port": "Utilities-Main",
+  "name": "Gptfdisk",
+  "version": "1.0.10",
+  "architectures": ["x86_64"],
+  "description": "Disk partitioning tool loosely modeled on Linux fdisk, but used for modifying GUID Partition Table (GPT) disks",
+  "website": "https://sourceforge.net/projects/gptfdisk/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Popt",
+      "version": ">=1.19.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
