@@ -7,6 +7,7 @@ class Target < ISM::Software
                 path: buildDirectoryPath)
 
         configureSource(arguments:  "--prefix=/usr                  \
+                                    --localstatedir=/var            \
                                     --with-daemon_username=cronie   \
                                     --with-daemon_groupname=cronie  \
                                     #{option("Linux-Pam") ? "--with-pam" : "--without-pam"}",
