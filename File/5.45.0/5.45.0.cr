@@ -34,7 +34,9 @@ class Target < ISM::Software
     def build
         super
 
-        if component("C-Library") == "Glibc" && option("Pass1")
+        usingGlibc = component("C-Library").uniqueDependencyIsEnabled("Glibc")
+
+        if usingGlibc && option("Pass1")
             makeSource( arguments:  "FILE_COMPILE=#{buildDirectoryPath}/src/file",
                         path:       buildDirectoryPath)
         else
