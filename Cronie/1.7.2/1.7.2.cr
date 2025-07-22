@@ -6,12 +6,21 @@ class Target < ISM::Software
         runFile(file: "autogen.sh",
                 path: buildDirectoryPath)
 
-        configureSource(arguments:  "--prefix=/usr                  \
-                                    --localstatedir=/var            \
-                                    --with-daemon_username=cronie   \
-                                    --with-daemon_groupname=cronie  \
-                                    #{option("Linux-Pam") ? "--with-pam" : "--without-pam"}",
-                        path:       buildDirectoryPath)
+        usingGlibc = component("C-Library").uniqueDependencyIsEnabled("Glibc")
+
+        configureEnvironment = Hash(String,String).new
+
+        if !usingGlibc
+            configureEnvironment = {"LIBS" => "-lobstack"}
+        end
+
+        configureSource(arguments:      "--prefix=/usr                  \
+                                        --localstatedir=/var            \
+                                        --with-daemon_username=cronie   \
+                                        --with-daemon_groupname=cronie  \
+                                        #{option("Linux-Pam") ? "--with-pam" : "--without-pam"}",
+                        path:           buildDirectoryPath,
+                        environment:    configureEnvironment)
     end
 
     def build
