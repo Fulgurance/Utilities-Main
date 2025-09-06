@@ -8,6 +8,8 @@ class Target < ISM::Software
     def configure
         super
 
+        usingGlibc = component("C-Library").uniqueDependencyIsEnabled("Glibc")
+
         runMesonCommand(arguments:  "setup                                  \
                                     --reconfigure                           \
                                     #{@buildDirectoryNames["MainBuild"]}    \
@@ -19,7 +21,8 @@ class Target < ISM::Software
                                     -Dhtml=false                            \
                                     -Ddocdir=/usr/share/doc/#{versionName}  \
                                     -Dcgroup-controller=elogind             \
-                                    -Ddbuspolicydir=/etc/dbus-1/system.d",
+                                    -Ddbuspolicydir=/etc/dbus-1/system.d    \
+                                    -Dutmp=#{usingGlibc ? "true" : "false"}",
                         path:       mainWorkDirectoryPath,
                         environment:    {   "PATH" => "/usr/bin/python3.12:$PATH",
                                             "PYTHONPATH" => "/usr/lib/python3.12/site-packages"})
