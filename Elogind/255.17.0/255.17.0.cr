@@ -17,6 +17,7 @@ class Target < ISM::Software
                                     --buildtype=release                     \
                                     --localstatedir=/var                    \
                                     --libexecdir=\"lib/elogind\"            \
+                                    -Dtests=false                           \
                                     -Dman=false                             \
                                     -Dhtml=false                            \
                                     -Ddocdir=/usr/share/doc/#{versionName}  \
