@@ -17,6 +17,7 @@ class Target < ISM::Software
                                     -Dsystemdsystemunitdir=no                                       \
                                     -Delogind=#{option("Elogind") ? "true" : "false"}               \
                                     -Dintrospection=#{option("Introspection") ? "true" : "false"}   \
+                                    -Dtests=false                                                   \
                                     -Dvapi=false",
                             path: mainWorkDirectoryPath)
     end
