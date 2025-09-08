@@ -108,7 +108,7 @@
       "kernelDependencies": []
     }
   ],
-  "uniqueDependencies": [["@ProgrammingTools-Main:Glibc","@ProgrammingTools-Main:Musl"]],
+  "uniqueDependencies": [["@ProgrammingTools-Main:Glibc","@ProgrammingTools-Main:Musl-Utils"]],
   "uniqueOptions": [],
   "selectedDependencies": [],
   "allowCodependencies": ["@SecuritySoftwares-Main:Polkit"]
