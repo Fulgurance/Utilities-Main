@@ -3,6 +3,8 @@ class Target < ISM::Software
     def configure
         super
 
+        usingGlibc = component("C-Library").uniqueDependencyIsEnabled("Glibc")
+
         runFile(file: "autogen.sh",
                 path: buildDirectoryPath)
 
@@ -11,7 +13,8 @@ class Target < ISM::Software
                                         --with-daemon_username=cronie   \
                                         --with-daemon_groupname=cronie  \
                                         #{option("Linux-Pam") ? "--with-pam" : "--without-pam"}",
-                        path:           buildDirectoryPath)
+                        path:           buildDirectoryPath,
+                        environment:    {"CFLAGS" => "#{usingGlibc ? "" : "-lobstack"}"})
     end
 
     def build
