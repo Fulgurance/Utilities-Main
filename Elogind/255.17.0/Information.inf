@@ -51,7 +51,6 @@ OPTIONS
     kernelDependencies:
 
 UNIQUEDEPENDENCIES
-    @ProgrammingTools-Main:Glibc,@ProgrammingTools-Main:Musl-Utils
 UNIQUEOPTIONS
 ALLOWCODEPENDENCIES
     @SecuritySoftwares-Main:Polkit
