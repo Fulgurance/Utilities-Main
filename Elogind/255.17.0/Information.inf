@@ -17,8 +17,10 @@ DEPENDENCIES
         @BaseLibraries-Main:Jinja2>=3.1.2(Python-3.12)
         @BaseLibraries-Main:Lxml>=5.3.0(Python-3.12)
         @BaseLibraries-Main:MarkupSafe>=3.0.2(Python-3.12)
-        @ProgrammingTools-Main:Glibc>=2.40.0
-        @ProgrammingTools-Main:Musl-Utils>=1.1.12-r7
+
+        if component("C-Library") selected "Musl"
+            @ProgrammingTools-Main:Musl-Utils>=1.1.12-r7
+        end
 KERNELDEPENDENCIES
     CONFIG_INOTIFY_USER
     CONFIG_INOTIFY_USER
