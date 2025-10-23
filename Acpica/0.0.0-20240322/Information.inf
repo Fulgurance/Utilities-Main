@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Acpica
+VERSION
+    0.0.0-20240322
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Open-source operating system-independent implementation of the Advanced Configuration and Power Interface specification
+WEBSITE
+    https://github.com/acpica/acpica
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

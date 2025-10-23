@@ -1,0 +1,27 @@
+PORT
+    Utilities-Main
+NAME
+    Upower
+VERSION
+    1.90.6
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Power management support for DeviceKit
+WEBSITE
+    https://gitlab.freedesktop.org/upower/upower
+DEPENDENCIES
+        @BaseLibraries-Main:Libgudev>=238.0.0
+        @BaseLibraries-Main:Libusb>=1.0.26
+KERNELDEPENDENCIES
+OPTIONS
+    name: Gobject-Introspection
+    description: Enable gobject-introspection support
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Gobject-Introspection>=1.76.1
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

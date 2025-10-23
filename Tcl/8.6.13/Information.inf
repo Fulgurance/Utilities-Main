@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Tcl
+VERSION
+    8.6.13
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    The Tool Command Language and Tk toolkit
+WEBSITE
+    http://tcl.sourceforge.net/
+DEPENDENCIES
+        @Utilities-Main:Flex>=2.6.4
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

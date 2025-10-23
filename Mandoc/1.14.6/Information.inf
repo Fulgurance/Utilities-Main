@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Mandoc
+VERSION
+    1.14.6
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Suite of tools compiling mdoc
+WEBSITE
+    https://mandoc.bsd.lv/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

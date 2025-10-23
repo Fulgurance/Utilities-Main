@@ -1,0 +1,87 @@
+PORT
+    Utilities-Main
+NAME
+    Udisks
+VERSION
+    2.10.1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    The UDisks project provides a daemon, tools and libraries to access and manipulate disks, storage devices and technologies
+WEBSITE
+    https://github.com/storaged-project/udisks
+DEPENDENCIES
+        @BaseLibraries-Main:Libatasmart>=0.19.0
+        @BaseLibraries-Main:Libblockdev>=3.0.2
+        @BaseLibraries-Main:Libgudev>=238.0.0
+        @BaseLibraries-Main:Libxslt>=1.1.38
+        @SecuritySoftwares-Main:Polkit>=123.0.0
+        @SystemGroups-Main:Plugdev>=0.1.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Btrfs-Progs
+    description: Enable btrfs-progs support
+    active: false
+    dependencies:
+        @FileSystems-Main:Btrfs-Progs>=6.3.3
+    kernelDependencies:
+
+    name: Dbus
+    description: Enable dbus support
+    active: false
+    dependencies:
+        @Utilities-Main:Dbus>=1.14.8
+    kernelDependencies:
+
+    name: Dosfstools
+    description: Enable dosfstools support
+    active: false
+    dependencies:
+        @FileSystems-Main:Dosfstools>=4.2.0
+    kernelDependencies:
+
+    name: Gptfdisk
+    description: Enable gptfdisk support
+    active: false
+    dependencies:
+        @Utilities-Main:Gptfdisk>=1.0.9
+    kernelDependencies:
+
+    name: Mdadm
+    description: Enable mdadm support
+    active: false
+    dependencies:
+        @Utilities-Main:Mdadm>=4.2.0
+    kernelDependencies:
+
+    name: Xfsprogs
+    description: Enable xfsprogs support
+    active: false
+    dependencies:
+        @FileSystems-Main:Xfsprogs>=6.4.0
+    kernelDependencies:
+
+    name: Elogind
+    description: Enable elogind support
+    active: false
+    dependencies:
+        @Utilities-Main:Elogind>=252.9.0
+    kernelDependencies:
+
+    name: Gobject-Introspection
+    description: Enable dbus support
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Gobject-Introspection>=1.76.1
+    kernelDependencies:
+
+    name: Lvm2
+    description: Enable lvm2 support
+    active: false
+    dependencies:
+        @FileSystems-Main:Lvm2>=2.3.22
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

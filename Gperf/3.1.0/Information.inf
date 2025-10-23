@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Gperf
+VERSION
+    3.1.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    GNU perfect hash function generator
+WEBSITE
+    https://www.gnu.org/software/gperf/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0(Pass3)
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

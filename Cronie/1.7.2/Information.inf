@@ -1,0 +1,33 @@
+PORT
+    Utilities-Main
+NAME
+    Cronie
+VERSION
+    1.7.2
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Cronie cron daemon project 
+WEBSITE
+    https://github.com/cronie-crond/cronie
+DEPENDENCIES
+        @SystemUsers-Main:Cronie>=0.1.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Openrc
+    description: Enable openrc support
+    active: false
+    dependencies:
+        @InitSystems-Main:Openrc>=0.52.1
+    kernelDependencies:
+
+    name: Linux-Pam
+    description: Enable linux-pam support
+    active: true
+    dependencies:
+        @SecuritySoftwares-Main:Linux-Pam>=1.5.3
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

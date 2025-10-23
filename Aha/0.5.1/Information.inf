@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Aha
+VERSION
+    0.5.1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Ansi HTML Adapter
+WEBSITE
+    https://github.com/theZiz/aha
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

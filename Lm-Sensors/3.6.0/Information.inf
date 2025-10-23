@@ -1,0 +1,30 @@
+PORT
+    Utilities-Main
+NAME
+    Lm-Sensors
+VERSION
+    3.6.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Provides user-space support for the hardware monitoring drivers in Linux 2.6.5 and later
+WEBSITE
+    https://github.com/lm-sensors/lm-sensors
+DEPENDENCIES
+        @Utilities-Main:Which>=2.21.0
+        @Utilities-Main:Flex>=2.6.4
+KERNELDEPENDENCIES
+    CONFIG_ACPI
+    CONFIG_ACPI_BATTERY
+    CONFIG_ACPI_THERMAL
+    CONFIG_BLK_DEV_NVME
+    CONFIG_NVME_HWMON
+    CONFIG_HWMON
+    CONFIG_SENSORS_K8TEMP
+    CONFIG_SENSORS_K10TEMP
+    CONFIG_SENSORS_FAM15H_POWER
+    CONFIG_SENSORS_CORETEMP
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

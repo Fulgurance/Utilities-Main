@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Gptfdisk
+VERSION
+    1.0.10
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Disk partitioning tool loosely modeled on Linux fdisk, but used for modifying GUID Partition Table (GPT) disks
+WEBSITE
+    https://sourceforge.net/projects/gptfdisk/
+DEPENDENCIES
+        @BaseLibraries-Main:Popt>=1.19.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

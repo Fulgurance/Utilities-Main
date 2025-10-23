@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Procps-Ng
+VERSION
+    4.0.3
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Command line and full screen utilities for browsing procfs
+WEBSITE
+    https://sourceforge.net/projects/procps-ng/
+DEPENDENCIES
+        @BaseLibraries-Main:Ncurses>=6.4.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

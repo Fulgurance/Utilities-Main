@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Kbd
+VERSION
+    2.6.1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Utilities for managing Linux console mainly, loading console fonts and keyboard maps
+WEBSITE
+    https://kbd-project.org/
+DEPENDENCIES
+        @Utilities-Main:Flex>=2.6.4
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

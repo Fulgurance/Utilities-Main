@@ -1,0 +1,33 @@
+PORT
+    Utilities-Main
+NAME
+    Attr
+VERSION
+    2.5.2
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Commands for Manipulating Filesystem Extended Attributes
+WEBSITE
+    https://savannah.nongnu.org/projects/attr
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0(Pass3)
+KERNELDEPENDENCIES
+OPTIONS
+    name: 32Bits
+    description: Enable 32 bits support
+    active: false
+    dependencies:
+    kernelDependencies:
+        CONFIG_IA32_EMULATION
+
+    name: x32Bits
+    description: Enable x32 bits support
+    active: false
+    dependencies:
+    kernelDependencies:
+        CONFIG_X86_X32
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

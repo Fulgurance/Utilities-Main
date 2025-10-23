@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Usbutils
+VERSION
+    18.0.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    USB utilities for Linux, including lsusb
+WEBSITE
+    https://github.com/gregkh/usbutils
+DEPENDENCIES
+        @BaseLibraries-Main:Libusb>=1.0.26
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

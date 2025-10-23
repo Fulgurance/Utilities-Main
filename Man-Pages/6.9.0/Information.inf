@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Man-Pages
+VERSION
+    6.9.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    The Linux man-pages project documents the Linux kernel and C library interfaces that are employed by user-space programs
+WEBSITE
+    https://www.kernel.org/doc/man-pages/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

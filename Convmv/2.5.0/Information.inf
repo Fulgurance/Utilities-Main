@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Convmv
+VERSION
+    2.5.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Tool to converts filenames from one encoding to another
+WEBSITE
+    https://j3e.de/linux/convmv/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

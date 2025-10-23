@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Socat
+VERSION
+    1.8.0-r1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Relay for bidirectional data transfer between two independent data channels
+WEBSITE
+    http://www.dest-unreach.org/socat/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

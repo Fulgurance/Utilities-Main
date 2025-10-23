@@ -1,0 +1,22 @@
+PORT
+    Utilities-Main
+NAME
+    Intltool
+VERSION
+    0.51.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Set of tools to centralize translation of many different file formats using GNU gettext-compatible PO files
+WEBSITE
+    https://freedesktop.org/wiki/Software/intltool
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+        @Xml-Main:Xml-Parser>=2.46.0
+        @ProgrammingTools-Main:Autoconf>=2.71.0
+        @ProgrammingTools-Main:Automake>=1.16.4
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

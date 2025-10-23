@@ -1,0 +1,24 @@
+PORT
+    Utilities-Main
+NAME
+    Android-Tools
+VERSION
+    35.0.2
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Tools that interface with the Android platform, primarily adb and fastboot
+WEBSITE
+    https://github.com/nmeum/android-tools
+DEPENDENCIES
+        @BaseLibraries-Main:Libusb>=1.0.26
+        @BaseLibraries-Main:Fmt>=11.0.2
+        @BaseLibraries-Main:Brotli>=1.1.0
+        @BaseLibraries-Main:Lz4>=1.10.0
+        @BaseLibraries-Main:Protobuf>=29.1.0
+        @ProgrammingLanguages-Main:Go>=1.23.4
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

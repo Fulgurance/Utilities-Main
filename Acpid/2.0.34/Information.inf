@@ -1,0 +1,26 @@
+PORT
+    Utilities-Main
+NAME
+    Acpid
+VERSION
+    2.0.34
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    The new ACPI Daemon
+WEBSITE
+    https://sourceforge.net/projects/acpid2/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Openrc
+    description: Enable openrc support
+    active: false
+    dependencies:
+        @InitSystems-Main:Openrc>=0.52.1
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

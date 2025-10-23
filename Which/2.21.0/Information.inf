@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Which
+VERSION
+    2.21.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Utility used to find which executable is executed when entered on the shell prompt
+WEBSITE
+    https://ftp.gnu.org/gnu/which/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

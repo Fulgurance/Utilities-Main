@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Psmisc
+VERSION
+    23.7.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Miscellaneous utilities that use the proc file-system
+WEBSITE
+    https://gitlab.com/psmisc/psmisc
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

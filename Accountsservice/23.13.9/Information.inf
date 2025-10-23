@@ -1,0 +1,41 @@
+PORT
+    Utilities-Main
+NAME
+    Accountsservice
+VERSION
+    23.13.9
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    D-Bus service for accessing the list of user accounts and information attached to those accounts
+WEBSITE
+    https://www.freedesktop.org/wiki/Software/AccountsService/
+DEPENDENCIES
+        @SecuritySoftwares-Main:Polkit>=123.0.0
+        @Utilities-Main:Dbus>=1.14.8
+KERNELDEPENDENCIES
+OPTIONS
+    name: Gobject-Introspection
+    description: Enable gobject-introspection support
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Gobject-Introspection>=1.76.1
+    kernelDependencies:
+
+    name: Elogind
+    description: Enable elogind support
+    active: true
+    dependencies:
+        @Utilities-Main:Elogind>=252.9.0
+    kernelDependencies:
+
+    name: Vala
+    description: Enable vala support
+    active: false
+    dependencies:
+        @ProgrammingLanguages-Main:Vala>=0.56.11
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

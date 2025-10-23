@@ -1,0 +1,36 @@
+PORT
+    Utilities-Main
+NAME
+    Kmod
+VERSION
+    33.0.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Libraries and utilities for loading kernel modules
+WEBSITE
+    https://www.kernel.org/pub/linux/utils/kernel/kmod
+DEPENDENCIES
+        @Utilities-Main:Flex>=2.6.4
+        @ProgrammingTools-Main:Pkgconf>=2.0.1
+        @BaseLibraries-Main:Zlib>=1.2.13
+        @Archivers-Main:Zstd>=1.5.6
+KERNELDEPENDENCIES
+OPTIONS
+    name: 32Bits
+    description: Enable 32 bits support
+    active: false
+    dependencies:
+    kernelDependencies:
+        CONFIG_IA32_EMULATION
+
+    name: x32Bits
+    description: Enable x32 bits support
+    active: false
+    dependencies:
+    kernelDependencies:
+        CONFIG_X86_X32
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

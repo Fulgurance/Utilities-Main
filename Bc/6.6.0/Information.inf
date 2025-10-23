@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Bc
+VERSION
+    6.6.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Implementation of the POSIX bc calculator that implements GNU bc extensions
+WEBSITE
+    https://git.yzena.com/gavin/bc
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0(Pass2)
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

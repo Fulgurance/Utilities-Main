@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Lcms2
+VERSION
+    2.14.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    A free, open source, CMM engine. It provides fast transforms between ICC profiles
+WEBSITE
+    https://github.com/mm2/Little-CMS
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

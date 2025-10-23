@@ -1,0 +1,27 @@
+PORT
+    Utilities-Main
+NAME
+    Man-Db
+VERSION
+    2.13.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Implementation of the standard Unix documentation system accessed using the man command
+WEBSITE
+    https://www.nongnu.org/man-db/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+        @Archivers-Main:Bzip2>=1.0.8
+        @Utilities-Main:Flex>=2.6.4
+        @BaseLibraries-Main:Gdbm>=1.23.0
+        @Utilities-Main:Groff>=1.23.0
+        @Utilities-Main:Less>=643.0.0
+        @BaseLibraries-Main:Libpipeline>=1.5.7
+        @BaseLibraries-Main:Zlib>=1.2.13
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
+

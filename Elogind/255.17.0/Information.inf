@@ -1,0 +1,55 @@
+PORT
+    Utilities-Main
+NAME
+    Elogind
+VERSION
+    255.17.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    The systemd project's logind extracted to a standalone package
+WEBSITE
+    https://github.com/elogind/elogind
+DEPENDENCIES
+        @Utilities-Main:Dbus>=1.14.8
+        @FileSystems-Main:Eudev>=3.2.14
+        @Xml-Main:Docbook-Xml>=4.5.0
+        @BaseLibraries-Main:Jinja2>=3.1.2(Python-3.12)
+        @BaseLibraries-Main:Lxml>=5.3.0(Python-3.12)
+        @BaseLibraries-Main:MarkupSafe>=3.0.2(Python-3.12)
+        @ProgrammingTools-Main:Glibc>=2.40.0
+        @ProgrammingTools-Main:Musl-Utils>=1.1.12-r7
+KERNELDEPENDENCIES
+    CONFIG_INOTIFY_USER
+    CONFIG_INOTIFY_USER
+    CONFIG_TMPFS_POSIX_ACL
+    CONFIG_CRYPTO
+    CONFIG_CRYPTO_USER
+    CONFIG_INOTIFY_USER_API_HASH
+OPTIONS
+    name: Openrc
+    description: Enable openrc support
+    active: false
+    dependencies:
+        @InitSystems-Main:Openrc>=0.52.1
+    kernelDependencies:
+
+    name: Linux-Pam
+    description: Enable linux-pam support for Xorg
+    active: true
+    dependencies:
+        @SecuritySoftwares-Main:Linux-Pam>=1.5.3
+    kernelDependencies:
+
+    name: Polkit
+    description: Enable polkit support
+    active: true
+    dependencies:
+        @SecuritySoftwares-Main:Polkit>=123.0.0
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+    @ProgrammingTools-Main:Glibc,@ProgrammingTools-Main:Musl-Utils
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
+    @SecuritySoftwares-Main:Polkit

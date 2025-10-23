@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Lsb-Release
+VERSION
+    3.3.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    LSB version query program with support of /etc/os-release
+WEBSITE
+    https://github.com/thkukuk/lsb-release_os-release
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

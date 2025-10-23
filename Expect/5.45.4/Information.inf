@@ -1,0 +1,20 @@
+PORT
+    Utilities-Main
+NAME
+    Expect
+VERSION
+    5.45.4
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Tool for automating interactive applications
+WEBSITE
+    https://core.tcl.tk/expect/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+        @Utilities-Main:Tcl>=8.6.11
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

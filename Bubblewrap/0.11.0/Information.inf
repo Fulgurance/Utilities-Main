@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Bubblewrap
+VERSION
+    0.11.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Low-level unprivileged sandboxing tool used by Flatpak and similar projects
+WEBSITE
+    https://github.com/containers/bubblewrap/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

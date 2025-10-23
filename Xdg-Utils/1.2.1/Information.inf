@@ -1,0 +1,27 @@
+PORT
+    Utilities-Main
+NAME
+    Xdg-Utils
+VERSION
+    1.2.1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Set of tools that allows applications to easily integrate with the desktop environment of the user, regardless of the specific desktop environment that the user runs.
+WEBSITE
+    https://www.freedesktop.org/wiki/Software/xdg-utils/
+DEPENDENCIES
+        @Xml-Main:Xmlto>=0.0.28(Links)
+        @XorgBase-Main:Xorg-Applications>=21.1.8
+KERNELDEPENDENCIES
+OPTIONS
+    name: Dbus
+    description: Enable dbus support
+    active: true
+    dependencies:
+        @Utilities-Main:Dbus>=1.14.8
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

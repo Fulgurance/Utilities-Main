@@ -1,0 +1,40 @@
+PORT
+    Utilities-Main
+NAME
+    Parted
+VERSION
+    3.6.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    GNU Parted manipulates partition tables
+WEBSITE
+    https://www.gnu.org/software/parted/parted.html
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Lvm2
+    description: Enable lvm2 support
+    active: false
+    dependencies:
+        @FileSystems-Main:Lvm2>=2.3.22
+    kernelDependencies:
+
+    name: Pth
+    description: Enable pth support
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Pth>=2.0.7
+    kernelDependencies:
+
+    name: Texlive
+    description: Enable texlive support
+    active: false
+    dependencies:
+        @Utilities-Main:Texlive>=0.0.0-20230313
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

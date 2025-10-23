@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Less
+VERSION
+    643.0.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Free, open-source file pager
+WEBSITE
+    https://www.greenwoodsoftware.com/less/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

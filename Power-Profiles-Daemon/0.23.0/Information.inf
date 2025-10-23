@@ -1,0 +1,27 @@
+PORT
+    Utilities-Main
+NAME
+    Power-Profiles-Daemon
+VERSION
+    0.23.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Makes power profiles handling available over D-Bus.
+WEBSITE
+    https://gitlab.freedesktop.org/upower/power-profiles-daemon/
+DEPENDENCIES
+        @Utilities-Main:Dbus>=1.15.12
+        @Utilities-Main:Upower>=1.90.2
+KERNELDEPENDENCIES
+OPTIONS
+    name: Openrc
+    description: Enable openrc support
+    active: false
+    dependencies:
+        @InitSystems-Main:Openrc>=0.52.1
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

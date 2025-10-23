@@ -1,0 +1,29 @@
+PORT
+    Utilities-Main
+NAME
+    Chrony
+VERSION
+    4.6.1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Versatile implementation of the Network Time Protocol (NTP)
+WEBSITE
+    https://chrony.tuxfamily.org/
+DEPENDENCIES
+        @BaseLibraries-Main:Libseccomp>0.0.0
+        @SecurityLibraries-Main:Gnutls>0.0.0
+        @SystemUsers-Main:Ntp>=0.1.0
+        @SystemGroups-Main:Ntp>=0.1.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Openrc
+    description: Enable openrc support
+    active: false
+    dependencies:
+        @InitSystems-Main:Openrc>=0.52.1
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

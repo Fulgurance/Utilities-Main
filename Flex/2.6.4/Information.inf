@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Flex
+VERSION
+    2.6.4
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    The Fast Lexical Analyzer and scanner generator for lexing in C and C++
+WEBSITE
+    https://github.com/westes/flex
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0(Pass3)
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

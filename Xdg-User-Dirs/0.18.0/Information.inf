@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Xdg-User-Dirs
+VERSION
+    0.18.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Tool to help manage user directories like the desktop folder and the music folder
+WEBSITE
+    https://www.freedesktop.org/wiki/Software/xdg-user-dirs
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

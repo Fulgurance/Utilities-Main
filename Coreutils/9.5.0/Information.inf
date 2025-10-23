@@ -1,0 +1,37 @@
+PORT
+    Utilities-Main
+NAME
+    Coreutils
+VERSION
+    9.5.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Basic file, shell and text manipulation utilities of the GNU operating system
+WEBSITE
+    https://www.gnu.org/software/coreutils/
+DEPENDENCIES
+        @ProgrammingTools-Main:Autoconf>=2.71.0
+        @ProgrammingTools-Main:Automake>=1.16.5
+        @Shells-Main:Bash>=5.2.37
+        @ProgrammingTools-Main:Binutils>=2.43.0
+        @ProgrammingTools-Main:Gcc>=14.2.0
+        @Utilities-Main:Gettext>=0.22.5
+        @Components-Main:C-Library>=0.2.0
+        @Utilities-Main:Grep>=3.11.0
+        @BaseLibraries-Main:Gmp>=6.3.0
+        @BaseLibraries-Main:Libcap>=2.69.0
+        @SecuritySoftwares-Main:Openssl>=3.4.0
+        @Utilities-Main:Sed>=4.9.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Pass1
+    description: Enable the phase 1 of the cross toolchain building
+    active: false
+    dependencies:
+        @Shells-Main:Bash>=5.2.15(Pass1)
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

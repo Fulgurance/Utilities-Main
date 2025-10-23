@@ -1,0 +1,20 @@
+PORT
+    Utilities-Main
+NAME
+    Groff
+VERSION
+    1.23.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Typesetting system that reads plain text input files that include formatting commands to produce output in PostScript, PDF, HTML, or DVI formats or for display to a terminal
+WEBSITE
+    https://www.gnu.org/software/groff/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0(Pass2)
+        @ProgrammingLanguages-Main:Perl>=5.40.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
