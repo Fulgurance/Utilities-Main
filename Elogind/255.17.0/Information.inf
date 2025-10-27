@@ -18,7 +18,7 @@ DEPENDENCIES
         @BaseLibraries-Main:Lxml>=5.3.0(Python-3.12)
         @BaseLibraries-Main:MarkupSafe>=3.0.2(Python-3.12)
 
-        if component("C-Library") selected "Musl"
+        if component("@Components-Main:C-Library") selected "@ProgrammingTools-Main:Musl"
             @ProgrammingTools-Main:Musl-Utils>=1.1.12-r7
         end
 KERNELDEPENDENCIES
