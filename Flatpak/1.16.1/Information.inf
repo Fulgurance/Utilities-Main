@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Flatpak
+VERSION
+    1.16.1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Linux application sandboxing and distribution framework
+WEBSITE
+    https://github.com/flatpak/flatpak
+DEPENDENCIES
+    @ProgrammingTools-Main:Meson>=1.6.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
