@@ -14,7 +14,7 @@ class Target < ISM::Software
                                         --with-daemon_groupname=cronie  \
                                         #{option("Linux-Pam") ? "--with-pam" : "--without-pam"}",
                         path:           buildDirectoryPath,
-                        environment:    {"CFLAGS" => "#{usingGlibc ? "" : "-lobstack"}"})
+                        environment:    {"CFLAGS" => "#{usingGlibc ? "$CFLAGS" : "-lobstack"}"})
     end
 
     def build
