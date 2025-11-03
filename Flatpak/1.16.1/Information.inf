@@ -18,6 +18,7 @@ DEPENDENCIES
     @FileSystems-Main:Libfuse>=3.17.4
     @Utilities-Main:Ostree>=0.0.0-20250601
     @BaseLibraries-Main:Appstream>=1.1.1
+    @BaseLibraries-Main:Libseccomp>=2.5.5
 KERNELDEPENDENCIES
 OPTIONS
 UNIQUEDEPENDENCIES
