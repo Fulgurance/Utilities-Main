@@ -11,6 +11,8 @@ DESCRIPTION
 WEBSITE
     https://github.com/flatpak/flatpak
 DEPENDENCIES
+    @SystemGroups-Main:Flatpak>=0.1.0
+    @SystemUsers-Main:Flatpak>=0.1.0
     @ProgrammingTools-Main:Meson>=1.6.0
     @BaseLibraries-Main:Glib>=2.82.2
     @NetworkingLibraries-Main:Curl>=8.10.1
