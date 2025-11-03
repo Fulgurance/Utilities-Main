@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Ostree
+VERSION
+    0.0.0-20250601
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Operating system and container binary deployment and upgrades
+WEBSITE
+    https://github.com/ostreedev/ostree
+DEPENDENCIES
+    @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
