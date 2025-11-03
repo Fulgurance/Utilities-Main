@@ -14,7 +14,8 @@ class Target < ISM::Software
                                     --prefix=/usr                           \
                                     --buildtype=release                     \
                                     -Dsystem_bubblewrap=bwrap               \
-                                    -Dsystem_dbus_proxy=xdg-dbus-proxy",
+                                    -Dsystem_dbus_proxy=xdg-dbus-proxy      \
+                                    -Dtests=false",
                         path:       mainWorkDirectoryPath)
     end
 
