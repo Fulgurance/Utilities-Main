@@ -17,6 +17,7 @@ DEPENDENCIES
     @SecuritySoftwares-Main:Polkit>=126.0.0
     @FileSystems-Main:Libfuse>=3.17.4
     @Utilities-Main:Ostree>=0.0.0-20250601
+    @BaseLibraries-Main:Appstream>=1.1.1
 KERNELDEPENDENCIES
 OPTIONS
 UNIQUEDEPENDENCIES
