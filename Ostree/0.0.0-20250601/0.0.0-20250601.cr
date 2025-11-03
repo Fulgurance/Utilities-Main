@@ -5,6 +5,7 @@ class Target < ISM::Software
 
         configureSource(arguments:  "--prefix=/usr          \
                                     --sysconfdir=/etc       \
+                                    --with-curl             \
                                     --disable-static        \
                                     --disable-gtk-doc",
                         path:       buildDirectoryPath)

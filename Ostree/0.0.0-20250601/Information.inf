@@ -13,6 +13,7 @@ WEBSITE
 DEPENDENCIES
     @BaseLibraries-Main:Glib>=2.82.2
     @SecurityLibraries-Main:Gpgme>=1.23.2
+    @NetworkingLibraries-Main:Curl>=8.10.1
 KERNELDEPENDENCIES
 OPTIONS
 UNIQUEDEPENDENCIES
