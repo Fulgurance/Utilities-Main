@@ -1,0 +1,19 @@
+PORT
+    Utilities-Main
+NAME
+    Xdg-Dbus-Proxy
+VERSION
+    0.1.6
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Filtering proxy for D-Bus connections
+WEBSITE
+    https://github.com/flatpak/xdg-dbus-proxy
+DEPENDENCIES
+    @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
