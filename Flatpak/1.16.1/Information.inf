@@ -12,6 +12,10 @@ WEBSITE
     https://github.com/flatpak/flatpak
 DEPENDENCIES
     @ProgrammingTools-Main:Meson>=1.6.0
+    @BaseLibraries-Main:Glib>=2.82.2
+    @NetworkingLibraries-Main:Curl>=8.10.1
+    @SecuritySoftwares-Main:Polkit>=126.0.0
+    @FileSystems-Main:Libfuse>=3.17.4
 KERNELDEPENDENCIES
 OPTIONS
 UNIQUEDEPENDENCIES
