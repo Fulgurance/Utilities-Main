@@ -1,0 +1,37 @@
+class Target < ISM::Software
+
+    def build
+        super
+
+        makeSource(path: buildDirectoryPath)
+    end
+
+    def prepareInstallation
+        super
+
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/include")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib")
+
+        moveFile(   "#{mainWorkDirectoryPath}/snowball",
+                    "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin/snowball")
+
+        moveFile(   "#{mainWorkDirectoryPath}/stemwords",
+                    "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin/stemwords")
+
+        copyFile(   "#{mainWorkDirectoryPath}/include/libstemmer.h",
+                    "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/include/libstemmer.h")
+
+        moveFile(   "#{mainWorkDirectoryPath}/libstemmer.so.0",
+                    "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libstemmer.so.0.0.0")
+
+        makeLink(   target: "libstemmer.so.0.0.0",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/lib/libstemmer.so.0",
+                    type:   :symbolicLinkByOverwrite)
+
+        makeLink(   target: "libstemmer.so.0",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/lib/libstemmer.so",
+                    type:   :symbolicLinkByOverwrite)
+    end
+
+end
