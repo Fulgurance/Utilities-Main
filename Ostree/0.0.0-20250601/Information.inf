@@ -11,7 +11,8 @@ DESCRIPTION
 WEBSITE
     https://github.com/ostreedev/ostree
 DEPENDENCIES
-    @SystemBase-Main:SystemBase>=0.2.0
+    @BaseLibraries-Main:Glib>=2.82.2
+    @SecurityLibraries-Main:Gpgme>=1.23.2
 KERNELDEPENDENCIES
 OPTIONS
 UNIQUEDEPENDENCIES
