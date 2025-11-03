@@ -22,8 +22,16 @@ class Target < ISM::Software
         copyFile(   "#{mainWorkDirectoryPath}/include/libstemmer.h",
                     "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/include/libstemmer.h")
 
-        moveFile(   "#{mainWorkDirectoryPath}/libstemmer.so*",
-                    "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/*")
+        moveFile(   "#{mainWorkDirectoryPath}/libstemmer.so",
+                    "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libstemmer.so")
+
+        moveFile(   "#{mainWorkDirectoryPath}/libstemmer.so.#{majorVersion}",
+                    "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libstemmer.so.#{majorVersion}")
+
+        version = "#{majorVersion}.#{minorVersion}.#{patchVersion}"
+
+        moveFile(   "#{mainWorkDirectoryPath}/libstemmer.so.#{version}",
+                    "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libstemmer.so.#{version}")
     end
 
 end
