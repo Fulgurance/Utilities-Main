@@ -21,6 +21,7 @@ DEPENDENCIES
     @BaseLibraries-Main:Libseccomp>=2.5.5
     @BaseLibraries-Main:Pyparsing>=3.2.5
     @Utilities-Main:Bubblewrap>=0.11.0
+    @Utilities-Main:Xdg-Dbus-Proxy>=0.1.6
 KERNELDEPENDENCIES
 OPTIONS
 UNIQUEDEPENDENCIES
