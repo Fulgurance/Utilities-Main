@@ -12,7 +12,9 @@ class Target < ISM::Software
                                     --reconfigure                           \
                                     #{@buildDirectoryNames["MainBuild"]}    \
                                     --prefix=/usr                           \
-                                    --buildtype=release",
+                                    --buildtype=release                     \
+                                    -Dsystem_bubblewrap=bwrap               \
+                                    -Dsystem_dbus_proxy=xdg-dbus-proxy",
                         path:       mainWorkDirectoryPath)
     end
 
