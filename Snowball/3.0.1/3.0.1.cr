@@ -22,16 +22,8 @@ class Target < ISM::Software
         copyFile(   "#{mainWorkDirectoryPath}/include/libstemmer.h",
                     "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/include/libstemmer.h")
 
-        moveFile(   "#{mainWorkDirectoryPath}/libstemmer.so.0",
-                    "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libstemmer.so.0.0.0")
-
-        makeLink(   target: "libstemmer.so.0.0.0",
-                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/lib/libstemmer.so.0",
-                    type:   :symbolicLinkByOverwrite)
-
-        makeLink(   target: "libstemmer.so.0",
-                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/lib/libstemmer.so",
-                    type:   :symbolicLinkByOverwrite)
+        moveFile(   "#{mainWorkDirectoryPath}/libstemmer.so*",
+                    "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/*")
     end
 
 end
