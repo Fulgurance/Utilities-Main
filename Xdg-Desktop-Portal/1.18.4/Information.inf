@@ -11,7 +11,7 @@ DESCRIPTION
 WEBSITE
     https://github.com/flatpak/xdg-desktop-portal
 DEPENDENCIES
-        @BaseLibraries-Main:Libfuse>=3.16.2
+        @FileSystems-Main:Libfuse>=3.17.4
         @GraphicsLibraries-Main:Gdk-Pixbuf>=2.42.10
         @BaseLibraries-Main:Json-Glib>=1.10.0
         @MultimediaSoftwares-Main:Wireplumber>=0.5.6
