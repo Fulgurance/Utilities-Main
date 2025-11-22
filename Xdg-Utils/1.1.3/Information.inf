@@ -12,7 +12,7 @@ WEBSITE
     https://www.freedesktop.org/wiki/Software/xdg-utils/
 DEPENDENCIES
         @Xml-Main:Xmlto>=0.0.28(Links)
-        @XorgBase-Main:Xorg-Applications>=21.1.8
+        @XorgBase-Main:Xorg-Applications>=0.0.0
 KERNELDEPENDENCIES
 OPTIONS
     name: Dbus
