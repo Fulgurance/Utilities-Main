@@ -1,17 +1,17 @@
 PORT
     Utilities-Main
 NAME
-    Tcl
+    Convmv
 VERSION
-    8.6.13
+    2.6.0
 ARCHITECTURES
     x86_64
 DESCRIPTION
-    The Tool Command Language and Tk toolkit
+    Tool to converts filenames from one encoding to another
 WEBSITE
-     https://downloads.sourceforge.net/tcl
+    https://j3e.de/linux/convmv/
 DEPENDENCIES
-        @Utilities-Main:Flex>=2.6.4
+        @SystemBase-Main:SystemBase>=0.2.0
 KERNELDEPENDENCIES
 OPTIONS
 UNIQUEDEPENDENCIES

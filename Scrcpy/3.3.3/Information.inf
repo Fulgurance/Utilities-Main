@@ -1,0 +1,27 @@
+PORT
+    Utilities-Main
+NAME
+    Scrcpy
+VERSION
+    3.3.3
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Display and control your Android device
+WEBSITE
+    https://github.com/Genymobile/scrcpy
+DEPENDENCIES
+        @GraphicsLibraries-Main:Sdl2>=2.0.5
+        @Utilities-Main:Android-Tools>=35.0.2
+KERNELDEPENDENCIES
+OPTIONS
+    name: Libusb
+    description: Enable libusb support
+    active: true
+    dependencies:
+        @BaseLibraries-Main:Libusb>=1.0.26
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

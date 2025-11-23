@@ -1,17 +1,17 @@
 PORT
     Utilities-Main
 NAME
-    Tcl
+    Usbutils
 VERSION
-    8.6.13
+    19.0.0
 ARCHITECTURES
     x86_64
 DESCRIPTION
-    The Tool Command Language and Tk toolkit
+    USB utilities for Linux, including lsusb
 WEBSITE
-     https://downloads.sourceforge.net/tcl
+    https://github.com/gregkh/usbutils
 DEPENDENCIES
-        @Utilities-Main:Flex>=2.6.4
+        @BaseLibraries-Main:Libusb>=1.0.26
 KERNELDEPENDENCIES
 OPTIONS
 UNIQUEDEPENDENCIES

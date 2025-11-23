@@ -1,15 +1,15 @@
 PORT
     Utilities-Main
 NAME
-    Bc
+    Acpica
 VERSION
-    7.0.3
+    0.0.0-20250807
 ARCHITECTURES
     x86_64
 DESCRIPTION
-    Implementation of the POSIX bc calculator that implements GNU bc extensions
+    Open-source operating system-independent implementation of the Advanced Configuration and Power Interface specification
 WEBSITE
-     https://github.com/gavinhoward/bc
+    https://github.com/acpica/acpica
 DEPENDENCIES
         @SystemBase-Main:SystemBase>=0.2.0
 KERNELDEPENDENCIES

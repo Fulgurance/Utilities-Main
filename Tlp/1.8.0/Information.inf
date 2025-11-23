@@ -1,0 +1,26 @@
+PORT
+    Utilities-Main
+NAME
+    Tlp
+VERSION
+    1.8.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Optimize Linux Laptop Battery Life 
+WEBSITE
+    https://github.com/linrunner/TLP
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Openrc
+    description: Enable openrc support
+    active: false
+    dependencies:
+        @InitSystems-Main:Openrc>=0.52.1
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

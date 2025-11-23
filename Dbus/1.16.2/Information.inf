@@ -1,0 +1,33 @@
+PORT
+    Utilities-Main
+NAME
+    Dbus
+VERSION
+    1.16.2
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Message bus system for applications to talk to one another
+WEBSITE
+    https://dbus.freedesktop.org
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Openrc
+    description: Enable openrc support
+    active: false
+    dependencies:
+        @InitSystems-Main:Openrc>=0.52.1
+    kernelDependencies:
+
+    name: Xorg-Libraries
+    description: Enable xorg libraries support for dbus-launch program
+    active: true
+    dependencies:
+        @XorgBase-Main:Xorg-Libraries>=0.0.0
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

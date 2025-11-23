@@ -1,0 +1,26 @@
+PORT
+    Utilities-Main
+NAME
+    Sysklogd
+VERSION
+    2.7.2
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    BSD syslog daemon with syslog/syslogp API replacement for Linux
+WEBSITE
+    https://github.com/troglobit/sysklogd
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Openrc
+    description: Enable openrc support
+    active: false
+    dependencies:
+        @InitSystems-Main:Openrc>=0.46.0
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

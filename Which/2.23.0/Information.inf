@@ -1,15 +1,15 @@
 PORT
     Utilities-Main
 NAME
-    Bc
+    Which
 VERSION
-    7.0.3
+    2.23.0
 ARCHITECTURES
     x86_64
 DESCRIPTION
-    Implementation of the POSIX bc calculator that implements GNU bc extensions
+    Utility used to find which executable is executed when entered on the shell prompt
 WEBSITE
-     https://github.com/gavinhoward/bc
+    https://ftp.gnu.org/gnu/which/
 DEPENDENCIES
         @SystemBase-Main:SystemBase>=0.2.0
 KERNELDEPENDENCIES

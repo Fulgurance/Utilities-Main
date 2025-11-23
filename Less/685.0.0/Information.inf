@@ -1,17 +1,17 @@
 PORT
     Utilities-Main
 NAME
-    Tcl
+    Less
 VERSION
-    8.6.13
+    685.0.0
 ARCHITECTURES
     x86_64
 DESCRIPTION
-    The Tool Command Language and Tk toolkit
+    Free, open-source file pager
 WEBSITE
-     https://downloads.sourceforge.net/tcl
+    https://www.greenwoodsoftware.com/less/
 DEPENDENCIES
-        @Utilities-Main:Flex>=2.6.4
+        @SystemBase-Main:SystemBase>=0.2.0
 KERNELDEPENDENCIES
 OPTIONS
 UNIQUEDEPENDENCIES

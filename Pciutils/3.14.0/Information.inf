@@ -1,0 +1,33 @@
+PORT
+    Utilities-Main
+NAME
+    Pciutils
+VERSION
+    3.14.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    The PCI Utilities
+WEBSITE
+    https://github.com/pciutils/pciutils/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Curl
+    description: Enable curl support
+    active: false
+    dependencies:
+        @NetworkingLibraries-Main:Curl>=8.2.1
+    kernelDependencies:
+
+    name: Wget
+    description: Enable wget support
+    active: false
+    dependencies:
+        @NetworkingSoftwares-Main:Wget>=1.21.4
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

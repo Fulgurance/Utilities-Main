@@ -1,0 +1,57 @@
+PORT
+    Utilities-Main
+NAME
+    Util-Linux
+VERSION
+    2.41.2
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Random collection of Linux utilities
+WEBSITE
+    https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git/
+DEPENDENCIES
+        @BaseLibraries-Main:Ncurses>=6.5.0
+        @Shells-Main:Bash>=5.2.37
+        @ProgrammingTools-Main:Binutils>=2.43.0
+        @ProgrammingTools-Main:Gcc>=14.2.0
+        @Components-Main:C-Library>=0.2.0
+        @ProgrammingTools-Main:Make>=4.4.1
+        @ProgrammingTools-Main:Pkgconf>=2.3.0
+        @Utilities-Main:Coreutils>=9.3.0
+        @ProgrammingTools-Main:Diffutils>=3.10.0
+        @Utilities-Main:Findutils>=4.10.0
+        @Utilities-Main:Gettext>=0.22.5
+        @Utilities-Main:Grep>=3.11.0
+        @Utilities-Main:Sed>=4.9.0
+        @Utilities-Main:Gawk>=5.3.1
+        @Utilities-Main:File>=5.45.0
+        @BaseLibraries-Main:Zlib>=1.3.1
+        @BaseLibraries-Main:Readline>=8.2.0
+        @FileSystems-Main:Eudev>=3.2.14
+KERNELDEPENDENCIES
+OPTIONS
+    name: 32Bits
+    description: Enable 32 bits support
+    active: false
+    dependencies:
+    kernelDependencies:
+        CONFIG_IA32_EMULATION
+
+    name: x32Bits
+    description: Enable x32 bits support
+    active: false
+    dependencies:
+    kernelDependencies:
+        CONFIG_X86_X32
+
+    name: Pass1
+    description: Enable the phase 1 of the cross toolchain building
+    active: false
+    dependencies:
+        @Utilities-Main:Texinfo>=7.0.3(Pass1)
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

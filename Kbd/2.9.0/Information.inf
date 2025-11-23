@@ -1,17 +1,18 @@
 PORT
     Utilities-Main
 NAME
-    Tcl
+    Kbd
 VERSION
-    8.6.13
+    2.9.0
 ARCHITECTURES
     x86_64
 DESCRIPTION
-    The Tool Command Language and Tk toolkit
+    Utilities for managing Linux console mainly, loading console fonts and keyboard maps
 WEBSITE
-     https://downloads.sourceforge.net/tcl
+    https://kbd-project.org/
 DEPENDENCIES
         @Utilities-Main:Flex>=2.6.4
+        @ProgrammingTools-Main:Autoconf>=2.72.0
 KERNELDEPENDENCIES
 OPTIONS
 UNIQUEDEPENDENCIES

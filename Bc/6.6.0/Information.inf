@@ -9,7 +9,7 @@ ARCHITECTURES
 DESCRIPTION
     Implementation of the POSIX bc calculator that implements GNU bc extensions
 WEBSITE
-    https://git.yzena.com/gavin/bc
+     https://github.com/gavinhoward/bc
 DEPENDENCIES
         @SystemBase-Main:SystemBase>=0.2.0(Pass2)
 KERNELDEPENDENCIES

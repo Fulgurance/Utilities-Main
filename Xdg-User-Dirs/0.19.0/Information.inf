@@ -1,15 +1,15 @@
 PORT
     Utilities-Main
 NAME
-    Bc
+    Xdg-User-Dirs
 VERSION
-    7.0.3
+    0.19.0
 ARCHITECTURES
     x86_64
 DESCRIPTION
-    Implementation of the POSIX bc calculator that implements GNU bc extensions
+    Tool to help manage user directories like the desktop folder and the music folder
 WEBSITE
-     https://github.com/gavinhoward/bc
+    https://www.freedesktop.org/wiki/Software/xdg-user-dirs
 DEPENDENCIES
         @SystemBase-Main:SystemBase>=0.2.0
 KERNELDEPENDENCIES
