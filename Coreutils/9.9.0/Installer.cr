@@ -12,9 +12,6 @@ class Target < ISM::Software
                                         gl_cv_macro_MB_CUR_MAX_good=y",
                             path:       buildDirectoryPath)
         else
-            runAutoreconfCommand(   arguments:  "-fiv",
-                                    path:       buildDirectoryPath)
-
             configureSource(arguments:      "--prefix=/usr                          \
                                             --enable-no-install-program=kill,uptime",
                             path:           buildDirectoryPath,
