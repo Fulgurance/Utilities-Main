@@ -14,6 +14,7 @@ DEPENDENCIES
         @Utilities-Main:Flex>=2.6.4
         @ProgrammingTools-Main:Pkgconf>=2.0.1
         @ProgrammingTools-Main:Meson>=1.6.0
+        @ProgrammingTools-Main:Ninja>=1.12.1
         @BaseLibraries-Main:Zlib>=1.2.13
         @Archivers-Main:Zstd>=1.5.6
 KERNELDEPENDENCIES
