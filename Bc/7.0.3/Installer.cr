@@ -5,9 +5,10 @@ class Target < ISM::Software
 
         configureSource(arguments:      "--prefix=/usr  \
                                         -G              \
-                                        -O3",
+                                        -O3             \
+                                        -r",
                         path:           buildDirectoryPath,
-                        environment:    {"CC" => "gcc"})
+                        environment:    {"CC" => "gcc -std=c99"})
     end
 
     def build
