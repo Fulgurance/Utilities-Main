@@ -17,7 +17,6 @@ class Target < ISM::Software
                                     -Ddoxygen_docs=disabled                                 \
                                     -Dducktype_docs=disabled                                \
                                     -Ddbus_user=messagebus                                  \
-                                    -Dembedded_tests=false                                  \
                                     -Dinstalled_tests=false                                 \
                                     -Dsystem_pid_file=/run/dbus/dbus.pid                    \
                                     -Dsystem_socket=/run/dbus/system_bus_socket",
