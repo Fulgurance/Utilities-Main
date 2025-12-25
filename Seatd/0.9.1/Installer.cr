@@ -29,6 +29,21 @@ class Target < ISM::Software
         runNinjaCommand(arguments:      "install",
                         path:           buildDirectoryPath,
                         environment:    {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
+
+        if option("Openrc")
+            prepareOpenrcServiceInstallation(   path:   "#{workDirectoryPath}/Seatd-Init.d",
+                                                name:   "seatd")
+        end
+    end
+
+    def deploy
+        super
+
+        if autoDeployServices
+            if option("Openrc")
+                runRcUpdateCommand("add seatd default")
+            end
+        end
     end
 
 end
